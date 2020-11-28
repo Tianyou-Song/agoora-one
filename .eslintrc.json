@@ -1,0 +1,107 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:jest/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "project": "tsconfig.json",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "jest"
+    ],
+    "rules": {
+        "@typescript-eslint/indent": [
+            "error",
+            "tab"
+        ],
+        "@typescript-eslint/quotes": [
+            "error",
+            "double"
+        ],
+        "arrow-body-style": [
+            "error",
+            "always"
+        ],
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "key-spacing": [
+            "error",
+            {
+                "align": {
+                    "beforeColon": true,
+                    "mode": "minimum",
+                    "on": "colon"
+                },
+                "multiLine": {
+                    "beforeColon": true
+                },
+                "singleLine": {
+                    "beforeColon": true
+                }
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "max-statements-per-line": [
+            "error",
+            {
+                "max": 1
+            }
+        ],
+        "no-tabs": [
+            "error",
+            {
+                "allowIndentationTabs": true
+            }
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ],
+        "react/jsx-indent": [
+            "error",
+            "tab"
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            "tab"
+        ],
+        "sort-imports": "error",
+        "sort-keys": [
+            "error",
+            "asc",
+            {
+                "natural": true
+            }
+        ],
+        "sort-vars": "error"
+    }
+}
