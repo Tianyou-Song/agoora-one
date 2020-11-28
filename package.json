@@ -1,12 +1,5 @@
 {
-	"name": "agoora-one",
-	"version": "0.1.0",
-	"private": false,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start"
-	},
+	"author": "Tianyou-Song",
 	"dependencies": {
 		"next": "10.0.3",
 		"prop-types": "^15.7.2",
@@ -14,10 +7,6 @@
 		"react-dom": "17.0.1"
 	},
 	"description": "Image board with perceptual hashing.",
-	"main": "index.js",
-	"repository": "https://github.com/Tianyou-Song/agoora-one.git",
-	"author": "Tianyou-Song",
-	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^14.14.10",
 		"@types/react": "^17.0.0",
@@ -35,5 +24,16 @@
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"jest": "^26.6.3",
 		"typescript": "^4.1.2"
-	}
+	},
+	"license": "MIT",
+	"main": "index.js",
+	"name": "agoora-one",
+	"private": false,
+	"repository": "https://github.com/Tianyou-Song/agoora-one.git",
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev",
+		"start": "next start"
+	},
+	"version": "0.1.0"
 }
