@@ -1,30 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Agoora One
+## Set Up
+### Node Version
+Please use node `12`.\
+Currently, the highiest node version working with this project is version 12.\
+postcss is a dependency, and it expects version version `^10 || ^12 || >=14`.\
+However, Sequelize currently does not work on version `>= 14`.\
+Version subject to be upgraded if both of these problems are taken care of.
 
-## Getting Started
+### Package Manager
 
-First, run the development server:
+This project uses `yarn`.\
+To install node moduels, run
 
 ```bash
-npm run dev
-# or
-yarn dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Database
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project uses `CockroachDB` with `Sequelize ORM`.\
+To set up the initial development db, run
 
-## Learn More
+```bash
+yarn cockroach-setup
+```
 
-To learn more about Next.js, take a look at the following resources:
+This sets up 3 secure CockroachDB nodes on your local.\
+With a user `dev` and password `dev`.\
+The db is hosted on `localhost:26257`.\
+And the console can be accessed through `localhost:8080`.\
+More info can be found on the 
+[cockroachlabs website](https://www.cockroachlabs.com/docs/v20.2/build-a-nodejs-app-with-cockroachdb-sequelize).\
+&nbsp;\
+After the initial setup, please kill all 3 nodes through system monitor, since 
+[quitting the nodes through console is depricated](https://www.cockroachlabs.com/docs/v20.2/cockroach-quit).\
+The nodes will start with the server.
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Running the Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run the dev server, run
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+yarn dev
+```

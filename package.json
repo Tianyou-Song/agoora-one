@@ -1,10 +1,15 @@
 {
 	"author": "Tianyou-Song",
 	"dependencies": {
+		"async": "^3.2.0",
 		"next": "10.0.3",
-		"prop-types": "^15.7.2",
+		"pg": "^8.5.1",
+		"pg-hstore": "^2.3.3",
 		"react": "17.0.1",
-		"react-dom": "17.0.1"
+		"react-dom": "17.0.1",
+		"sass": "^1.29.0",
+		"sequelize": "^6.3.5",
+		"sequelize-cockroachdb": "^1.1.0"
 	},
 	"description": "Image board with perceptual hashing.",
 	"devDependencies": {
@@ -25,6 +30,9 @@
 		"jest": "^26.6.3",
 		"typescript": "^4.1.2"
 	},
+	"engines": {
+		"node": ">=10.13 <13"
+	},
 	"license": "MIT",
 	"main": "index.js",
 	"name": "agoora-one",
@@ -32,7 +40,21 @@
 	"repository": "https://github.com/Tianyou-Song/agoora-one.git",
 	"scripts": {
 		"build": "next build",
-		"dev": "next dev",
+		"cockroach-setup": "yarn cockroach-setup-cert && yarn cockroach-start-nodes && yarn dev-init-nodes && yarn cockroach-setup-user",
+		"cockroach-setup-cert": "yarn cockroach-setup-cert-1 && yarn cockroach-setup-cert-2 && yarn cockroach-setup-cert-3 && yarn cockroach-setup-cert-4",
+		"cockroach-setup-cert-1": "mkdir certs my-safe-directory",
+		"cockroach-setup-cert-2": "cockroach cert create-ca --certs-dir=certs --ca-key=my-safe-directory/ca.key",
+		"cockroach-setup-cert-3": "cockroach cert create-node localhost $(hostname) --certs-dir=certs --ca-key=my-safe-directory/ca.key",
+		"cockroach-setup-cert-4": "cockroach cert create-client root --certs-dir=certs --ca-key=my-safe-directory/ca.key",
+		"cockroach-setup-user": "yarn cockroach-setup-user-db && yarn cockroach-setup-user-cert",
+		"cockroach-setup-user-cert": "cockroach cert create-client dev --certs-dir=certs --ca-key=my-safe-directory/ca.key",
+		"cockroach-setup-user-db": "cockroach sql --certs-dir=certs -e 'CREATE USER dev WITH PASSWORD 'dev'; CREATE DATABASE agoora_one; GRANT ALL ON DATABASE agoora_one TO dev;'",
+		"cockroach-start-node-1": "cockroach start --certs-dir=certs --store=node1 --listen-addr=localhost:26257 --http-addr=localhost:8080 --join=localhost:26257,localhost:26258,localhost:26259 --background",
+		"cockroach-start-node-2": "cockroach start --certs-dir=certs --store=node2 --listen-addr=localhost:26258 --http-addr=localhost:8081 --join=localhost:26257,localhost:26258,localhost:26259 --background",
+		"cockroach-start-node-3": "cockroach start --certs-dir=certs --store=node3 --listen-addr=localhost:26259 --http-addr=localhost:8082 --join=localhost:26257,localhost:26258,localhost:26259 --background",
+		"cockroach-start-nodes": "yarn cockroach-start-node-1 && yarn cockroach-start-node-2 && yarn cockroach-start-node-3",
+		"dev": "yarn cockroach-start-nodes && next dev",
+		"dev-init-nodes": "cockroach init --certs-dir=certs --host=localhost:26257",
 		"start": "next start"
 	},
 	"version": "0.1.0"

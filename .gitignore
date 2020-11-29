@@ -32,3 +32,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# CockroachDB
+/certs
+/cockroach-data
+/my-safe-directory
+/node1
+/node2
+/node3
