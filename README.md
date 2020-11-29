@@ -2,7 +2,7 @@
 ## Set Up
 ### Node Version
 Please use node `12`.\
-Currently, the highiest node version working with this project is version 12.\
+Currently, the highest node version working with this project is version 12.\
 postcss is a dependency, and it expects version version `^10 || ^12 || >=14`.\
 However, Sequelize currently does not work on version `>= 14`.\
 Version subject to be upgraded if both of these problems are taken care of.
@@ -10,7 +10,7 @@ Version subject to be upgraded if both of these problems are taken care of.
 ### Package Manager
 
 This project uses `yarn`.\
-To install node moduels, run
+To install node modules, run
 
 ```bash
 yarn install
