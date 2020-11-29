@@ -38,8 +38,10 @@ The nodes will start with the server.
 
 ### Running the Server
 
-To run the dev server, run
+To start the dev server, run
 
 ```bash
 yarn dev
 ```
+
+To stop the dev server, press `ctrl+c` twice.

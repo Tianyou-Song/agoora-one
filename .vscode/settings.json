@@ -2,7 +2,6 @@
 	"cSpell.words": [
 		"Agoora"
 	],
-	"editor.insertSpaces": false,
 	"eslint.format.enable": true,
 	"eslint.validate": [
 		"javascript",
