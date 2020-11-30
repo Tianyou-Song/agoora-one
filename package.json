@@ -2,6 +2,7 @@
 	"author": "Tianyou-Song",
 	"dependencies": {
 		"async": "^3.2.0",
+		"lodash": "^4.17.20",
 		"next": "10.0.3",
 		"pg": "^8.5.1",
 		"pg-hstore": "^2.3.3",
@@ -31,7 +32,7 @@
 		"typescript": "^4.1.2"
 	},
 	"engines": {
-		"node": ">=10.13 <13"
+		"node": "12"
 	},
 	"license": "MIT",
 	"main": "index.js",
@@ -54,7 +55,7 @@
 		"cockroach-start-node-2": "cockroach start --certs-dir=certs --store=node2 --listen-addr=localhost:26258 --http-addr=localhost:8081 --join=localhost:26257,localhost:26258,localhost:26259 --background",
 		"cockroach-start-node-3": "cockroach start --certs-dir=certs --store=node3 --listen-addr=localhost:26259 --http-addr=localhost:8082 --join=localhost:26257,localhost:26258,localhost:26259 --background",
 		"cockroach-start-nodes": "yarn cockroach-start-node-1 && yarn cockroach-start-node-2 && yarn cockroach-start-node-3",
-		"dev": "yarn cockroach-start-nodes && next dev",
+		"dev": "next dev",
 		"setup": "yarn install && yarn cockroach-setup",
 		"start": "next start"
 	},

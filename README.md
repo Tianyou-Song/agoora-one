@@ -9,7 +9,8 @@ Version subject to be upgraded if both of these problems are taken care of.
 
 ### Package Manager
 
-This project uses `yarn`.
+This project uses `yarn`. If it's not installed already, please 
+[install it](https://classic.yarnpkg.com/en/docs/install).
 
 ### Setup Script
 To set up the project initially, run
@@ -25,13 +26,14 @@ The db is hosted on `localhost:26257`.\
 And the db console can be accessed through `localhost:8080`.\
 More info can be found on the 
 [cockroachlabs website](https://www.cockroachlabs.com/docs/v20.2/build-a-nodejs-app-with-cockroachdb-sequelize). 
-&nbsp;
-
-After the initial setup, please kill all 3 nodes through system monitor, since 
-[quitting the nodes through console is depricated](https://www.cockroachlabs.com/docs/v20.2/cockroach-quit).\
-The nodes will start with the server.
 
 ## Running the Server on Local
+
+If the db servers are not running, run
+
+```bash
+yarn cockroach-start-nodes
+```
 
 To start the dev server, run
 
@@ -39,17 +41,20 @@ To start the dev server, run
 yarn dev
 ```
 
-To stop the dev server, press `ctrl+c`.
+To stop the dev server, press `CTRL+C`.
 
 ## Code Style
-This project follows mostly [Airbnb style guide](https://github.com/airbnb/javascript) with the following exceptions.
+In order to enforce consistency, code style for this project is designed to be as restrictive as possible. 
+It uses `eslint:all` as well as the 
+[Airbnb style guide](https://github.com/airbnb/javascript). 
+Some notable exceptions from common practices:
 
 - tab indentations
 - prefer double quotes
-- always braces around the function body
+- always use braces around the function body
 - keys and values are aligned, on the colon, wth at least one space before and after the colon
 	- except for json files
-- maximum 1 space per line
-- imports, keys, and variables should be alphabetically sorted
+- maximum 1 statement per line
+- imports, keys, and variables should be sorted
 
-For more details, please see the [eslintrc](.eslintrc.json) config
+For more details, please see the [eslintrc config](.eslintrc.json).

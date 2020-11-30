@@ -1,9 +1,14 @@
 {
 	"cSpell.words": [
 		"Agoora",
+		"accentize",
 		"backreference",
+		"cockroachlabs",
 		"linebreak",
-		"parens"
+		"parens",
+		"readonly",
+		"isnan",
+		"typeof"
 	],
 	"eslint.format.enable": true,
 	"eslint.validate": [

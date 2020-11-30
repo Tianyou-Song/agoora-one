@@ -5,12 +5,12 @@
         "node": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
+        "eslint:all",
+        "plugin:react/all",
+        "plugin:@typescript-eslint/all",
+        "plugin:jest/all",
         "airbnb",
-        "airbnb-typescript",
-        "eslint:recommended",
-        "plugin:jest/recommended"
+        "airbnb-typescript"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -22,22 +22,43 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
         "@typescript-eslint",
-        "jest"
+        "jest",
+        "react"
     ],
     "rules": {
         "@typescript-eslint/indent": [
             "error",
             "tab"
         ],
+        "@typescript-eslint/prefer-readonly-parameter-types": "off",
         "@typescript-eslint/quotes": [
             "error",
             "double"
         ],
+        "array-callback-return": [
+            "error",
+            {
+                "checkForEach": true
+            }
+        ],
         "arrow-body-style": [
             "error",
             "always"
+        ],
+        "consistent-return": [
+            "error",
+            {
+                "treatUndefinedAsUnspecified": true
+            }
+        ],
+        "dot-location": [
+            "error",
+            "property"
+        ],
+        "grouped-accessor-pairs": [
+            "error",
+            "getBeforeSet"
         ],
         "indent": [
             "error",
@@ -59,28 +80,59 @@
                 }
             }
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
+        "max-lines-per-function": "off",
         "max-statements-per-line": [
             "error",
             {
                 "max": 1
             }
         ],
-        "no-console": "error",
-        "no-extra-parens": "error",
-        "no-loss-of-precision": "error",
-        "no-promise-executor-return": "error",
+        "no-extra-boolean-cast": [
+            "error",
+            {
+                "enforceForLogicalOperands": true
+            }
+        ],
+        "no-implicit-globals": [
+            "error",
+            {
+                "lexicalBindings": true
+            }
+        ],
+        "no-inner-declarations": [
+            "error",
+            "both"
+        ],
+        "no-magic-numbers": [
+            "error",
+            {
+                "detectObjects": true,
+                "enforceConst": true
+            }
+        ],
+        "no-multi-spaces": [
+            "error",
+            {
+                "exceptions": {
+                    "ImportDeclaration": true,
+                    "VariableDeclarator": true
+                },
+                "ignoreEOLComments": true
+            }
+        ],
         "no-tabs": [
             "error",
             {
                 "allowIndentationTabs": true
             }
         ],
-        "no-unreachable-loop": "error",
-        "no-useless-backreference": "error",
+        "no-unsafe-negation": [
+            "error",
+            {
+                "enforceForOrderingRelations": true
+            }
+        ],
+        "no-use-before-define": "off",
         "quotes": [
             "error",
             "double"
@@ -101,8 +153,6 @@
             "error",
             "tab"
         ],
-        "require-atomic-updates": "error",
-        "sort-imports": "error",
         "sort-keys": [
             "error",
             "asc",
@@ -110,6 +160,11 @@
                 "natural": true
             }
         ],
-        "sort-vars": "error"
+        "use-isnan": [
+            "error",
+            {
+                "enforceForIndexOf": true
+            }
+        ]
     }
 }
