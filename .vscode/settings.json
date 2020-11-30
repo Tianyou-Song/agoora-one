@@ -1,13 +1,14 @@
 {
 	"cSpell.words": [
-		"agoora",
 		"accentize",
+		"agoora",
 		"backreference",
 		"cockroachlab",
+		"iife",
+		"isnan",
 		"linebreak",
 		"paren",
 		"readonly",
-		"isnan",
 		"typeof",
 		"vercel"
 	],

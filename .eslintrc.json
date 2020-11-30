@@ -122,10 +122,23 @@
                 "ignoreEOLComments": true
             }
         ],
+        "no-shadow": [
+            "error",
+            {
+                "builtinGlobals": true,
+                "hoist": "all"
+            }
+        ],
         "no-tabs": [
             "error",
             {
                 "allowIndentationTabs": true
+            }
+        ],
+        "no-undef": [
+            "error",
+            {
+                "typeof": true
             }
         ],
         "no-unsafe-negation": [
@@ -134,7 +147,21 @@
                 "enforceForOrderingRelations": true
             }
         ],
+        "no-unused-vars": [
+            "error",
+            {
+                "args": "all",
+                "caughtErrors": "all"
+            }
+        ],
         "no-use-before-define": "off",
+        "no-warning-comments": "warn",
+        "prefer-regex-literals": [
+            "error",
+            {
+                "disallowRedundantWrapping": true
+            }
+        ],
         "quotes": [
             "error",
             "double"
@@ -170,6 +197,20 @@
             "error",
             {
                 "enforceForIndexOf": true
+            }
+        ],
+        "wrap-iife": [
+            "error",
+            "inside",
+            {
+                "functionPrototypeMethods": true
+            }
+        ],
+        "yoda": [
+            "error",
+            "never",
+            {
+                "exceptRange": true
             }
         ]
     }
