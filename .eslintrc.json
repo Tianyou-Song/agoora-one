@@ -9,6 +9,7 @@
         "plugin:@typescript-eslint/recommended",
         "airbnb",
         "airbnb-typescript",
+        "eslint:recommended",
         "plugin:jest/recommended"
     ],
     "parser": "@typescript-eslint/parser",
@@ -68,12 +69,18 @@
                 "max": 1
             }
         ],
+        "no-console": "error",
+        "no-extra-parens": "error",
+        "no-loss-of-precision": "error",
+        "no-promise-executor-return": "error",
         "no-tabs": [
             "error",
             {
                 "allowIndentationTabs": true
             }
         ],
+        "no-unreachable-loop": "error",
+        "no-useless-backreference": "error",
         "quotes": [
             "error",
             "double"
@@ -94,6 +101,7 @@
             "error",
             "tab"
         ],
+        "require-atomic-updates": "error",
         "sort-imports": "error",
         "sort-keys": [
             "error",
