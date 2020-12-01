@@ -2,6 +2,7 @@
     "author": "Tianyou-Song",
     "dependencies": {
         "async": "^3.2.0",
+        "axios": "^0.21.0",
         "lodash": "^4.17.20",
         "next": "10.0.3",
         "pg": "^8.5.1",
