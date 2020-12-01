@@ -3,12 +3,17 @@
 		"accentize",
 		"agoora",
 		"backreference",
-		"cockroachlab",
+		"bitstream",
+		"castoro",
+		"cockroachdb",
+		"cockroachlabs",
+		"hstore",
 		"iife",
 		"isnan",
 		"linebreak",
 		"paren",
 		"readonly",
+		"tianyou",
 		"typeof",
 		"vercel"
 	],
@@ -17,7 +22,6 @@
 		"javascript",
 		"javascriptreact",
 		"typescript",
-		"typescriptreact",
-		"json"
+		"typescriptreact"
 	]
 }
