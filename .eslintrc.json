@@ -28,14 +28,20 @@
         "react"
     ],
     "rules": {
-        "@typescript-eslint/indent": [
-            "error",
-            "tab"
-        ],
+        "@typescript-eslint/comma-dangle": "off",
+        "@typescript-eslint/comma-spacing": "off",
+        "@typescript-eslint/indent": "off",
         "@typescript-eslint/prefer-readonly-parameter-types": "off",
-        "@typescript-eslint/quotes": [
+        "@typescript-eslint/quotes": "off",
+        "array-bracket-newline": [
             "error",
-            "double"
+            {
+                "minItems": 1
+            }
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "always"
         ],
         "array-callback-return": [
             "error",
@@ -47,7 +53,31 @@
             "error",
             "always"
         ],
+        "capitalized-comments": [
+            "error",
+            "always",
+            {
+                "block": {
+                    "ignoreConsecutiveComments": true
+                }
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            "always"
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "after": true,
+                "before": true
+            }
+        ],
         "complexity": "off",
+        "computed-property-spacing": [
+            "error",
+            "always"
+        ],
         "consistent-return": [
             "error",
             {
@@ -58,31 +88,81 @@
             "error",
             "property"
         ],
+        "func-names": [
+            "error",
+            "as-needed",
+            {
+                "generators": "as-needed"
+            }
+        ],
+        "function-paren-newline": [
+            "error",
+            {
+                "minItems": 1
+            }
+        ],
         "grouped-accessor-pairs": [
             "error",
             "getBeforeSet"
         ],
+        "id-length": "off",
         "indent": [
             "error",
-            "tab"
+            "tab",
+            {
+                "ArrayExpression": "first",
+                "CallExpression": {
+                    "arguments": "first"
+                },
+                "FunctionDeclaration": {
+                    "parameters": "first"
+                },
+                "FunctionExpression": {
+                    "parameters": "first"
+                },
+                "ImportDeclaration": "first",
+                "ObjectExpression": "first",
+                "VariableDeclarator": "first",
+                "offsetTernaryExpressions": true
+            }
+        ],
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
         ],
         "key-spacing": [
             "error",
             {
-                "align": {
-                    "beforeColon": true,
-                    "mode": "minimum",
-                    "on": "colon"
-                },
-                "multiLine": {
-                    "beforeColon": true
-                },
-                "singleLine": {
-                    "beforeColon": true
-                }
+                "align": "colon",
+                "beforeColon": true,
+                "mode": "minimum"
             }
         ],
+        "lines-around-comment": [
+            "error",
+            {
+                "beforeLineComment": true
+            }
+        ],
+        "max-depth": [
+            "error",
+            4
+        ],
+        "max-len": "off",
+        "max-lines": "off",
         "max-lines-per-function": "off",
+        "max-nested-callbacks": [
+            "error",
+            4
+        ],
+        "max-params": [
+            "error",
+            4
+        ],
+        "max-statements": [
+            "error",
+            4
+        ],
         "max-statements-per-line": [
             "error",
             {
