@@ -1,31 +1,33 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import type {
-	NextApiRequest ,
-	NextApiResponse ,
-} from "next";
+    NextApiRequest ,
+    NextApiResponse ,
+} from "next" ;
 
-const api = (
-	req: NextApiRequest ,
-	res: NextApiResponse ,
-): void => {
-	// eslint-disable-next-line no-magic-numbers
-	res.statusCode = 200;
-	res.json(
-		{
-			body        : JSON.stringify(
-				req.body ,
-			) ,
-			cookies     : req.cookies ,
-			env         : req.env ,
-			name        : "John Doe" ,
-			preview     : req.preview ,
-			previewData : JSON.stringify(
-				req.previewData ,
-			) ,
-			query : req.query ,
-		} ,
-	);
-};
+const api = function (
+    request: NextApiRequest ,
+    response: NextApiResponse ,
+): void {
 
-export default api;
+    // eslint-disable-next-line no-magic-numbers
+    response.statusCode = 200 ;
+
+    response.json (
+        {
+            "body" : JSON.stringify (
+                request.body ,
+            ) ,
+            "cookies"     : request.cookies ,
+            "env"         : request.env ,
+            "preview"     : request.preview ,
+            "previewData" : JSON.stringify (
+                request.previewData ,
+            ) ,
+            "query" : request.query ,
+        } ,
+    ) ;
+
+} ;
+
+export default api ;

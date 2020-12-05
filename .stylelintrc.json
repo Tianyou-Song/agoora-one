@@ -1,0 +1,15 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-rational-order",
+		"stylelint-config-sass-guidelines"
+	],
+	"plugins": [
+		"stylelint-config-rational-order/plugin",
+		"stylelint-order",
+		"stylelint-scss"
+	],
+	"rules": {
+		"order/properties-alphabetical-order": null
+	}
+}

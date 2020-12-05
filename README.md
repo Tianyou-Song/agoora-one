@@ -1,11 +1,9 @@
 # Agoora One
 ## Setup
 ### Node Version
-Please use node `12`.\
-Currently, the highest node version working with this project is version 12.\
-postcss is a dependency, and it expects version version `^10 || ^12 || >=14`.\
-However, Sequelize currently does not work on version `>= 14`.\
-Version subject to be upgraded if both of these problems are taken care of.
+Please use node `^12`.\
+Currently, Sequelize currently does not work on node `>= 14`.\
+Version subject to be upgraded after that's fixed.
 
 ### Package Manager
 
@@ -45,11 +43,9 @@ To stop the dev server, press `CTRL+C`.
 
 ## Code Style
 In order to enforce consistency, code style for this project is designed to be as restrictive as possible. 
-It uses `eslint:all` as well as the 
-[Airbnb style guide](https://github.com/airbnb/javascript). 
 Some notable exceptions from common practices:
 
-- tab indentations
+- 4 space indentations
 - prefer double quotes
 - always use braces around the function body
 - keys and values are aligned, on the colon, wth at least one space before and after the colon
