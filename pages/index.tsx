@@ -11,7 +11,7 @@ import React from "react" ;
 
 import styles from "../styles/Home.module.scss" ;
 
-const Home: NextPage = function () {
+const Home: NextPage = function Home () {
 
     return (
         <div className={styles.container}>

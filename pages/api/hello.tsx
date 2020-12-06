@@ -5,7 +5,7 @@ import type {
     NextApiResponse ,
 } from "next" ;
 
-const api = function (
+const api = function api (
     request: NextApiRequest ,
     response: NextApiResponse ,
 ): void {
@@ -13,15 +13,15 @@ const api = function (
     // eslint-disable-next-line no-magic-numbers
     response.statusCode = 200 ;
 
-    response.json (
+    response.json(
         {
-            "body" : JSON.stringify (
+            "body" : JSON.stringify(
                 request.body ,
             ) ,
             "cookies"     : request.cookies ,
             "env"         : request.env ,
             "preview"     : request.preview ,
-            "previewData" : JSON.stringify (
+            "previewData" : JSON.stringify(
                 request.previewData ,
             ) ,
             "query" : request.query ,

@@ -6,7 +6,7 @@ import type {
 
 import React from "react" ;
 
-const MyApp = function (
+const MyApp = function MyApp (
     {
         Component ,
         pageProps ,

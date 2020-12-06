@@ -1,3 +1,4 @@
+/* eslint-disable init-declarations */
 /* eslint-disable unicorn/filename-case */
 export const card: string ,
              code: string ,
