@@ -186,6 +186,9 @@
                 "allowSingleLine": false
             }
         ],
+        "callback-return": [
+            "off"
+        ],
         "camelcase": [
             "error",
             {
@@ -363,12 +366,21 @@
                 "allowImplicit": false
             }
         ],
+        "global-require": [
+            "off"
+        ],
         "grouped-accessor-pairs": [
             "error",
             "getBeforeSet"
         ],
         "guard-for-in": [
             "error"
+        ],
+        "handle-callback-err": [
+            "off"
+        ],
+        "id-blacklist": [
+            "off"
         ],
         "id-denylist": [
             "error"
@@ -420,6 +432,9 @@
                 "offsetTernaryExpressions": true,
                 "outerIIFEBody": 1
             }
+        ],
+        "indent-legacy": [
+            "off"
         ],
         "init-declarations": [
             "error",
@@ -474,6 +489,9 @@
                 "beforeLineComment": true,
                 "ignorePattern": "a^"
             }
+        ],
+        "lines-around-directive": [
+            "off"
         ],
         "lines-between-class-members": [
             "error",
@@ -564,6 +582,12 @@
             "error",
             "always"
         ],
+        "newline-after-var": [
+            "off"
+        ],
+        "newline-before-return": [
+            "off"
+        ],
         "newline-per-chained-call": [
             "error",
             {
@@ -588,11 +612,17 @@
                 "allow": []
             }
         ],
+        "no-buffer-constructor": [
+            "off"
+        ],
         "no-caller": [
             "error"
         ],
         "no-case-declarations": [
             "error"
+        ],
+        "no-catch-shadow": [
+            "off"
         ],
         "no-compare-neg-zero": [
             "error"
@@ -835,6 +865,9 @@
                 "groups": []
             }
         ],
+        "no-mixed-requires": [
+            "off"
+        ],
         "no-mixed-spaces-and-tabs": [
             "error"
         ],
@@ -864,8 +897,14 @@
                 "maxEOF": 1
             }
         ],
+        "no-native-reassign": [
+            "off"
+        ],
         "no-negated-condition": [
             "error"
+        ],
+        "no-negated-in-lhs": [
+            "off"
         ],
         "no-nested-ternary": [
             "error"
@@ -878,6 +917,9 @@
         ],
         "no-new-object": [
             "error"
+        ],
+        "no-new-require": [
+            "off"
         ],
         "no-new-wrappers": [
             "error"
@@ -900,11 +942,20 @@
                 "props": false
             }
         ],
+        "no-path-concat": [
+            "off"
+        ],
         "no-plusplus": [
             "error",
             {
                 "allowForLoopAfterthoughts": false
             }
+        ],
+        "no-process-env": [
+            "off"
+        ],
+        "no-process-exit": [
+            "off"
         ],
         "no-promise-executor-return": [
             "error"
@@ -926,6 +977,9 @@
         ],
         "no-restricted-globals": [
             "error"
+        ],
+        "no-restricted-modules": [
+            "off"
         ],
         "no-restricted-properties": [
             "error"
@@ -977,6 +1031,9 @@
         ],
         "no-sparse-arrays": [
             "error"
+        ],
+        "no-sync": [
+            "off"
         ],
         "no-tabs": [
             "error",
@@ -1243,6 +1300,9 @@
                 "allowEmptyReject": false
             }
         ],
+        "prefer-reflect": [
+            "off"
+        ],
         "prefer-regex-literals": [
             "error",
             {
@@ -1303,6 +1363,9 @@
         ],
         "require-await": [
             "error"
+        ],
+        "require-jsdoc": [
+            "off"
         ],
         "require-unicode-regexp": [
             "error"
@@ -1388,22 +1451,22 @@
             "error",
             {
                 "nonwords": true,
-                "words": true,
-                "overrides": {}
+                "overrides": {},
+                "words": true
             }
         ],
         "spaced-comment": [
             "error",
             "always",
             {
-                "line": {
-                    "markers": [],
-                    "exceptions": []
-                },
                 "block": {
-                    "markers": [],
+                    "balanced": true,
                     "exceptions": [],
-                    "balanced": true
+                    "markers": []
+                },
+                "line": {
+                    "exceptions": [],
+                    "markers": []
                 }
             }
         ],
@@ -1623,6 +1686,9 @@
                 "enforceForIndexOf": true,
                 "enforceForSwitchCase": true
             }
+        ],
+        "valid-jsdoc": [
+            "off"
         ],
         "valid-typeof": [
             "error",
