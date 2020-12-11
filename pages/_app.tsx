@@ -1,22 +1,23 @@
 import "../styles/globals.scss" ;
 
 import type {
-    AppProps ,
+	AppProps ,
 } from "next/dist/next-server/lib/router/router" ;
 
 import React from "react" ;
 
-const MyApp = function MyApp (
-    {
-        Component ,
-        pageProps ,
-    }: AppProps ,
+const myApp = (
+	{
+		// eslint-disable-next-line @typescript-eslint/naming-convention
+		Component ,
+		pageProps ,
+	}: AppProps ,
 // eslint-disable-next-line no-undef
-): JSX.Element {
+): JSX.Element => {
 
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    return <Component {...pageProps} /> ;
+	// eslint-disable-next-line react/jsx-props-no-spreading
+	return <Component {...pageProps} /> ;
 
 } ;
 
-export default MyApp ;
+export default myApp ;

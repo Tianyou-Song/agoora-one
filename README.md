@@ -45,7 +45,7 @@ To stop the dev server, press `CTRL+C`.
 In order to enforce consistency, code style for this project is designed to be as restrictive as possible. 
 Some notable exceptions from common practices:
 
-- 4 space indentations
+- tab indentations
 - prefer double quotes
 - always use braces around the function body
 - keys and values are aligned, on the colon, wth at least one space before and after the colon
