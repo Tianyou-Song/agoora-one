@@ -17,7 +17,11 @@ const myApp = (
 	} : AppProps ,
 ) : JSX.Element => {
 
-	return <Component {...pageProps} /> ;
+	return (
+		< Component
+			{ ...pageProps }
+		/>
+	) ;
 
 } ;
 
