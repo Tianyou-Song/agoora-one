@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable react/jsx-no-literals */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
