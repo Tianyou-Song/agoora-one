@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-readonly-parameter-types */
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import type {
@@ -6,11 +7,11 @@ import type {
 } from "next" ;
 
 const api = function api (
-	request: NextApiRequest ,
-	response: NextApiResponse ,
-): void {
+	request : NextApiRequest ,
+	response : NextApiResponse ,
+) : void {
 
-	// eslint-disable-next-line no-magic-numbers
+	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 	response.statusCode = 200 ;
 
 	response.json(

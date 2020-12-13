@@ -9,7 +9,7 @@ import React from "react" ;
 import styles from "../styles/Home.module.scss" ;
 
 // eslint-disable-next-line no-undef
-const home =  (): JSX.Element => {
+const home =  () : JSX.Element => {
 
 	return (
 		<div className={styles.container}>

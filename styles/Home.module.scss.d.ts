@@ -1,11 +1,11 @@
-/* eslint-disable init-declarations */
+/* eslint-disable @typescript-eslint/init-declarations */
 export const
-	card: string ,
-	code: string ,
-	container: string ,
-	description: string ,
-	footer: string ,
-	grid: string ,
-	logo: string ,
-	main: string ,
-	title: string ;
+	card : string ,
+	code : string ,
+	container : string ,
+	description : string ,
+	footer : string ,
+	grid : string ,
+	logo : string ,
+	main : string ,
+	title : string ;

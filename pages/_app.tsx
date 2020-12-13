@@ -1,3 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @typescript-eslint/prefer-readonly-parameter-types */
 import "../styles/globals.scss" ;
 
 import type {
@@ -8,14 +12,11 @@ import React from "react" ;
 
 const myApp = (
 	{
-		// eslint-disable-next-line @typescript-eslint/naming-convention
 		Component ,
 		pageProps ,
-	}: AppProps ,
-// eslint-disable-next-line no-undef
-): JSX.Element => {
+	} : AppProps ,
+) : JSX.Element => {
 
-	// eslint-disable-next-line react/jsx-props-no-spreading
 	return <Component {...pageProps} /> ;
 
 } ;
