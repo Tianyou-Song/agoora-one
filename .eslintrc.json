@@ -7,6 +7,8 @@
 	"extends": [
 		"eslint:all",
 		"plugin:@typescript-eslint/all",
+		"plugin:jsx-a11y/strict",
+		"plugin:react-hooks/recommended",
 		"plugin:react/all"
 	],
 	"overrides": [
@@ -33,7 +35,10 @@
 	},
 	"plugins": [
 		"@typescript-eslint",
-		"react"
+		"jsx-a11y",
+		"react",
+		"react-hooks",
+		"woke"
 	],
 	"rules": {
 		"@typescript-eslint/adjacent-overload-signatures": [
@@ -2678,6 +2683,35 @@
 				"exceptRange": true,
 				"onlyEquality": false
 			}
+		],
+		"woke/all": [
+			"error"
 		]
+	},
+	"settings": {
+		"linkComponents": [
+			"Hyperlink",
+			{
+				"linkAttribute": "to",
+				"name": "Link"
+			}
+		],
+		"propWrapperFunctions": [
+			"forbidExtraProps",
+			{
+				"object": "Object",
+				"property": "freeze"
+			},
+			{
+				"property": "myFavoriteWrapper"
+			}
+		],
+		"react": {
+			"createClass": "createReactClass",
+			"flowVersion": "0.53",
+			"fragment": "Fragment",
+			"pragma": "React",
+			"version": "detect"
+		}
 	}
 }

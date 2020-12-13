@@ -10,7 +10,7 @@ import type {
 
 import React from "react" ;
 
-const myApp = (
+const fuck = (
 	{
 		Component ,
 		pageProps ,
@@ -25,4 +25,4 @@ const myApp = (
 
 } ;
 
-export default myApp ;
+export default fuck ;
