@@ -48,8 +48,7 @@
 		"react",
 		"react-hooks",
 		"sonarjs",
-		"unicorn",
-		"woke"
+		"unicorn"
 	],
 	"rules": {
 		"@typescript-eslint/adjacent-overload-signatures": [
@@ -3039,9 +3038,6 @@
 			}
 		],
 		"vars-on-top": [
-			"error"
-		],
-		"woke/all": [
 			"error"
 		],
 		"wrap-iife": [
