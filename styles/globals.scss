@@ -56,16 +56,13 @@
 	@include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
 }
 
-* {
+*,
+.--sans-serif {
 	font-family: $sansSerif, sans-serif;
 }
 
 .--monospace {
 	font-family: $monospace, monospace;
-}
-
-.--sans {
-	font-family: $sansSerif, sans-serif;
 }
 
 .--serif {

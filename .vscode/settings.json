@@ -1,6 +1,7 @@
 {
 	"cSpell.words": [
 		"accentize",
+		"activedescendant",
 		"agoora",
 		"backreference",
 		"bitstream",
@@ -40,6 +41,7 @@
 		"singleline",
 		"sonarjs",
 		"stylelint",
+		"tabindex",
 		"tagless",
 		"textnodes",
 		"thenable",
