@@ -1,12 +1,9 @@
-/* eslint-disable unicorn/filename-case */
-/* eslint-disable @typescript-eslint/init-declarations */
-export const
-	card : string ,
-	code : string ,
-	container : string ,
-	description : string ,
-	footer : string ,
-	grid : string ,
-	logo : string ,
-	main : string ,
-	title : string ;
+export const card: string;
+export const code: string;
+export const container: string;
+export const description: string;
+export const footer: string;
+export const grid: string;
+export const logo: string;
+export const main: string;
+export const title: string;

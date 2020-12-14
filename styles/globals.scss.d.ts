@@ -1,4 +1,2 @@
-/* eslint-disable @typescript-eslint/init-declarations */
-export const
-	dark : string ,
-	light : string ;
+export const dark: string;
+export const light: string;

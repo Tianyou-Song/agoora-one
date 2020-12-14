@@ -21,6 +21,7 @@
 		"isnan",
 		"linebreak",
 		"madrun",
+		"mischeck",
 		"mixins",
 		"multiline",
 		"multilines",

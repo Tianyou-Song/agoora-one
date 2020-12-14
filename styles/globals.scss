@@ -1,29 +1,30 @@
-// TODO import constants from json, or maybe style in js using constants from db
-
 @import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
 @import url('https://fonts.googleapis.com/css?family=Castoro');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import '../constant.json';
 
 $font-family-mono: 'Fira Code', monospace;
 $font-family-sans: 'Roboto', sans-serif;
 $font-family-serif: 'Castoro', serif;
 
-$base00: #657b83;
-$base01: #586e75;
-$base02: #073642;
-$base03: #002b36;
-$base0: #839496;
-$base1: #93a1a1;
-$base2: #eee8d5;
-$base3: #fdf6e3;
-$blue: #268bd2;
-$cyan: #2aa198;
-$green: #859900;
-$magenta: #d33682;
-$orange: #cb4b16;
-$red: #dc322f;
-$violet: #6c71c4;
-$yellow: #b58900;
+$color: map-get($style, 'color');
+
+$base00: map-get($color, 'base00');
+$base01: map-get($color, 'base01');
+$base02: map-get($color, 'base02');
+$base03: map-get($color, 'base03');
+$base0: map-get($color, 'base0');
+$base1: map-get($color, 'base1');
+$base2: map-get($color, 'base2');
+$base3: map-get($color, 'base3');
+$blue: map-get($color, 'blue');
+$cyan: map-get($color, 'cyan');
+$green: map-get($color, 'green');
+$magenta: map-get($color, 'magenta');
+$orange: map-get($color, 'orange');
+$red: map-get($color, 'red');
+$violet: map-get($color, 'violet');
+$yellow: map-get($color, 'yellow');
 
 @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
 	color: $rebase0;

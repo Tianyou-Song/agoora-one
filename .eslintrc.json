@@ -2,7 +2,6 @@
 	"env": {
 		"browser": true,
 		"es2021": true,
-		"es6": true,
 		"node": true
 	},
 	"extends": [
@@ -33,8 +32,15 @@
 			"jsx": true
 		},
 		"ecmaVersion": 12,
+		"extraFileExtensions": [],
+		"jsxFragmentName": "",
+		"jsxPragma": "",
+		"lib": [],
 		"project": "./tsconfig.json",
-		"sourceType": "module"
+		"projectFolderIgnoreList": [],
+		"sourceType": "module",
+		"tsconfigRootDir": "",
+		"warnOnUnsupportedTypeScriptVersion": true
 	},
 	"plugins": [
 		"@typescript-eslint",
@@ -1438,7 +1444,7 @@
 			"error"
 		],
 		"no-extra-boolean-cast": [
-			"error",
+			"off",
 			{
 				"enforceForLogicalOperands": true
 			}
@@ -1585,7 +1591,7 @@
 			"off"
 		],
 		"no-nested-ternary": [
-			"error"
+			"off"
 		],
 		"no-new": [
 			"error"
@@ -2724,13 +2730,22 @@
 			"never"
 		],
 		"unicorn/better-regex": [
-			"error"
+			"error",
+			{
+				"sortCharacterClasses": true
+			}
 		],
 		"unicorn/catch-error-name": [
-			"error"
+			"error",
+			{
+				"name": "error"
+			}
 		],
 		"unicorn/consistent-function-scoping": [
-			"error"
+			"error",
+			{
+				"checkArrowFunctions": true
+			}
 		],
 		"unicorn/custom-error-definition": [
 			"error"
@@ -2742,19 +2757,69 @@
 			"error"
 		],
 		"unicorn/expiring-todo-comments": [
-			"error"
+			"error",
+			{
+				"allowWarningComments": true,
+				"ignoreDatesOnPullRequests": true,
+				"terms": [
+					"fixme",
+					"todo",
+					"xxx"
+				]
+			}
 		],
 		"unicorn/explicit-length-check": [
-			"error"
+			"error",
+			{
+				"non-zero": "not-equal"
+			}
 		],
 		"unicorn/filename-case": [
-			"error"
+			"error",
+			{
+				"cases": {
+					"camelCase": false,
+					"kebabCase": false,
+					"pascalCase": false,
+					"snakeCase": true
+				}
+			}
 		],
 		"unicorn/import-index": [
-			"error"
+			"error",
+			{
+				"ignoreImports": false
+			}
 		],
 		"unicorn/import-style": [
-			"error"
+			"error",
+			{
+				"checkDynamicImport": true,
+				"checkExportFrom": true,
+				"checkImport": true,
+				"checkRequire": true,
+				"extendDefaultStyles": false,
+				"styles": {
+					"chalk": {
+						"default": true,
+						"named": false,
+						"namespace": false,
+						"unassigned": false
+					},
+					"path": {
+						"default": true,
+						"named": false,
+						"namespace": false,
+						"unassigned": false
+					},
+					"util": {
+						"default": false,
+						"named": true,
+						"namespace": false,
+						"unassigned": false
+					}
+				}
+			}
 		],
 		"unicorn/new-for-builtins": [
 			"error"
@@ -2778,16 +2843,30 @@
 			"error"
 		],
 		"unicorn/no-keyword-prefix": [
-			"error"
+			"error",
+			{
+				"blacklist": [
+					"new",
+					"for"
+				],
+				"checkProperties": true,
+				"onlyCamelCase": true
+			}
 		],
 		"unicorn/no-nested-ternary": [
-			"error"
+			"error",
+			{
+				"checkStrictEquality": true
+			}
 		],
 		"unicorn/no-new-buffer": [
 			"error"
 		],
 		"unicorn/no-null": [
-			"error"
+			"error",
+			{
+				"checkStrictEquality": true
+			}
 		],
 		"unicorn/no-object-as-default-parameter": [
 			"error"
@@ -2830,6 +2909,9 @@
 		],
 		"unicorn/prefer-event-key": [
 			"error"
+		],
+		"unicorn/prefer-exponentiation-operator": [
+			"off"
 		],
 		"unicorn/prefer-flat-map": [
 			"error"
@@ -2894,17 +2976,14 @@
 		"unicorn/prevent-abbreviations": [
 			"error"
 		],
+		"unicorn/regex-shorthand": [
+			"off"
+		],
 		"unicorn/string-content": [
 			"error"
 		],
 		"unicorn/throw-new-error": [
 			"error"
-		],
-		"unicorn/prefer-exponentiation-operator": [
-			"off"
-		],
-		"unicorn/regex-shorthand": [
-			"off"
 		],
 		"use-isnan": [
 			"error",
