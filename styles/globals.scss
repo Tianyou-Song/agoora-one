@@ -1,30 +1,8 @@
 @import url('https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css');
 @import url('https://fonts.googleapis.com/css?family=Castoro');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import '../constant.json';
-
-$font-family-mono: 'Fira Code', monospace;
-$font-family-sans: 'Roboto', sans-serif;
-$font-family-serif: 'Castoro', serif;
-
-$color: map-get($style, 'color');
-
-$base00: map-get($color, 'base00');
-$base01: map-get($color, 'base01');
-$base02: map-get($color, 'base02');
-$base03: map-get($color, 'base03');
-$base0: map-get($color, 'base0');
-$base1: map-get($color, 'base1');
-$base2: map-get($color, 'base2');
-$base3: map-get($color, 'base3');
-$blue: map-get($color, 'blue');
-$cyan: map-get($color, 'cyan');
-$green: map-get($color, 'green');
-$magenta: map-get($color, 'magenta');
-$orange: map-get($color, 'orange');
-$red: map-get($color, 'red');
-$violet: map-get($color, 'violet');
-$yellow: map-get($color, 'yellow');
+@import '../constant/style/color.json';
+@import '../constant/style/font-family.json';
 
 @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) {
 	color: $rebase0;
@@ -70,14 +48,26 @@ $yellow: map-get($color, 'yellow');
 }
 
 *,
-.dark {
+.--dark {
 	@include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3);
 }
 
-.light {
+.--light {
 	@include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
 }
 
 * {
-	font-family: $font-family-sans;
+	font-family: $sansSerif, sans-serif;
+}
+
+.--monospace {
+	font-family: $monospace, monospace;
+}
+
+.--sans {
+	font-family: $sansSerif, sans-serif;
+}
+
+.--serif {
+	font-family: $serif, serif;
 }

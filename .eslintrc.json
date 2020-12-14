@@ -128,7 +128,7 @@
 		],
 		"@typescript-eslint/consistent-type-definitions": [
 			"error",
-			"type"
+			"interface"
 		],
 		"@typescript-eslint/consistent-type-imports": [
 			"error",
@@ -429,7 +429,10 @@
 					"UPPER_CASE"
 				],
 				"leadingUnderscore": "allow",
-				"selector": "variable",
+				"selector": [
+					"memberLike",
+					"variableLike"
+				],
 				"trailingUnderscore": "allow"
 			},
 			{
@@ -1149,7 +1152,7 @@
 		"id-length": [
 			"error",
 			{
-				"max": 16,
+				"max": 32,
 				"min": 1,
 				"properties": "always"
 			}
@@ -1562,7 +1565,7 @@
 			"error",
 			{
 				"exceptions": {
-					"BinaryExpression": false,
+					"BinaryExpression": true,
 					"ImportDeclaration": true,
 					"Property": true,
 					"VariableDeclarator": true
@@ -2028,7 +2031,7 @@
 		],
 		"quote-props": [
 			"error",
-			"always",
+			"as-needed",
 			{
 				"keywords": true,
 				"numbers": true,
@@ -2779,9 +2782,9 @@
 			{
 				"cases": {
 					"camelCase": false,
-					"kebabCase": false,
+					"kebabCase": true,
 					"pascalCase": false,
-					"snakeCase": true
+					"snakeCase": false
 				}
 			}
 		],
@@ -2865,7 +2868,7 @@
 		"unicorn/no-null": [
 			"error",
 			{
-				"checkStrictEquality": true
+				"checkStrictEquality": false
 			}
 		],
 		"unicorn/no-object-as-default-parameter": [
@@ -2887,7 +2890,10 @@
 			"error"
 		],
 		"unicorn/no-useless-undefined": [
-			"error"
+			"error",
+			{
+				"checkArguments": true
+			}
 		],
 		"unicorn/no-zero-fractions": [
 			"error"
@@ -2896,7 +2902,25 @@
 			"error"
 		],
 		"unicorn/numeric-separators-style": [
-			"error"
+			"error",
+			{
+				"binary": {
+					"groupLength": 4,
+					"minimumDigits": 0
+				},
+				"hexadecimal": {
+					"groupLength": 2,
+					"minimumDigits": 0
+				},
+				"number": {
+					"groupLength": 3,
+					"minimumDigits": 0
+				},
+				"octal": {
+					"groupLength": 4,
+					"minimumDigits": 0
+				}
+			}
 		],
 		"unicorn/prefer-add-event-listener": [
 			"error"
@@ -2935,7 +2959,10 @@
 			"error"
 		],
 		"unicorn/prefer-number-properties": [
-			"error"
+			"error",
+			{
+				"checkInfinity": true
+			}
 		],
 		"unicorn/prefer-optional-catch-binding": [
 			"error"
@@ -2974,7 +3001,17 @@
 			"error"
 		],
 		"unicorn/prevent-abbreviations": [
-			"error"
+			"error",
+			{
+				"checkDefaultAndNamespaceImports": true,
+				"checkFilenames": true,
+				"checkProperties": true,
+				"checkShorthandImports": true,
+				"checkShorthandProperties": true,
+				"checkVariables": true,
+				"extendDefaultReplacements": true,
+				"extendDefaultWhitelist": true
+			}
 		],
 		"unicorn/regex-shorthand": [
 			"off"

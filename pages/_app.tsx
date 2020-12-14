@@ -5,7 +5,7 @@
 import "../styles/globals.scss" ;
 
 import type {
-	AppProps ,
+	AppProps as AppProperties ,
 } from "next/dist/next-server/lib/router/router" ;
 
 import React from "react" ;
@@ -13,13 +13,13 @@ import React from "react" ;
 const myApp = (
 	{
 		Component ,
-		pageProps ,
-	} : AppProps ,
+		pageProps : pageProperties ,
+	} : AppProperties ,
 ) : JSX.Element => {
 
 	return (
 		< Component
-			{ ...pageProps }
+			{ ...pageProperties }
 		/>
 	) ;
 

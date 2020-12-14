@@ -6,28 +6,72 @@ import type {
 	NextApiResponse ,
 } from "next" ;
 
+import {
+	StatusCodes ,
+} from "http-status-codes" ;
+
 const api = function api (
 	request : NextApiRequest ,
 	response : NextApiResponse ,
 ) : void {
 
-	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
-	response.statusCode = 200 ;
+	try {
 
-	response.json(
-		{
-			"body" : JSON.stringify(
-				request.body ,
-			) ,
-			"cookies"     : request.cookies ,
-			"env"         : request.env ,
-			"preview"     : request.preview ,
-			"previewData" : JSON.stringify(
-				request.previewData ,
-			) ,
-			"query" : request.query ,
-		} ,
-	) ;
+		const {
+			OK ,
+		} : {
+			OK : number;
+		} = StatusCodes ;
+
+		response.statusCode = OK ;
+
+		response.json(
+			{
+				"body"        : JSON.stringify(
+					request.body ,
+				) ,
+				"cookies"     : request.cookies ,
+				"env"         : request.env ,
+				"preview"     : request.preview ,
+				"previewData" : JSON.stringify(
+					request.previewData ,
+				) ,
+				"query"       : request.query ,
+			} ,
+		) ;
+
+	} catch ( error : unknown ) {
+
+		const {
+			INTERNAL_SERVER_ERROR ,
+		} : {
+			INTERNAL_SERVER_ERROR : number;
+		} = StatusCodes ;
+
+		response.statusCode = INTERNAL_SERVER_ERROR ;
+
+		if (
+			typeof error === "object"
+			&& error !== null
+			&& Boolean(
+				Object.prototype.hasOwnProperty.call(
+					error ,
+					"message" ,
+				) ,
+			)
+		) {
+
+			const errorWithMessage : {message : string;} = error as {message : string;} ;
+
+			response.json(
+				JSON.stringify(
+					errorWithMessage.message ,
+				) ,
+			) ;
+
+		}
+
+	}
 
 } ;
 
