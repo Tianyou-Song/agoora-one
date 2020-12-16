@@ -32,8 +32,7 @@ const home =  () : JSX.Element => {
 				< h1
 					className = { styles.title }
 				>
-					{ "Welcome to" }
-					{ " " }
+					{ "Welcome to " }
 					< a
 						href = { "https://nextjs.org" }
 					>
@@ -44,8 +43,7 @@ const home =  () : JSX.Element => {
 				< p
 					className = { styles.description }
 				>
-					{ "Get started by editing" }
-					{ " " }
+					{ "Get started by editing " }
 					< code
 						className = { styles.code }
 					>
@@ -143,8 +141,7 @@ const home =  () : JSX.Element => {
 					rel = { "noopener noreferrer" }
 					target = { "_blank" }
 				>
-					{ "Powered by" }
-					{ " " }
+					{ "Powered by " }
 					< img
 						alt = { "Vercel Logo" }
 						className = { styles.logo }
