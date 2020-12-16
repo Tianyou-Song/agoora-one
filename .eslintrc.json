@@ -709,6 +709,9 @@
 		"@typescript-eslint/no-var-requires": [
 			"error"
 		],
+		"@typescript-eslint/non-nullable-type-assertion-style": [
+			"error"
+		],
 		"@typescript-eslint/prefer-as-const": [
 			"error"
 		],
@@ -1185,6 +1188,9 @@
 			"error"
 		],
 		"jsx-a11y/aria-activedescendant-has-tabindex": [
+			"error"
+		],
+		"jsx-a11y/aria-props": [
 			"error"
 		],
 		"jsx-quotes": [
