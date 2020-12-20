@@ -2,11 +2,6 @@
 @import '../constants/styles/font-family.json';
 
 @font-face {
-	font-family: 'Noto Mono';
-	src: url('../public/fonts/Noto-hinted/NotoMono-Regular.ttf') format('truetype');
-}
-
-@font-face {
 	font-weight: 900;
 	font-family: 'Noto Sans';
 	font-style: normal;
@@ -1159,9 +1154,13 @@
 }
 
 @font-face {
+	font-family: 'Noto Mono';
+	src: url('../public/fonts/Noto-hinted/NotoMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
 	font-weight: 300 700;
 	font-family: 'Fira Code';
-	font-style: normal;
 	src:
 		url('../public/fonts/Fira_Code_v5.2/woff2/FiraCode-VF.woff2') format('woff2-variations'),
 		url('../public/fonts/Fira_Code_v5.2/woff/FiraCode-VF.woff') format('woff-variations');

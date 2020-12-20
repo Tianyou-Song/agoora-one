@@ -10,18 +10,22 @@ import {
 	StatusCodes ,
 } from "http-status-codes" ;
 
-const api = function api (
+const
+
+	{
+		INTERNAL_SERVER_ERROR ,
+		OK ,
+	} : {
+		INTERNAL_SERVER_ERROR : number;
+		OK : number;
+	} = StatusCodes ;
+
+const api = (
 	request : NextApiRequest ,
 	response : NextApiResponse ,
-) : void {
+) : void => {
 
 	try {
-
-		const {
-			OK ,
-		} : {
-			OK : number;
-		} = StatusCodes ;
 
 		response.statusCode = OK ;
 
@@ -42,30 +46,23 @@ const api = function api (
 
 	} catch ( error : unknown ) {
 
-		const {
-			INTERNAL_SERVER_ERROR ,
-		} : {
-			INTERNAL_SERVER_ERROR : number;
-		} = StatusCodes ;
-
 		response.statusCode = INTERNAL_SERVER_ERROR ;
 
 		if (
-			typeof error === "object"
-			&& error !== null
-			&& Boolean(
-				Object.prototype.hasOwnProperty.call(
-					error ,
-					"message" ,
-				) ,
-			)
+			error instanceof Error
 		) {
-
-			const errorWithMessage : {message : string;} = error as {message : string;} ;
 
 			response.json(
 				JSON.stringify(
-					errorWithMessage.message ,
+					error.message ,
+				) ,
+			) ;
+
+		} else {
+
+			response.json(
+				JSON.stringify(
+					error ,
 				) ,
 			) ;
 

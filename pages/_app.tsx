@@ -1,28 +1,48 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable no-undef */
-/* eslint-disable @typescript-eslint/naming-convention */
-/* eslint-disable @typescript-eslint/prefer-readonly-parameter-types */
-import "../styles/globals.scss" ;
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import React from "react" ;
 
 import type {
 	AppProps as AppProperties ,
-} from "next/dist/next-server/lib/router/router" ;
+} from "next/app" ;
 
-import React from "react" ;
+import type {
+	ApolloClient ,
+	NormalizedCacheObject ,
+} from "@apollo/client" ;
 
-const myApp = (
+import {
+	ApolloProvider ,
+} from "@apollo/client" ;
+
+import {
+	useApollo ,
+} from "../lib/apollo" ;
+
+const App = (
+	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	{
 		Component ,
 		pageProps : pageProperties ,
-	} : AppProperties ,
+	} : Readonly<AppProperties> ,
 ) : JSX.Element => {
 
+	const apolloClient : ApolloClient<NormalizedCacheObject> = useApollo(
+		pageProperties.initialApolloState ,
+	) ;
+
 	return (
-		< Component
-			{ ...pageProperties }
-		/>
+		< ApolloProvider
+			client = {
+				apolloClient
+			}
+		>
+			< Component
+				// eslint-disable-next-line react/jsx-props-no-spreading
+				{ ...pageProperties }
+			/>
+		</ ApolloProvider >
 	) ;
 
 } ;
 
-export default myApp ;
+export default App ;

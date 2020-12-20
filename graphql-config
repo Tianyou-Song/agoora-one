@@ -1,0 +1,10 @@
+graphql.config.json
+graphql.config.js
+graphql.config.yaml
+graphql.config.yml
+.graphqlrc (YAML or JSON)
+.graphqlrc.json
+.graphqlrc.yaml
+.graphqlrc.yml
+.graphqlrc.js
+graphql property in package.json

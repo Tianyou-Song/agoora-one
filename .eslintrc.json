@@ -13,6 +13,12 @@
 		"plugin:sonarjs/recommended",
 		"plugin:unicorn/recommended"
 	],
+	"globals": {
+		"JSX": "readonly",
+		"Readonly": "readonly",
+		"Record": "readonly",
+		"Required": "readonly"
+	},
 	"overrides": [
 		{
 			"files": [
@@ -22,7 +28,10 @@
 			"plugins": [
 				"@graphql-eslint"
 			],
-			"rules": {}
+			"rules": {
+				"eol-last": "error",
+				"prettier/prettier": "off"
+			}
 		}
 	],
 	"parser": "@typescript-eslint/parser",
@@ -44,11 +53,13 @@
 	},
 	"plugins": [
 		"@typescript-eslint",
+		"graphql",
 		"jsx-a11y",
 		"react",
 		"react-hooks",
 		"sonarjs",
-		"unicorn"
+		"unicorn",
+		"woke"
 	],
 	"rules": {
 		"@typescript-eslint/adjacent-overload-signatures": [
@@ -204,8 +215,7 @@
 			}
 		],
 		"@typescript-eslint/init-declarations": [
-			"error",
-			"always"
+			"off"
 		],
 		"@typescript-eslint/keyword-spacing": [
 			"error",
@@ -424,6 +434,7 @@
 			},
 			{
 				"format": [
+					"PascalCase",
 					"camelCase",
 					"UPPER_CASE"
 				],
@@ -595,7 +606,18 @@
 			"error"
 		],
 		"@typescript-eslint/no-parameter-properties": [
-			"error"
+			"error",
+			{
+				"allows": [
+					"private",
+					"private readonly",
+					"protected",
+					"protected readonly",
+					"public",
+					"public readonly",
+					"readonly"
+				]
+			}
 		],
 		"@typescript-eslint/no-redeclare": [
 			"error",
@@ -844,11 +866,11 @@
 				"allowAny": false,
 				"allowNullableBoolean": false,
 				"allowNullableNumber": false,
-				"allowNullableObject": false,
+				"allowNullableObject": true,
 				"allowNullableString": false,
-				"allowNumber": false,
+				"allowNumber": true,
 				"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
-				"allowString": false
+				"allowString": true
 			}
 		],
 		"@typescript-eslint/switch-exhaustiveness-check": [
@@ -1085,9 +1107,9 @@
 		],
 		"func-names": [
 			"error",
-			"always",
+			"as-needed",
 			{
-				"generators": "always"
+				"generators": "as-needed"
 			}
 		],
 		"func-style": [
@@ -1176,21 +1198,72 @@
 			"off"
 		],
 		"jsx-a11y/accessible-emoji": [
-			"off"
+			"error"
 		],
 		"jsx-a11y/alt-text": [
-			"error"
+			"error",
+			{
+				"area": [
+					"Area"
+				],
+				"elements": [
+					"img",
+					"object",
+					"area",
+					"input[type=\"image\"]"
+				],
+				"img": [
+					"Image"
+				],
+				"input[type=\"image\"]": [
+					"InputImage"
+				],
+				"object": [
+					"Object"
+				]
+			}
 		],
 		"jsx-a11y/anchor-has-content": [
-			"error"
+			"error",
+			{
+				"components": [
+					"Anchor"
+				]
+			}
 		],
 		"jsx-a11y/anchor-is-valid": [
-			"error"
+			"error",
+			{
+				"aspects": [
+					"noHref",
+					"invalidHref",
+					"preferButton"
+				],
+				"components": [
+					"Link"
+				],
+				"specialLink": [
+					"hrefLeft",
+					"hrefRight"
+				]
+			}
 		],
 		"jsx-a11y/aria-activedescendant-has-tabindex": [
 			"error"
 		],
 		"jsx-a11y/aria-props": [
+			"error"
+		],
+		"jsx-a11y/aria-proptypes": [
+			"error"
+		],
+		"jsx-a11y/aria-role": [
+			"error",
+			{
+				"ignoreNonDOM": false
+			}
+		],
+		"jsx-a11y/aria-unsupported-elements": [
 			"error"
 		],
 		"jsx-quotes": [
@@ -1278,7 +1351,7 @@
 			"error",
 			{
 				"IIFEs": true,
-				"max": 128,
+				"max": 256,
 				"skipBlankLines": true,
 				"skipComments": true
 			}
@@ -1467,7 +1540,7 @@
 			"error"
 		],
 		"no-extra-boolean-cast": [
-			"off",
+			"error",
 			{
 				"enforceForLogicalOperands": true
 			}
@@ -1948,7 +2021,7 @@
 		"one-var": [
 			"error",
 			{
-				"initialized": "consecutive",
+				"initialized": "never",
 				"uninitialized": "consecutive"
 			}
 		],
@@ -2148,7 +2221,7 @@
 			"error",
 			{
 				"multiline": "require",
-				"singleline": "forbid"
+				"singleline": "require"
 			}
 		],
 		"react/jsx-curly-spacing": [
@@ -2191,7 +2264,7 @@
 			"error",
 			"tab",
 			{
-				"checkAttributes": true,
+				"checkAttributes": false,
 				"indentLogicalExpressions": true
 			}
 		],
@@ -2773,6 +2846,9 @@
 		"unicorn/custom-error-definition": [
 			"error"
 		],
+		"unicorn/empty-brace-spaces": [
+			"error"
+		],
 		"unicorn/error-message": [
 			"error"
 		],
@@ -2876,6 +2952,9 @@
 				"onlyCamelCase": true
 			}
 		],
+		"unicorn/no-lonely-if": [
+			"error"
+		],
 		"unicorn/no-nested-ternary": [
 			"error",
 			{
@@ -2949,6 +3028,9 @@
 			"error"
 		],
 		"unicorn/prefer-dataset": [
+			"error"
+		],
+		"unicorn/prefer-date-now": [
 			"error"
 		],
 		"unicorn/prefer-event-key": [
@@ -3060,6 +3142,9 @@
 		],
 		"vars-on-top": [
 			"error"
+		],
+		"woke/all": [
+			"warn"
 		],
 		"wrap-iife": [
 			"error",

@@ -1,157 +1,219 @@
-/* eslint-disable sonarjs/no-duplicate-string */
-/* eslint-disable react/jsx-no-literals */
-/* eslint-disable max-lines-per-function */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import Link from "next/link" ;
 
-import Head from "next/head" ;
+import type {
+	Dispatch ,
+	SetStateAction ,
+} from "react" ;
 
-import React from "react" ;
+import type React from "react" ;
 
-import styles from "../styles/Home.module.scss" ;
+import {
+	useCallback ,
+	useState ,
+} from "react" ;
 
-// eslint-disable-next-line no-undef
-const home =  () : JSX.Element => {
+import {
+	ViewerDocument ,
+	useUpdateNameMutation ,
+	useViewerQuery ,
+} from "../lib/viewer.graphql" ;
+
+import {
+	initializeApollo ,
+} from "../lib/apollo" ;
+
+import type {
+	ApolloClient ,
+	NormalizedCacheObject ,
+} from "@apollo/client" ;
+
+const Index = () : JSX.Element => {
+
+	const {
+		viewer ,
+	} = useViewerQuery().data! ;
+
+	const [
+		nameState ,
+		setNameState ,
+	] : [
+		nameState : string ,
+		setNameState : Dispatch<SetStateAction<string>> ,
+	] = useState(
+		"" ,
+	) ;
+
+	const handleNameStateChange : (
+		// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+		nameChangeEvent : Readonly<React.ChangeEvent<HTMLInputElement>>
+	) => void = useCallback(
+		(
+			// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+			nameChangeEvent : Readonly<React.ChangeEvent<HTMLInputElement>> ,
+		) : void => {
+
+			setNameState(
+				nameChangeEvent.target.value ,
+			) ;
+
+		} ,
+		[
+			setNameState ,
+		] ,
+	) ;
+
+	const [
+		updateNameMutation ,
+	] = useUpdateNameMutation() ;
+
+	const handleNameChange : () => void = useCallback(
+		() : void => {
+
+			updateNameMutation(
+				{
+
+					/*
+					 * Follow apollo suggestion to update cache
+					 * https://www.apollographql.com/docs/angular/features/cache-updates/#update
+					 */
+
+					update : (
+						store ,
+						{
+							data: {
+								updateName: {
+									name ,
+								} ,
+							} ,
+						} ,
+					) => {
+
+						// Read the data from our cache for this query.
+						const {
+							viewer ,
+						} = store.readQuery(
+							{
+								query : ViewerDocument ,
+							} ,
+						) ;
+
+						const newViewer = {
+							...viewer ,
+						} ;
+
+						// Add our comment from the mutation to the end.
+						newViewer.name = name ;
+
+						// Write our data back to the cache.
+						store.writeQuery(
+							{
+								query : ViewerDocument ,
+								data  : {
+									viewer : newViewer ,
+								} ,
+							} ,
+						) ;
+
+					} ,
+
+					variables : {
+						name : nameState ,
+					} ,
+				} ,
+			) ;
+
+		} ,
+		[
+			nameState ,
+			updateNameMutation ,
+		] ,
+	) ;
 
 	return (
-		< div
-			className = { styles.container }
-		>
-			< Head >
-				< title >
-					{ "Create Next App" }
-				</ title >
-				< link
-					href = { "/favicon.ico" }
-					rel = { "icon" }
-				/>
-			</ Head >
-
-			< main
-				className = { styles.main }
+		< div >
+			{
+				"You're signed in as "
+			}
+			{
+				viewer.name
+			}
+			{
+				" and you're"
+			}
+			{
+				viewer.status
+			}
+			{
+				". Go to the "
+			}
+			< Link
+				href = {
+					"/about"
+				}
 			>
-				< h1
-					className = { styles.title }
-				>
-					{ "Welcome to " }
-					< a
-						href = { "https://nextjs.org" }
-					>
-						{ "Next.js!" }
-					</ a >
-				</ h1 >
-
-				< p
-					className = { styles.description }
-				>
-					{ "Get started by editing " }
-					< code
-						className = { styles.code }
-					>
-						{ "pages/index.js" }
-					</ code >
-				</ p >
-
-				< div
-					className = { styles.grid }
-				>
-					< a
-						className = { styles.card }
-						href = {
-							"https://nextjs.org"
-                            + "/docs"
-						}
-					>
-						< h3 >
-							{ "Documentation " }
-							&rarr;
-						</ h3 >
-						< p >
-							{ "Find in-depth information about Next.js features and API." }
-						</ p >
-					</ a >
-
-					< a
-						className = { styles.card }
-						href = {
-							"https://nextjs.org"
-                            + "/learn"
-						}
-					>
-						< h3 >
-							{ "Learn " }
-							&rarr;
-						</ h3 >
-						< p >
-							{ "Learn about Next.js in an interactive course with quizzes!" }
-						</ p >
-					</ a >
-
-					< a
-						className = { styles.card }
-						href = {
-							"https://github.com"
-                            + "/vercel"
-                            + "/next.js"
-                            + "/tree"
-                            + "/master"
-                            + "/examples"
-						}
-					>
-						< h3 >
-							{ "Examples " }
-							&rarr;
-						</ h3 >
-						< p >
-							{ "Discover and deploy boilerplate example Next.js projects." }
-						</ p >
-					</ a >
-
-					< a
-						className = { styles.card }
-						href = {
-							"https://vercel.com"
-                            + "/import"
-                            + "?filter=next.js"
-                            + "&utm_source=create-next-app"
-                            + "&utm_medium=default-template"
-                            + "&utm_campaign=create-next-app"
-						}
-					>
-						< h3 >
-							{ "Deploy " }
-							&rarr;
-						</ h3 >
-						< p >
-							{ "Instantly deploy your Next.js site to a public URL with Vercel." }
-						</ p >
-					</ a >
-				</ div >
-			</ main >
-
-			< footer
-				className = { styles.footer }
-			>
-				< a
-					href = {
-						"https://vercel.com"
-                        + "?utm_source=create-next-app"
-                        + "&utm_medium=default-template"
-                        + "&utm_campaign=create-next-app"
+				< button
+					type = {
+						"button"
 					}
-					rel = { "noopener noreferrer" }
-					target = { "_blank" }
 				>
-					{ "Powered by " }
-					< img
-						alt = { "Vercel Logo" }
-						className = { styles.logo }
-						src = { "/vercel.svg" }
-					/>
-				</ a >
-			</ footer >
+					{
+						"about"
+					}
+				</ button >
+			</ Link >
+			{
+				" page."
+			}
+			< div >
+				< input
+					placeholder = {
+						"your new name..."
+					}
+					type = {
+						"text"
+					}
+					onChange = {
+						handleNameStateChange
+					}
+				/>
+				< input
+					type = {
+						"button"
+					}
+					value = {
+						"change"
+					}
+					onClick = {
+						handleNameChange
+					}
+				/>
+			</ div >
 		</ div >
 	) ;
 
 } ;
 
-export default home ;
+export const getStaticProperties = async () : Promise<{
+	properties : {
+		initialApolloState : NormalizedCacheObject;
+	};
+}> => {
+
+	const apolloClient : ApolloClient<NormalizedCacheObject> = initializeApollo() ;
+
+	await apolloClient.query(
+		{
+			query : ViewerDocument ,
+		} ,
+	) ;
+
+	return {
+		properties : {
+			initialApolloState : apolloClient.cache.extract() ,
+		} ,
+	} ;
+
+} ;
+
+export default Index ;
