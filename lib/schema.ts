@@ -1,6 +1,6 @@
 import path from "path" ;
 
-import type {
+import {
 	DocumentNode ,
 	GraphQLSchema , Source ,
 } from "graphql" ;
@@ -21,7 +21,7 @@ import graphQLLetConfig from "../.graphql-let.yml" ;
 
 import resolvers from "./resolvers" ;
 
-const loadedFiles : Array<string | Source | DocumentNode | GraphQLSchema> = loadFilesSync(
+const loadedFiles : string | Source | DocumentNode | GraphQLSchema[] = loadFilesSync(
 	path.join(
 		process.cwd() ,
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
@@ -39,3 +39,4 @@ export const schema : GraphQLSchema = makeExecutableSchema(
 		typeDefs ,
 	} ,
 ) ;
+

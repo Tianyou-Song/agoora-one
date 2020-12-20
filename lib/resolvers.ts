@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-underscore-dangle */
-import type {
-	MutationResolvers , QueryResolvers ,
+import {
+	MutationResolvers ,
+	QueryResolvers ,
 } from "./type-defs.graphqls" ;
 
-import type {
+import {
 	ResolverContext ,
 } from "./apollo" ;
 
@@ -19,9 +20,7 @@ const userProfile : Required<QueryResolvers<ResolverContext>> = {
 } ;
 
 const Query : Required<QueryResolvers<ResolverContext>> = {
-	viewer (
-		_parent : string , _arguments : string , _context : string , _info : string ,
-	) {
+	viewer () {
 
 		return userProfile ;
 
@@ -30,11 +29,14 @@ const Query : Required<QueryResolvers<ResolverContext>> = {
 
 const Mutation : Required<MutationResolvers<ResolverContext>> = {
 	updateName (
-		_parent : string , _arguments : { readonly name : string; } , _context : string , _info : string ,
+		_parent : string ,
+		_arguments : {
+			readonly name : string;
+		} ,
 	) {
 
 		const {
-			name : username ,
+			name: username ,
 		} : {
 			name : string;
 		} = _arguments ;
@@ -53,3 +55,4 @@ export default {
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	Query ,
 } ;
+

@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable unicorn/prevent-abbreviations */
+/* eslint-disable sonarjs/no-duplicate-string */
 module.exports = {
 	projects : {
 		app : {

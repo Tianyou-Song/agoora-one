@@ -1,19 +1,17 @@
-import type {
-	IncomingMessage , ServerResponse ,
+import {
+	IncomingMessage ,
+	ServerResponse ,
 } from "http" ;
 
 import {
 	useMemo ,
 } from "react" ;
 
-import type {
-	NormalizedCacheObject ,
-} from "@apollo/client" ;
-
 import {
 	ApolloClient ,
 	HttpLink ,
 	InMemoryCache ,
+	NormalizedCacheObject ,
 } from "@apollo/client" ;
 
 import {
@@ -135,3 +133,4 @@ export const useApollo = (
 	) ;
 
 } ;
+

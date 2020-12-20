@@ -42,6 +42,4 @@ yarn-error.log*
 /node2
 /node3
 
-next-env.d.ts
-
-/styles
+**/*.json

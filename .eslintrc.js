@@ -13,6 +13,7 @@ module.exports = {
 		"plugin:jsx-a11y/recommended" ,
 		"plugin:react-hooks/recommended" ,
 		"plugin:react/all" ,
+		"plugin:putout/recommended" ,
 		"plugin:sonarjs/recommended" ,
 		"plugin:unicorn/recommended" ,
 	] ,
@@ -167,6 +168,7 @@ module.exports = {
 		"jsx-a11y" ,
 		"react" ,
 		"react-hooks" ,
+		"putout" ,
 		"sonarjs" ,
 		"unicorn" ,
 		"woke" ,
@@ -178,8 +180,8 @@ module.exports = {
 		"@typescript-eslint/array-type" : [
 			"error" ,
 			{
-				"default"  : "generic" ,
-				"readonly" : "generic" ,
+				"default"  : "array" ,
+				"readonly" : "array" ,
 			} ,
 		] ,
 		"@typescript-eslint/await-thenable" : [
@@ -254,7 +256,7 @@ module.exports = {
 			"error" ,
 			{
 				"disallowTypeAnnotations" : true ,
-				"prefer"                  : "type-imports" ,
+				"prefer"                  : "no-type-imports" ,
 			} ,
 		] ,
 		"@typescript-eslint/default-param-last" : [
@@ -1320,12 +1322,12 @@ module.exports = {
 					"img" ,
 					"object" ,
 					"area" ,
-					"input[type=\"image\"]" ,
+					"input[type='image']" ,
 				] ,
 				"img" : [
 					"Image" ,
 				] ,
-				"input[type=\"image\"]" : [
+				"input[type='image']" : [
 					"InputImage" ,
 				] ,
 				"object" : [
@@ -2467,6 +2469,42 @@ module.exports = {
 		"prefer-template" : [
 			"error" ,
 		] ,
+		"putout/align-spaces" : [
+			"error" ,
+		] ,
+		"putout/destructuring-as-function-argument" : [
+			"off" ,
+		] ,
+		"putout/for-of-multiple-properties-destructuring" : [
+			"off" ,
+		] ,
+		"putout/function-declaration-paren-newline" : [
+			"off" ,
+		] ,
+		"putout/keyword-spacing" : [
+			"off" ,
+		] ,
+		"putout/long-properties-destructuring" : [
+			"error" ,
+		] ,
+		"putout/multiple-properties-destructuring" : [
+			"error" ,
+			{
+				"minProperties" : 1 ,
+			} ,
+		] ,
+		"putout/newline-function-call-arguments" : [
+			"error" ,
+		] ,
+		"putout/putout" : [
+			"error" ,
+		] ,
+		"putout/remove-newline-after-default-import" : [
+			"error" ,
+		] ,
+		"putout/single-property-destructuring" : [
+			"off" ,
+		] ,
 		"quote-props" : [
 			"error" ,
 			"as-needed" ,
@@ -3148,11 +3186,14 @@ module.exports = {
 				"block" : {
 					"balanced" : true ,
 				} ,
+				"markers" : [
+					"/" ,
+				] ,
 			} ,
 		] ,
 		"strict" : [
 			"error" ,
-			"global" ,
+			"safe" ,
 		] ,
 		"switch-colon-spacing" : [
 			"error" ,
@@ -3550,3 +3591,4 @@ module.exports = {
 		} ,
 	} ,
 } ;
+

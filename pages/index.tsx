@@ -1,14 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Link from "next/link" ;
 
-import type {
+import React , {
 	Dispatch ,
 	SetStateAction ,
-} from "react" ;
-
-import type React from "react" ;
-
-import {
 	useCallback ,
 	useState ,
 } from "react" ;
@@ -23,7 +18,7 @@ import {
 	initializeApollo ,
 } from "../lib/apollo" ;
 
-import type {
+import {
 	ApolloClient ,
 	NormalizedCacheObject ,
 } from "@apollo/client" ;
@@ -48,8 +43,7 @@ const Index = () : JSX.Element => {
 		// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 		nameChangeEvent : Readonly<React.ChangeEvent<HTMLInputElement>>
 	) => void = useCallback(
-		(
-			// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
+		( // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 			nameChangeEvent : Readonly<React.ChangeEvent<HTMLInputElement>> ,
 		) : void => {
 
@@ -98,9 +92,7 @@ const Index = () : JSX.Element => {
 							} ,
 						) ;
 
-						const newViewer = {
-							...viewer ,
-						} ;
+						const newViewer = viewer ;
 
 						// Add our comment from the mutation to the end.
 						newViewer.name = name ;

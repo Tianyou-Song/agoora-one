@@ -1,17 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react" ;
 
-import type {
+import {
 	AppProps as AppProperties ,
 } from "next/app" ;
 
-import type {
-	ApolloClient ,
-	NormalizedCacheObject ,
-} from "@apollo/client" ;
-
 import {
-	ApolloProvider ,
+	ApolloClient , ApolloProvider , NormalizedCacheObject ,
 } from "@apollo/client" ;
 
 import {
@@ -22,7 +17,7 @@ const App = (
 	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	{
 		Component ,
-		pageProps : pageProperties ,
+		pageProps:pageProperties ,
 	} : Readonly<AppProperties> ,
 ) : JSX.Element => {
 
@@ -46,3 +41,4 @@ const App = (
 } ;
 
 export default App ;
+

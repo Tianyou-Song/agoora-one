@@ -1,0 +1,192 @@
+{
+	"exclude": [
+		".md"
+	],
+	"formatter": [
+		"progress-bar",
+		{
+			"minCount": 10
+		}
+	],
+	"ignore": [
+		"**/node_modules",
+		"**/fixture",
+		"**/.nyc_output",
+		"**/coverage",
+		"**/dist*",
+		"**/package-lock.json"
+	],
+	"match": {
+		"*.md": {
+			"apply-shorthand-properties": "off",
+			"convert-binary-expression-to-boolean": "off",
+			"remove-console": "off",
+			"remove-constant-conditions": "off",
+			"remove-empty": "off",
+			"remove-unused-expressions": "off",
+			"remove-unused-for-of-variables": "off",
+			"remove-unused-variables": "off",
+			"remove-useless-escape": "off",
+			"remove-useless-variables": "off"
+		},
+		"*.mjs": {
+			"apply-top-level-await": "on",
+			"convert-commonjs-to-esm": "on"
+		},
+		"*.{js,jsx,mjs,cjs,ts,tsx}": {
+			"strict-mode": "on",
+			"strict-mode/add": "off"
+		},
+		"*.{json,yml}": {
+			"apply-numeric-separators": "off",
+			"remove-useless-escape": "off"
+		},
+		"*.{ts,tsx}": {
+			"convert-generic-to-shorthand": "on",
+			"remove-unused-types": "on",
+			"remove-useless-types": "on"
+		},
+		".eslintrc.json": {
+			"eslint": "on"
+		},
+		".gitignore": {
+			"gitignore": "on"
+		},
+		".madrun.{js,cjs,mjs}": {
+			"madrun": "on"
+		},
+		".travis.yml": {
+			"remove-useless-escape": "off",
+			"travis": "on"
+		},
+		"bin": {
+			"convert-top-level-return": "on",
+			"remove-console": "off",
+			"remove-process-exit": "off"
+		},
+		"webpack.config.js": {
+			"webpack": "on"
+		},
+		"{.,}putout.json": {
+			"putout-config": "on"
+		},
+		"{test,*.spec.js}": {
+			"remove-only": "on",
+			"remove-skip": "on",
+			"tape": "on"
+		}
+	},
+	"parser": "babel",
+	"plugins": [
+		"apply-destructuring",
+		"apply-shorthand-properties",
+		"apply-top-level-await",
+		"apply-optional-chaining",
+		"apply-nullish-coalescing",
+		"apply-numeric-separators",
+		"extract-object-properties",
+		"extract-sequence-expressions",
+		"madrun",
+		"webpack",
+		"eslint",
+		"remove-debugger",
+		"remove-iife",
+		"remove-only",
+		"remove-skip",
+		"remove-process-exit",
+		"remove-console",
+		"remove-empty",
+		"remove-unreferenced-variables",
+		"remove-unused-variables",
+		"remove-unused-types",
+		"remove-unused-for-of-variables",
+		"remove-unused-private-fields",
+		"remove-unused-expressions",
+		"remove-useless-variables",
+		"remove-useless-array-from",
+		"remove-useless-arguments",
+		"remove-useless-escape",
+		"remove-useless-spread",
+		"remove-useless-async",
+		"remove-useless-await",
+		"remove-useless-typeof",
+		"remove-useless-types",
+		"remove-useless-type-convertion",
+		"remove-useless-functions",
+		"remove-useless-template-expressions",
+		"remove-useless-for-of",
+		"remove-constant-conditions",
+		"remove-boolean-from-logical-expressions",
+		"remove-nested-blocks",
+		"remove-unreachable-code",
+		"remove-duplicate-keys",
+		"remove-duplicate-interface-keys",
+		"reuse-duplicate-init",
+		"split-variable-declarations",
+		"split-nested-destructuring",
+		"simplify-ternary",
+		"convert-esm-to-commonjs",
+		"convert-commonjs-to-esm",
+		"convert-apply-to-spread",
+		"convert-arguments-to-rest",
+		"convert-object-assign-to-merge-spread",
+		"convert-binary-expression-to-boolean",
+		"convert-math-pow",
+		"convert-throw",
+		"convert-to-arrow-function",
+		"convert-for-to-for-of",
+		"convert-for-each-to-for-of",
+		"convert-for-in-to-for-of",
+		"convert-top-level-return",
+		"convert-array-copy-to-slice",
+		"convert-template-to-string",
+		"convert-equal-to-strict-equal",
+		"convert-index-of-to-includes",
+		"convert-generic-to-shorthand",
+		"merge-destructuring-properties",
+		"merge-duplicate-imports",
+		"merge-if-statements",
+		"strict-mode",
+		"putout",
+		"putout-config",
+		"promises",
+		"gitignore",
+		"regexp",
+		"travis",
+		"tape"
+	],
+	"processors": [
+		"javascript",
+		"json",
+		"markdown",
+		"ignore",
+		"yaml",
+		"css"
+	],
+	"rules": {
+		"apply-nullish-coalescing": "off",
+		"apply-optional-chaining": "off",
+		"apply-shorthand-properties": "off",
+		"apply-top-level-await": "off",
+		"convert-commonjs-to-esm": "off",
+		"convert-esm-to-commonjs": "off",
+		"convert-generic-to-shorthand": "off",
+		"convert-throw": "off",
+		"convert-top-level-return": "off",
+		"eslint": "off",
+		"gitignore": "off",
+		"madrun": "off",
+		"putout": "off",
+		"putout-config": "off",
+		"regexp/convert-replace-to-replace-all": "off",
+		"remove-duplicate-interface-keys": "off",
+		"remove-only": "off",
+		"remove-skip": "off",
+		"remove-unused-types": "off",
+		"remove-useless-types": "off",
+		"strict-mode": "off",
+		"tape": "off",
+		"travis": "off",
+		"webpack": "off"
+	}
+}
