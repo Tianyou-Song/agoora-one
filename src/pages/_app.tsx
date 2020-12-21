@@ -2,14 +2,18 @@ import "../styles/globals.scss" ;
 
 import React from "react" ;
 
-import {
-	AppProps as AppProperties ,
-} from "next/app" ;
+import type {
+	NextComponentType ,
+	NextPageContext ,
+} from "next" ;
+
+import type {
+	ApolloCache ,
+	NormalizedCacheObject ,
+} from "@apollo/client" ;
 
 import {
-	ApolloClient ,
 	ApolloProvider ,
-	NormalizedCacheObject ,
 } from "@apollo/client" ;
 
 import {
@@ -17,16 +21,23 @@ import {
 } from "../lib/apollo" ;
 
 const App = (
-	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	{
 		Component ,
-		pageProps:pageProperties ,
-	} : Readonly<AppProperties> ,
+		pageProps : pageProperties ,
+	} : {
+		Component : NextComponentType<NextPageContext , unknown , unknown> ;
+		pageProps : Record<string , unknown> ;
+	} ,
 ) : JSX.Element => {
 
-	const apolloClient : ApolloClient<NormalizedCacheObject> = useApollo(
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-		pageProperties.initialApolloState ,
+	const {
+		initialApolloState ,
+	} = pageProperties as {
+		initialApolloState : ApolloCache<NormalizedCacheObject> ;
+	} ;
+
+	const apolloClient = useApollo(
+		initialApolloState ,
 	) ;
 
 	return (

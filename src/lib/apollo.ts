@@ -1,4 +1,4 @@
-import {
+import type {
 	IncomingMessage , ServerResponse ,
 } from "http" ;
 
@@ -6,10 +6,14 @@ import {
 	useMemo ,
 } from "react" ;
 
+import type {
+	ApolloCache ,
+	NormalizedCacheObject ,
+} from "@apollo/client" ;
+
 import {
 	ApolloClient ,
 	InMemoryCache ,
-	NormalizedCacheObject ,
 } from "@apollo/client" ;
 
 let apolloClient : ApolloClient<NormalizedCacheObject> | undefined ;
@@ -78,7 +82,7 @@ function createApolloClient (
 }
 
 export function initializeApollo (
-	initialState : unknown = null ,
+	initialState : ApolloCache<NormalizedCacheObject> ,
 
 	/*
 	 * Pages with Next.js data fetching methods, like `getStaticProps`, can send
@@ -124,7 +128,7 @@ export function initializeApollo (
 }
 
 export function useApollo (
-	initialState : unknown ,
+	initialState : ApolloCache<NormalizedCacheObject> ,
 ) {
 
 	return useMemo(

@@ -257,7 +257,7 @@ module.exports = {
 			"error" ,
 			{
 				"disallowTypeAnnotations" : true ,
-				"prefer"                  : "no-type-imports" ,
+				"prefer"                  : "type-imports" ,
 			} ,
 		] ,
 		"@typescript-eslint/default-param-last" : [
@@ -885,11 +885,7 @@ module.exports = {
 			} ,
 		] ,
 		"@typescript-eslint/prefer-readonly-parameter-types" : [
-			"error" ,
-			{
-				"checkParameterProperties" : true ,
-				"ignoreInferredTypes"      : false ,
-			} ,
+			"off" ,
 		] ,
 		"@typescript-eslint/prefer-reduce-type-parameter" : [
 			"error" ,
@@ -1002,14 +998,14 @@ module.exports = {
 		"@typescript-eslint/typedef" : [
 			"error" ,
 			{
-				"arrayDestructuring"                : true ,
-				"arrowParameter"                    : true ,
-				"memberVariableDeclaration"         : true ,
-				"objectDestructuring"               : true ,
-				"parameter"                         : true ,
-				"propertyDeclaration"               : true ,
-				"variableDeclaration"               : true ,
-				"variableDeclarationIgnoreFunction" : true ,
+				"arrayDestructuring"                : false ,
+				"arrowParameter"                    : false ,
+				"memberVariableDeclaration"         : false ,
+				"objectDestructuring"               : false ,
+				"parameter"                         : false ,
+				"propertyDeclaration"               : false ,
+				"variableDeclaration"               : false ,
+				"variableDeclarationIgnoreFunction" : false ,
 			} ,
 		] ,
 		"@typescript-eslint/unbound-method" : [

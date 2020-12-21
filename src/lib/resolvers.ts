@@ -1,8 +1,8 @@
-import {
+import type {
 	MutationResolvers , QueryResolvers ,
 } from "./type-defs.graphqls" ;
 
-import {
+import type {
 	ResolverContext ,
 } from "./apollo" ;
 

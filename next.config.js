@@ -20,7 +20,8 @@ module.exports = {
 	} ,
 
 	webpack (
-		config , options ,
+		config ,
+		options ,
 	) {
 
 		config.module.rules.push(
