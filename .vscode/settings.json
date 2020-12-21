@@ -12,6 +12,7 @@
 		"builtins",
 		"camelcase",
 		"castoro",
+		"cloudcmd",
 		"cockroachdb",
 		"cockroachlabs",
 		"codegen",

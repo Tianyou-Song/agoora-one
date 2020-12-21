@@ -2057,7 +2057,7 @@
   dependencies:
     "@babel/types" "^7.12.6"
 
-"@putout/plugin-add-return-await@^2.0.0":
+"@putout/plugin-add-return-await@^2.0.0", "@putout/plugin-add-return-await@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-add-return-await/-/plugin-add-return-await-2.1.0.tgz#617a5e84d14568e9c7dd40d4f5386f6fe2e3c2bf"
   integrity sha512-7pnaIwfsNIAjJFAgbOjh9bp57cQ0hfH6o/KgwCf8RqvtmADHD9EYy6wMd15bC3TrhB/Gl2FaFgtBSAj3m4gBtQ==
@@ -2072,12 +2072,12 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-apply-nullish-coalescing/-/plugin-apply-nullish-coalescing-1.0.0.tgz#98a923f4adcaa5af73ceb1cff4e83353c51915c1"
   integrity sha512-8oNOzREx9cXaeRcVr2hN59PNcZ1Ymgty7eFpJ9x1bVjQcqjAikYGqaF8e1X2WWjcCJciiue//fNntLeC6OM0+Q==
 
-"@putout/plugin-apply-numeric-separators@^1.0.0":
+"@putout/plugin-apply-numeric-separators@^1.0.0", "@putout/plugin-apply-numeric-separators@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-apply-numeric-separators/-/plugin-apply-numeric-separators-1.2.0.tgz#9b28af265a12190a22fd4691641e9ff904e2760c"
   integrity sha512-yIworkjXWxyEpxD1aRu5/NpEkIHf8LyG+/Xu+JrHkhb4fCzDY2oij6B/gtMcVWMSSEwLiT52s2W6R7YBg31Yqg==
 
-"@putout/plugin-apply-optional-chaining@^2.0.0":
+"@putout/plugin-apply-optional-chaining@^2.0.0", "@putout/plugin-apply-optional-chaining@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-apply-optional-chaining/-/plugin-apply-optional-chaining-2.0.1.tgz#ecb27e93854adbc12abf488d9e7d1bb2be420030"
   integrity sha512-pdfnKABoiiDDsMCjTX0QzM8szH7OD3gbA3dA9SEqyjqOcut1/8lOpQsMTI3h8/m5FEnihpUFD2rNwFYUsj6p3Q==
@@ -2087,7 +2087,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-apply-shorthand-properties/-/plugin-apply-shorthand-properties-3.0.1.tgz#a0a2ce4fd3617ea1eba194b3e4bbd2c51f5c7fc5"
   integrity sha512-IpDx+WrTqiamlCQ96MNqdGG3BH2v65VHWqHH6qEvAakiK3vQIjKYa5R6YDvGzj6JO7eBI4V4pZebOcqIowk0KQ==
 
-"@putout/plugin-apply-top-level-await@^2.0.0":
+"@putout/plugin-apply-top-level-await@^2.0.0", "@putout/plugin-apply-top-level-await@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-apply-top-level-await/-/plugin-apply-top-level-await-2.0.1.tgz#dee87ae2c01d3851827a8e4ddc92e187cb886640"
   integrity sha512-3+m4RYjI6Lv+fkclS71qb0y+0PNCdk+In4U17SM/nMYk4SbAxK5AV8ocdgsHcpHQjjPtkej1DRfH4eVgmidBWw==
@@ -2104,22 +2104,22 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-arguments-to-rest/-/plugin-convert-arguments-to-rest-1.2.0.tgz#2079c81dd89355248f152eab8d9bc28f253d143c"
   integrity sha512-7iflDBpYKVshS3hGDnJiixoeEePmwIjd7cp3OEeB2WoU4agW6g90hywo8SrgUcy6RuOIdKmz+Z5aa2z+oReUqA==
 
-"@putout/plugin-convert-array-copy-to-slice@^1.0.0":
+"@putout/plugin-convert-array-copy-to-slice@^1.0.0", "@putout/plugin-convert-array-copy-to-slice@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-array-copy-to-slice/-/plugin-convert-array-copy-to-slice-1.1.0.tgz#537c0f576bd60ed0a0bd47af5281da5db2e2ad30"
   integrity sha512-PVCdhG3p+xbwH/ZHpynxr1ziBn9+nMtWuBRtgx1eEkGNWYQXrKLF+FaY5VdLJLMg8oK+WUvs25zYyInScjG14w==
 
-"@putout/plugin-convert-binary-expression-to-boolean@^2.0.0":
+"@putout/plugin-convert-binary-expression-to-boolean@^2.0.0", "@putout/plugin-convert-binary-expression-to-boolean@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-binary-expression-to-boolean/-/plugin-convert-binary-expression-to-boolean-2.1.0.tgz#8534d25b42c1cbb5ddbebc7d0b47e40e277feef9"
   integrity sha512-+OaQZLYBqHZRqb31s+8gIk1O06W9+Lpd9a0+VcK+yD+MAc3ofVMHplUssDbPAjK3jKWVG03I8PgQTH8BlSxWxA==
 
-"@putout/plugin-convert-commonjs-to-esm@^4.0.0":
+"@putout/plugin-convert-commonjs-to-esm@^4.0.0", "@putout/plugin-convert-commonjs-to-esm@^4.3.0":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-commonjs-to-esm/-/plugin-convert-commonjs-to-esm-4.3.0.tgz#da5faacdd036b377c384b9aaa8c83965f6b3d0a6"
   integrity sha512-J/B2cAnNG7uPok5LGgGODSPgpGbdKeOmfy1LUdiHX151utGkWm8k/2JYBCh1F4jxt14kQh/of57a/U2pc+wFHw==
 
-"@putout/plugin-convert-equal-to-strict-equal@^1.0.0":
+"@putout/plugin-convert-equal-to-strict-equal@^1.0.0", "@putout/plugin-convert-equal-to-strict-equal@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-equal-to-strict-equal/-/plugin-convert-equal-to-strict-equal-1.1.0.tgz#e32df3942d96f93959a354fb72c26e0f7c999620"
   integrity sha512-H6H4Qu7lCBSyTj16olpB2D9PFH1owy08ORcFOfmvyvuLYDqJybyycMk4sHDvU4cQDhsHYfEGXJOeAaKnoxEtLA==
@@ -2129,7 +2129,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-esm-to-commonjs/-/plugin-convert-esm-to-commonjs-3.0.0.tgz#b68eba56cddc6c2551147ba7ff884821d890928d"
   integrity sha512-ZqnqRhLRla4tuI4qMBjJqiHUguNcd7OvXjb7OH1tl6fYgYdf5E+7KRlVXrWSBw+L8MWOd7X+cuslPCVVIZaLRA==
 
-"@putout/plugin-convert-for-each-to-for-of@^5.0.0":
+"@putout/plugin-convert-for-each-to-for-of@^5.0.0", "@putout/plugin-convert-for-each-to-for-of@^5.2.0":
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-for-each-to-for-of/-/plugin-convert-for-each-to-for-of-5.2.0.tgz#0f01cb14161d78bc90af7e873af6c900d1e98949"
   integrity sha512-3aYEzG/nGXQvydDqBvk5ieWYnAVqQFpZeSZ4aoK//cC+ir9YApCjkAumdH6uJy9qcn2x4OLWMxtcHeTRtTemWg==
@@ -2139,7 +2139,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-for-in-to-for-of/-/plugin-convert-for-in-to-for-of-2.0.0.tgz#ff7bb297d7bc3184b0813a1adf54d1cd9f7486d7"
   integrity sha512-uE9h/o30PMio2yP+YbaHWfce1n++5DyeuG05zHaaMIMX7/MkQM3B9nrWHp9u9TIdGqxTyu6J5AZ4cWwRRe9G3w==
 
-"@putout/plugin-convert-for-to-for-of@^1.0.0":
+"@putout/plugin-convert-for-to-for-of@^1.0.0", "@putout/plugin-convert-for-to-for-of@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-for-to-for-of/-/plugin-convert-for-to-for-of-1.2.1.tgz#28f5e9d5077804b247b09c2db48330e7beee223d"
   integrity sha512-hTOU34OVL6y2Ov3Mge+glTwsHa/WUT5NHz1TusmlsA7aQQfh5N5AgL2OhRrLiBOiAG0Ex2QpSYbeFAajueVlHw==
@@ -2149,7 +2149,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-generic-to-shorthand/-/plugin-convert-generic-to-shorthand-1.0.0.tgz#881c8779651f7ca8ea95e477eb8e925de7726c16"
   integrity sha512-Yu79YHEMa+KwC8fPoUf4ntcXyqpXPvoVeArK0J2sqn2n+EdLfjgzMSX+seqChejG4KgfzB6JfcoDN0zVMY3kbQ==
 
-"@putout/plugin-convert-index-of-to-includes@^1.0.0":
+"@putout/plugin-convert-index-of-to-includes@^1.0.0", "@putout/plugin-convert-index-of-to-includes@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-index-of-to-includes/-/plugin-convert-index-of-to-includes-1.1.0.tgz#95a436cd956dc829863f36d7520759806cb56622"
   integrity sha512-d2w/GwYwtaq1ArW5VJA+CpSIPiRI1Lp4zJIGcQENj0zOyTwJ7OWP8SqHlqWOSoK6YpMoMFSDdlH1JU5NBTsx8Q==
@@ -2163,6 +2163,11 @@
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-object-assign-to-merge-spread/-/plugin-convert-object-assign-to-merge-spread-5.0.0.tgz#75edd7481c0b0221798f3be985ec0a88bad44931"
   integrity sha512-kpMPYe++ai46ZC4YDcLGe7WFzhvC8wbZi1z1LwpnPPZbPb+Hem0AqNpDrjzfO2aWJbYjJAZFlwzaQtOOfTNoww==
+
+"@putout/plugin-convert-spread-to-array-from@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@putout/plugin-convert-spread-to-array-from/-/plugin-convert-spread-to-array-from-2.0.0.tgz#f7d27f144d9e5a40973212edea58efaeda0d24d8"
+  integrity sha512-wzpXWwHwz/IWayk2BLFi3S5up/tpfpQ+Qtt0U1iGJ5WNEbqPLiP14hMN9+mfab8LHehcIqQ3Jb9FCrtVVw2CZw==
 
 "@putout/plugin-convert-template-to-string@^1.0.0":
   version "1.0.0"
@@ -2179,7 +2184,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-to-arrow-function/-/plugin-convert-to-arrow-function-3.0.0.tgz#6f64d9a132f431bc3ea9ae5884d41836599418fe"
   integrity sha512-0bqurAj6elhSiLW+AOimEWSgNdoQuLNqj4dQHrVo4RZCfbtYLL2yqiv4Y5PfGS7+Le6dFuwxEcyj9L3+u9EnYg==
 
-"@putout/plugin-convert-top-level-return@^3.0.0":
+"@putout/plugin-convert-top-level-return@^3.0.0", "@putout/plugin-convert-top-level-return@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-top-level-return/-/plugin-convert-top-level-return-3.1.0.tgz#ecb63eea97a8553ccdd311653036aed1818e3283"
   integrity sha512-L85ROIyrblODBtcCepvTXz241xE+uS89fQdOxJcSFa//FMeWapPWa6LhAQct6u/XH7XEnyYu0bTfAf5oB1ZZxA==
@@ -2194,7 +2199,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-extract-object-properties/-/plugin-extract-object-properties-5.0.0.tgz#1939de30d9f86f58852f10060dc2c92ddd455b3f"
   integrity sha512-aMlB2PPL+szmTh1/MySmt9n/l2eI3v9tWz+V/2rw4770b/WqzKhB6Ojk3cnvXwPX6wfPBAy1kO40wNiZt4JEDA==
 
-"@putout/plugin-extract-sequence-expressions@^2.0.0":
+"@putout/plugin-extract-sequence-expressions@^2.0.0", "@putout/plugin-extract-sequence-expressions@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-extract-sequence-expressions/-/plugin-extract-sequence-expressions-2.1.1.tgz#db47d1542387800862b6f65611fc6a0f98dea985"
   integrity sha512-obYAWAdkm+5Tzg4jckTuRlpM0NZ6c0ntmPiHDz8CKw9zDuda7jHhu77nJQMijAiElJO7Dfaj8nolqVG4D2XaBg==
@@ -2224,7 +2229,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-merge-if-statements/-/plugin-merge-if-statements-3.0.0.tgz#9636a4eddfc9e1762e7a89028d6ec2bd2eeb7a3a"
   integrity sha512-6U8wiUhDSqt1iub9OPcROh3DUg/L3D4uKeegziUg3pczcYxFw08t0yYbIXR317R4oiXBn4IjvB84quxTL0CH4Q==
 
-"@putout/plugin-promises@^4.0.0":
+"@putout/plugin-promises@^4.0.0", "@putout/plugin-promises@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-promises/-/plugin-promises-4.2.0.tgz#df341fb5b70ee137ed0b6e97e94f01c562fb7f7e"
   integrity sha512-CPpRZE5UPTWh3fXJ4wlX9U5Og85lT3RqPKh7Y406aTO+uWXZa9LF2RzQ+fdMgjoi0rfJOJdUz7c6KnmL+pzLyA==
@@ -2243,7 +2248,12 @@
   dependencies:
     fullstore "^3.0.0"
 
-"@putout/plugin-regexp@^1.0.0":
+"@putout/plugin-react-hooks@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@putout/plugin-react-hooks/-/plugin-react-hooks-3.0.2.tgz#d38b56c83fc2dc83d99ff071c8ff68fd2bf95f69"
+  integrity sha512-8oPyZC65YCAztAlilkObBxmbgtUZTsMZ4gikCWQB+J3tSXPlebAGbGktuLMGgn0ynrXg4HL2JWOvfx3v6yMLDw==
+
+"@putout/plugin-regexp@^1.0.0", "@putout/plugin-regexp@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-regexp/-/plugin-regexp-1.3.0.tgz#1158f56881b0144576a6da6568c9626b5951ce90"
   integrity sha512-NgST+TTMwxoP3y70Do+6ZaJInmtsc+Pscn8eKU5M8Kwg0ZLRB/xGV9b967yFrYClvzGbkftoYZivG7N+9SUqHg==
@@ -2255,7 +2265,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-boolean-from-logical-expressions/-/plugin-remove-boolean-from-logical-expressions-3.0.0.tgz#0935ff90c7652fc607cde397e180930dd8ac043b"
   integrity sha512-Pu7xG3nyBqDFOQY9xmeDM4Rzm277TXQYelFDmI6pgx2AqucTOCd1Ptz6k6CmaWrWk+z3bDSshzyL4fJgjYmVmA==
 
-"@putout/plugin-remove-console@^3.0.0":
+"@putout/plugin-remove-console@^3.0.0", "@putout/plugin-remove-console@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-console/-/plugin-remove-console-3.1.0.tgz#4eb3fde18d026efe5307b43dc29a9ddb03a5f4dc"
   integrity sha512-sGBcfThKGNfLWBmXmjj3R2XJ3ONyBrPMuv3iL6xhMF5FhVCOqQGKier56eNroYnZCr0IlO/z/des2U2TSd8uHA==
@@ -2265,17 +2275,17 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-constant-conditions/-/plugin-remove-constant-conditions-2.0.0.tgz#804133e2a729f42457eab7913f04f3a8476de6d7"
   integrity sha512-cVhlIyandoee+CgZhuxpsCT0bJiLwrCxOpIi14/fQSVZmr5DMZ8U81sp3jZq1/B7qCi0KKqcc0GbVQDw+Z3MlQ==
 
-"@putout/plugin-remove-debugger@^4.0.0":
+"@putout/plugin-remove-debugger@^4.0.0", "@putout/plugin-remove-debugger@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-debugger/-/plugin-remove-debugger-4.0.1.tgz#b1365bf972c777b8ea332987dad4517050dd4b95"
   integrity sha512-XXSqLFmqkGMQIGwCa59RlhX2Fo1NO4FaABwzQTwpbMOUxpA+DBzyY2h9onShvSef/pS3BmTnR/j6mfBAIsURzA==
 
-"@putout/plugin-remove-double-negations@^3.0.0":
+"@putout/plugin-remove-double-negations@^3.0.0", "@putout/plugin-remove-double-negations@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-double-negations/-/plugin-remove-double-negations-3.1.0.tgz#a6fd210d9555c36442c3d7b5f921ff6caecc08f5"
   integrity sha512-h7nxiwbV2oN0GTzp+hcdbNrZUcf46/ncLZ8Zwyu9q0+WNqZG6fccIyjd8VlIBcjdoKGyBcWmxMeFPDGikn2q2Q==
 
-"@putout/plugin-remove-duplicate-interface-keys@^2.0.0":
+"@putout/plugin-remove-duplicate-interface-keys@^2.0.0", "@putout/plugin-remove-duplicate-interface-keys@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-duplicate-interface-keys/-/plugin-remove-duplicate-interface-keys-2.0.1.tgz#f2e40efeba0c9cd4ce83c125b46c5e9301502f96"
   integrity sha512-RzlgzBe6aW+adyVnxfxVu7bB8XmuPAWu79otzFBLCI8ufNZz7ZYtSNtipvQe5C8t1lsxYW0M8PM5QFNTKZY09Q==
@@ -2287,19 +2297,19 @@
   dependencies:
     fullstore "^3.0.0"
 
-"@putout/plugin-remove-empty-pattern@^3.0.1":
+"@putout/plugin-remove-empty-pattern@^3.0.1", "@putout/plugin-remove-empty-pattern@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-empty-pattern/-/plugin-remove-empty-pattern-3.1.0.tgz#dbb8057a64ba644e113edf348b77d0273516e906"
   integrity sha512-ftx4gMFJ/4fOkRN9BbH73R5XZ95ZGHCzgjvPgr9ba/kPHWtAk7W1Qc8tt+OWZdeH6xj/F1/teiefnybbZ+IQ2w==
 
-"@putout/plugin-remove-empty@^5.0.0":
+"@putout/plugin-remove-empty@^5.0.0", "@putout/plugin-remove-empty@^5.3.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-empty/-/plugin-remove-empty-5.3.0.tgz#49b0836713e67527782b7bccb5ae7e7a339e67f0"
   integrity sha512-lABvAxPsoXwhZ5l/ZiOY6a2u+cXFNxd8vxqFbNfqpW6ZOASpf64JbCkwUeMFtVgffWvTGLTKqqfOl59tASUftg==
   dependencies:
     "@putout/plugin-remove-empty-pattern" "^3.0.1"
 
-"@putout/plugin-remove-iife@^1.0.0":
+"@putout/plugin-remove-iife@^1.0.0", "@putout/plugin-remove-iife@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-iife/-/plugin-remove-iife-1.1.0.tgz#6c9c010eeec68880584878625ab66195e7e2457d"
   integrity sha512-c39o/CxBS7KQBEppiGNhtf82HmvCI4jSrZqDMC8XhG34tidcpGf17mOEPv9OSrKLjBqZXEvnEPvlg6gF0F+v7w==
@@ -2309,7 +2319,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-nested-blocks/-/plugin-remove-nested-blocks-3.0.0.tgz#82698b29daf7ad6f9466730e8bee1567940c4767"
   integrity sha512-U262Or87Iq1BcVOJYHlT7Jy8JHfwVnz+5Q846XeBGg+HRJsg4NWSiNYsLLM409kahpZMlpyoQsoC9y0fhxuIxw==
 
-"@putout/plugin-remove-only@^4.0.0":
+"@putout/plugin-remove-only@^4.0.0", "@putout/plugin-remove-only@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-only/-/plugin-remove-only-4.1.0.tgz#a5942e9616584ce32732c29e03332cd18a11c04a"
   integrity sha512-xh4tIjpTW3XiT3pJzl5tBN+C9Se2wc9Jk06YSJapRadwbL3VYj6lyX6GSfgR4Svc3JBhFr2QeQcOwOaIlWlP9A==
@@ -2319,17 +2329,17 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-process-exit/-/plugin-remove-process-exit-3.0.0.tgz#0b6dde95ecca9dbf796d1ba9eb9eeedabe0bcdd2"
   integrity sha512-N6AEXDcvrsqwbA1CGJ/2TZg7a/Rix6lXP4Bs5IYHaN+8MzTvLO1BnowA6hmr7qKNZcp8iTpE6KCo1lqiUyldrw==
 
-"@putout/plugin-remove-skip@^3.0.0":
+"@putout/plugin-remove-skip@^3.0.0", "@putout/plugin-remove-skip@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-skip/-/plugin-remove-skip-3.1.0.tgz#3825dd7d015ac2d3cd727fde13506574fa25e8b9"
   integrity sha512-0HWbGYX/mZ7oXVvPXUcgXoMu3xZS5KSvHpD39Qbvq/IWzhwHQUUqTzy7FfbVG/qaLoXehXQ6beIKVhFKk3BCHQ==
 
-"@putout/plugin-remove-unreachable-code@^1.0.0":
+"@putout/plugin-remove-unreachable-code@^1.0.0", "@putout/plugin-remove-unreachable-code@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-unreachable-code/-/plugin-remove-unreachable-code-1.1.0.tgz#f5b32edf970b7840867c1f26948b4e6886aa2b00"
   integrity sha512-eCjQtc8+kKBhLGo//ZHoQqvycTiPO2ARYinbzi6DdxPQlgo7lI08vHp4ow1Qo2J1CJrPqLuEgW0TCJ9H6OSsPg==
 
-"@putout/plugin-remove-unreferenced-variables@^1.0.0":
+"@putout/plugin-remove-unreferenced-variables@^1.0.0", "@putout/plugin-remove-unreferenced-variables@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-unreferenced-variables/-/plugin-remove-unreferenced-variables-1.1.0.tgz#59376a190624137f42b6f20d2a644b0f8e6d8092"
   integrity sha512-Pg4MAbZaHhGmsl2QLfd5DUOiW6xlwRmxk+7UadpZT17yZsjeO2itM/DToX89d8i7lRMIKlQxqJ9uc4p/a1IufA==
@@ -2339,37 +2349,37 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-unused-expressions/-/plugin-remove-unused-expressions-2.0.0.tgz#27894df48c2ac7b56597b1f82aa609a8e5eaec50"
   integrity sha512-EjVFykKTKjEonOgQdGUONrFuEkyaDhCcqtKtbt+bPOiOKVhENYWAU9xJY6knIekc/oDZQfmjWZAL7KlG/BxxtQ==
 
-"@putout/plugin-remove-unused-for-of-variables@^1.0.0":
+"@putout/plugin-remove-unused-for-of-variables@^1.0.0", "@putout/plugin-remove-unused-for-of-variables@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-unused-for-of-variables/-/plugin-remove-unused-for-of-variables-1.2.0.tgz#efcf01739f9fbc909b6922dd5acdd575f33b7f57"
   integrity sha512-kicnGAk1bE+hRgR682YM3QIfuNT6MVVyRj2GPka8rb7ycMNV6iAInKlMhWRvdjNYp68Bxl6oYy7YbEnm+7a2cQ==
 
-"@putout/plugin-remove-unused-private-fields@^1.0.0":
+"@putout/plugin-remove-unused-private-fields@^1.0.0", "@putout/plugin-remove-unused-private-fields@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-unused-private-fields/-/plugin-remove-unused-private-fields-1.2.1.tgz#6e191d2c171cd6c8e50dbb87546d7ad7cb701e7d"
   integrity sha512-aM+kBpMDDZz8JM4umuYXYEoMCuZRVx/QCmp+9d6cm6Ga2J1fT9cgol5F8DkcQLQFdDUddSNB4tb96GDcHgkpQw==
 
-"@putout/plugin-remove-unused-types@^1.0.0":
+"@putout/plugin-remove-unused-types@^1.0.0", "@putout/plugin-remove-unused-types@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-unused-types/-/plugin-remove-unused-types-1.2.0.tgz#c7b11502a8db7d9735975a9ebab4fd340149c487"
   integrity sha512-4VR34L446RTz+1dQdF5m10hOqHbGNdah8kRf7/DVApmwiUTtfBNrv7ER8bNejJ52FtuLmjiAM8jcSLeSETMosA==
 
-"@putout/plugin-remove-unused-variables@^3.0.0":
+"@putout/plugin-remove-unused-variables@^3.0.0", "@putout/plugin-remove-unused-variables@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-unused-variables/-/plugin-remove-unused-variables-3.1.0.tgz#6286c017258e22f4a97701f19496400c4819b4ba"
   integrity sha512-LcGCQPWcJL1qfld8QYxhqrBEAR6JXVkNwnJ7kA3gX0K2A6sOhXIjqXj7zgsLOCcV3gh26qL/ugsb5bF0BqPXlA==
 
-"@putout/plugin-remove-useless-arguments@^5.0.0":
+"@putout/plugin-remove-useless-arguments@^5.0.0", "@putout/plugin-remove-useless-arguments@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-arguments/-/plugin-remove-useless-arguments-5.0.1.tgz#001738216c7cbdceae82a7844859c90bfb4e4f06"
   integrity sha512-L7HYOaz/FPX90AT1DZdj8IEMl3VvOfcdWMwBSBaboQ97zxir46cbUrQ++KzTXKfmoKmSeWcEtmmd+Rjh3+NVLQ==
 
-"@putout/plugin-remove-useless-array-from@^2.0.0":
+"@putout/plugin-remove-useless-array-from@^2.0.0", "@putout/plugin-remove-useless-array-from@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-array-from/-/plugin-remove-useless-array-from-2.1.0.tgz#726040b766e2809d8ad1ddd0d78711fd5d64fdb6"
   integrity sha512-/iUlLKb/aAg9H4W8skl/hoFf3dLl0whMI5/PO30BVdTaY3VUVQnV35Gvp67HLNsqx3kM+8hxPBIdH8ZfQSH2Mg==
 
-"@putout/plugin-remove-useless-async@^3.0.0":
+"@putout/plugin-remove-useless-async@^3.0.0", "@putout/plugin-remove-useless-async@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-async/-/plugin-remove-useless-async-3.2.0.tgz#b8c140d88731190f8a719750956f2809ea2de97a"
   integrity sha512-lNkX0pwwnxJq7C8aYMuVVj2cGxJWVMrWErjbyaS6TvBt91KWE9SippDkCn/beNYwALDkpYCE7EJP28JZvNJAmg==
@@ -2379,27 +2389,27 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-await/-/plugin-remove-useless-await-1.0.0.tgz#b397be67140bb035afd083505a50aefebf3b7858"
   integrity sha512-fjNQ+pS6/0NFWEqIRzQpwEXN5aOD4OUxSJX5wPPCc7lv8LQsIOi7JJdrihLasP/vXiZwUkW7pz5s18kagxvqTA==
 
-"@putout/plugin-remove-useless-escape@^1.0.0":
+"@putout/plugin-remove-useless-escape@^1.0.0", "@putout/plugin-remove-useless-escape@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-escape/-/plugin-remove-useless-escape-1.1.2.tgz#f4282063e98ad8ff3c6fa5e3a23bfc304bf122d9"
   integrity sha512-HQiyZ8nb8U9ayXkXdXNiA9WxVsKnkVsmOfssk2h71isptUppZH0mHMxn7ebRa7IfSNtaOD7PLoS32ZmYNmyXWw==
 
-"@putout/plugin-remove-useless-for-of@^1.0.0":
+"@putout/plugin-remove-useless-for-of@^1.0.0", "@putout/plugin-remove-useless-for-of@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-for-of/-/plugin-remove-useless-for-of-1.0.2.tgz#7859b87e06d1e88aedf8d79b14aa40e49e20c2fe"
   integrity sha512-fUkXMq87v9bCQW0d9KQnWEUsqDUhxDLYdhwHDKkeBXNl29bV5VE0aXIwdzwtQYzjGJyVuj0YIIcslNTIYk56Bw==
 
-"@putout/plugin-remove-useless-functions@^1.0.3":
+"@putout/plugin-remove-useless-functions@^1.0.3", "@putout/plugin-remove-useless-functions@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-functions/-/plugin-remove-useless-functions-1.0.5.tgz#51d477c40065db9d2523d7dfc8ff03fe87f558a7"
   integrity sha512-bx35BmakBIHBJGYGbthLY077CytWKm0+xJ4CPD/xdQUSlPXdWvLsfUy+NEJ7aIQbD19qoMJpKGLju4oJGrCZNw==
 
-"@putout/plugin-remove-useless-spread@^4.0.0":
+"@putout/plugin-remove-useless-spread@^4.0.0", "@putout/plugin-remove-useless-spread@^4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-spread/-/plugin-remove-useless-spread-4.1.0.tgz#f3a2d20082f93cb1eb737f91a68b490b957f4bde"
   integrity sha512-DtGvjEL9lBUDiXwOAPG2N14bAjoJHyCQZkvOzpa7W4RvWUo4Bza6ttG26NBZr2Vz9wtgcsJ7UDs4DUPBaDdfnA==
 
-"@putout/plugin-remove-useless-template-expressions@^1.0.0":
+"@putout/plugin-remove-useless-template-expressions@^1.0.0", "@putout/plugin-remove-useless-template-expressions@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-template-expressions/-/plugin-remove-useless-template-expressions-1.0.1.tgz#3fb38b82c0ae8e6d4b70eca79c683db14d6df3be"
   integrity sha512-N/C//lQDusFo/MjxGMJuI1a7ccBaEKTjmh9xAL7dyMT+oH+9Qv0JagThul4mUYoXZqJH27TXWrPdHU2JzCpFBw==
@@ -2416,17 +2426,17 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-typeof/-/plugin-remove-useless-typeof-1.0.0.tgz#89d6e5ed7152c674150de6a3ce2b7b727d167514"
   integrity sha512-C5nN1IwJeYhpqp7I2B4ki6jHhuc9cNAv0Z2DbTVE17J9HItsEShQgEyxGTxjGEb4dl2vOat2MHF70DbY6OFepg==
 
-"@putout/plugin-remove-useless-types@^1.0.0":
+"@putout/plugin-remove-useless-types@^1.0.0", "@putout/plugin-remove-useless-types@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-types/-/plugin-remove-useless-types-1.3.0.tgz#d45c2a99efd17524ca93daf6745468bbdb8b551f"
   integrity sha512-8lVk63YJc7A21xcjjlsXAhydKocHUZTA11YRL576fRlJAmh4t8Jo/1KnQzRaZSP61tkGhKwtE2FSeRyxGSx6kA==
 
-"@putout/plugin-remove-useless-variables@^4.0.0":
+"@putout/plugin-remove-useless-variables@^4.0.0", "@putout/plugin-remove-useless-variables@^4.6.0":
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-remove-useless-variables/-/plugin-remove-useless-variables-4.6.0.tgz#2b7dd3bd29fcbff3d9c32414dc2bdaa3a7096328"
   integrity sha512-8fdClGuYxmHtizn4otBnMQ2xeSYLFbg+WuIhcSuLbkgO49inj2n+DAqExttfMhTa2zrPQlswvtrTffajoyMrBg==
 
-"@putout/plugin-reuse-duplicate-init@^1.0.0":
+"@putout/plugin-reuse-duplicate-init@^1.0.0", "@putout/plugin-reuse-duplicate-init@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-reuse-duplicate-init/-/plugin-reuse-duplicate-init-1.1.0.tgz#d97a7b7253f7fdd0bc4e3859d724a82757ce73e2"
   integrity sha512-i0TNiSflQUhq00SmJCGDBQIid2lZj8/tI49RYYBsBLqjAP6EpWQmmEOSJsLnXCoNGvst5NXkrQB66MhkWH6ajQ==
@@ -2436,7 +2446,7 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-simplify-ternary/-/plugin-simplify-ternary-2.0.0.tgz#ce70fe48d8740c3b660c9a7be2dd07e6f96ecefd"
   integrity sha512-dWAbAhBWC/FPjugG87DXWZYtuHunKI8zqBde8gSy8hW0AWcjntAaGIOzLLyavqXIaFcnN45olfl7PKHg4Hohug==
 
-"@putout/plugin-split-nested-destructuring@^1.0.0":
+"@putout/plugin-split-nested-destructuring@^1.0.0", "@putout/plugin-split-nested-destructuring@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@putout/plugin-split-nested-destructuring/-/plugin-split-nested-destructuring-1.0.1.tgz#bcd6d5661472f1ce6b8dbf1d2a63ffd69bfaa454"
   integrity sha512-myl/tM5b6zzIkqCcmnllX60uIhPbf1Npkh8znCYOKlmqzQvEr4L6pAImaSd8ChyXNnyvyVfNdhRNAAio9AKxMg==
@@ -2463,7 +2473,7 @@
   dependencies:
     fast-deep-equal "^3.1.3"
 
-"@putout/plugin-webpack@^1.0.0":
+"@putout/plugin-webpack@^1.0.0", "@putout/plugin-webpack@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@putout/plugin-webpack/-/plugin-webpack-1.2.0.tgz#7569f224f998383cfa8e509e80a6128ebbebe115"
   integrity sha512-5kcuO79dhyt3G3KQ90otyhI7Gty5bMZzKzGPE4qu97lj0ywU9MltzPSY4yuT8qn8GkXXtHmKM2btG0o7itfx0Q==
@@ -6303,9 +6313,9 @@ fastparse@^1.1.2:
   integrity sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==
 
 fastq@^1.6.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.9.0.tgz#e16a72f338eaca48e91b5c23593bcc2ef66b7947"
-  integrity sha512-i7FVWL8HhVY+CTkwFxkN2mk3h+787ixS5S63eb78diVRc1MCssarHq3W5cj0av7YDSwmaV928RNag+U1etRQ7w==
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.10.0.tgz#74dbefccade964932cdf500473ef302719c652bb"
+  integrity sha512-NL2Qc5L3iQEsyYzweq7qfgy5OtXCmGzGvhElGEd/SoFWEMOEczNh5s5ocaF01HDetxz+p8ecjNPA6cZxxIHmzA==
   dependencies:
     reusify "^1.0.4"
 
@@ -7257,9 +7267,9 @@ import-fresh@^2.0.0:
     resolve-from "^3.0.0"
 
 import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.2.tgz#fc129c160c5d68235507f4331a6baad186bdbc3e"
-  integrity sha512-cTPNrlvJT6twpYy+YmKUKrTSjWFs3bjYjAhCwm+z4EOCubZxAuO+hHpRN64TqjEaYSHs7tJAE0w1CKMGmsG/lw==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
+  integrity sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
@@ -7290,9 +7300,9 @@ import-local@^3.0.2:
     resolve-cwd "^3.0.0"
 
 import-modules@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/import-modules/-/import-modules-2.0.0.tgz#9c1e13b4e7a15682f70a6e3fa29534e4540cfc5d"
-  integrity sha512-iczM/v9drffdNnABOKwj0f9G3cFDon99VcG1mxeBsdqnbd+vnQ5c2uAiCHNQITqFTOPaEvwg3VjoWCur0uHLEw==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/import-modules/-/import-modules-2.1.0.tgz#abe7df297cb6c1f19b57246eb8b8bd9664b6d8c2"
+  integrity sha512-8HEWcnkbGpovH9yInoisxaSoIg9Brbul+Ju3Kqe2UsYDUBJD/iQjSgEj0zPcTDPKfPp2fs5xlv1i+JSye/m1/A==
 
 imurmurhash@^0.1.4:
   version "0.1.4"
