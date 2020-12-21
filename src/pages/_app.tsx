@@ -1,4 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import "../styles/globals.scss" ;
+
 import React from "react" ;
 
 import {
@@ -6,7 +7,9 @@ import {
 } from "next/app" ;
 
 import {
-	ApolloClient , ApolloProvider , NormalizedCacheObject ,
+	ApolloClient ,
+	ApolloProvider ,
+	NormalizedCacheObject ,
 } from "@apollo/client" ;
 
 import {
@@ -22,6 +25,7 @@ const App = (
 ) : JSX.Element => {
 
 	const apolloClient : ApolloClient<NormalizedCacheObject> = useApollo(
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 		pageProperties.initialApolloState ,
 	) ;
 
@@ -33,7 +37,9 @@ const App = (
 		>
 			< Component
 				// eslint-disable-next-line react/jsx-props-no-spreading
-				{ ...pageProperties }
+				{
+					...pageProperties
+				}
 			/>
 		</ ApolloProvider >
 	) ;

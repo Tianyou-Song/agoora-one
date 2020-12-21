@@ -47,7 +47,6 @@
 		"extract-object-properties",
 		"extract-sequence-expressions",
 		"merge-destructuring-properties",
-		"merge-duplicate-imports",
 		"merge-if-statements",
 		"promises",
 		"react-hooks",
@@ -137,7 +136,6 @@
 		"extract-object-properties/not-equal-deep": true,
 		"extract-sequence-expressions": true,
 		"merge-destructuring-properties": true,
-		"merge-duplicate-imports": true,
 		"merge-if-statements": true,
 		"promises/add-return-await": true,
 		"promises/convert-reject-to-throw": true,
@@ -163,12 +161,7 @@
 		"remove-empty-pattern": true,
 		"remove-empty/argument": true,
 		"remove-empty/block": true,
-		"remove-empty/import": [
-			true,
-			{
-				"ignore": []
-			}
-		],
+		"remove-empty/import": false,
 		"remove-empty/pattern": true,
 		"remove-iife": true,
 		"remove-nested-blocks": true,

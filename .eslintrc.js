@@ -11,9 +11,9 @@ module.exports = {
 		"eslint:all" ,
 		"plugin:@typescript-eslint/all" ,
 		"plugin:jsx-a11y/recommended" ,
+		"plugin:putout/recommended" ,
 		"plugin:react-hooks/recommended" ,
 		"plugin:react/all" ,
-		"plugin:putout/recommended" ,
 		"plugin:sonarjs/recommended" ,
 		"plugin:unicorn/recommended" ,
 	] ,
@@ -40,7 +40,8 @@ module.exports = {
 	"overrides" : [
 		{
 			"files" : [
-				"*.graphql" ,
+				"**/*.graphql" ,
+				"**/*.graphqls" ,
 			] ,
 			"parser"        : "@graphql-eslint/eslint-plugin" ,
 			"parserOptions" : {
@@ -166,9 +167,9 @@ module.exports = {
 		"@typescript-eslint" ,
 		"graphql" ,
 		"jsx-a11y" ,
+		"putout" ,
 		"react" ,
 		"react-hooks" ,
-		"putout" ,
 		"sonarjs" ,
 		"unicorn" ,
 		"woke" ,

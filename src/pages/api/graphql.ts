@@ -6,13 +6,13 @@ import {
 	schema ,
 } from "../../lib/schema" ;
 
-const apolloServer : ApolloServer = new ApolloServer(
+const apolloServer = new ApolloServer(
 	{
 		schema ,
 	} ,
 ) ;
 
-export const config : Record<string , unknown> = {
+export const config = {
 	api : {
 		bodyParser : false ,
 	} ,

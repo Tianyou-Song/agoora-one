@@ -12,10 +12,19 @@ import {
 	MockedProvider ,
 } from "@apollo/client/testing" ;
 
-const cache : InMemoryCache = new InMemoryCache() ;
+const cache = new InMemoryCache() ;
 
 cache.writeQuery(
 	{
+		query : gql `
+    query Viewer {
+      viewer {
+        id
+        name
+        status
+      }
+    }
+  ` ,
 		data : {
 			viewer : {
 				__typename : "User" ,
@@ -24,15 +33,6 @@ cache.writeQuery(
 				status     : "Healthy" ,
 			} ,
 		} ,
-		query : gql `
-			query Viewer {
-				viewer {
-					id
-					name
-					status
-				}
-			}
-		` ,
 	} ,
 ) ;
 

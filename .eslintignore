@@ -43,3 +43,6 @@ yarn-error.log*
 /node3
 
 **/*.json
+**/*.d.ts
+
+!*.js
