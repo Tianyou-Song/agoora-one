@@ -1,6 +1,6 @@
 import Link from "next/link" ;
 
-import {
+import React , {
 	useState ,
 } from "react" ;
 
@@ -13,6 +13,8 @@ import {
 import {
 	initializeApollo ,
 } from "../libraries/apollo" ;
+
+import HomeStyles from "../styles/Home.module.scss" ;
 
 const Index = () => {
 
@@ -86,7 +88,11 @@ const Index = () => {
 	} ;
 
 	return (
-		< div >
+		< div
+			className = {
+				HomeStyles.main
+			}
+		>
 			{
 				"You're signed in as "
 			}
