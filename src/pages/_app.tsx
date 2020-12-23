@@ -18,7 +18,7 @@ import {
 
 import {
 	useApollo ,
-} from "../lib/apollo" ;
+} from "../libraries/apollo" ;
 
 const App = (
 	{

@@ -8,11 +8,11 @@ import {
 	ViewerDocument ,
 	useUpdateNameMutation ,
 	useViewerQuery ,
-} from "../lib/viewer.graphql" ;
+} from "../libraries/viewer.graphql" ;
 
 import {
 	initializeApollo ,
-} from "../lib/apollo" ;
+} from "../libraries/apollo" ;
 
 const Index = () => {
 

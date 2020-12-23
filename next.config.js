@@ -1,12 +1,11 @@
-/* eslint-disable @typescript-eslint/strict-boolean-expressions */
-/* eslint-disable require-unicode-regexp */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/typedef */
 
 const jsonImporter = require(
@@ -14,6 +13,8 @@ const jsonImporter = require(
 ) ;
 
 module.exports = {
+
+	"reactStrictMode" : true ,
 
 	"sassOptions" : {
 		"importer" : jsonImporter() ,
@@ -26,8 +27,8 @@ module.exports = {
 
 		config.module.rules.push(
 			{
-				exclude : /node_modules/ ,
-				test    : /\.graphql$/ ,
+				exclude : /node_modules/u ,
+				test    : /\.graphql$/u ,
 				use     : [
 					options.defaultLoaders.babel ,
 					{
@@ -39,8 +40,8 @@ module.exports = {
 
 		config.module.rules.push(
 			{
-				exclude : /node_modules/ ,
-				test    : /\.graphqls$/ ,
+				exclude : /node_modules/u ,
+				test    : /\.graphqls$/u ,
 				use     : [
 					"graphql-let/schema/loader" ,
 				] ,
@@ -49,7 +50,7 @@ module.exports = {
 
 		config.module.rules.push(
 			{
-				test : /\.ya?ml$/ ,
+				test : /\.ya?ml$/u ,
 				type : "json" ,
 				use  : "yaml-loader" ,
 			} ,

@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 /* eslint-disable max-lines */
 /* eslint-disable sonarjs/no-duplicate-string */
-/* eslint-disable @typescript-eslint/no-magic-numbers */
+
 module.exports = {
 	"env" : {
 		"browser" : true ,
@@ -10,6 +11,9 @@ module.exports = {
 	"extends" : [
 		"eslint:all" ,
 		"plugin:@typescript-eslint/all" ,
+		"plugin:import/errors" ,
+		"plugin:import/typescript" ,
+		"plugin:import/warnings" ,
 		"plugin:jsx-a11y/recommended" ,
 		"plugin:putout/recommended" ,
 		"plugin:react-hooks/recommended" ,
@@ -166,6 +170,7 @@ module.exports = {
 	"plugins" : [
 		"@typescript-eslint" ,
 		"graphql" ,
+		"import" ,
 		"jsx-a11y" ,
 		"putout" ,
 		"react" ,
@@ -1296,6 +1301,121 @@ module.exports = {
 		"implicit-arrow-linebreak" : [
 			"error" ,
 			"below" ,
+		] ,
+		"import/default" : [
+			"error" ,
+		] ,
+		"import/named" : [
+			"error" ,
+		] ,
+		"import/namespace" : [
+			"error" ,
+			{
+				"allowComputed" : false ,
+			} ,
+		] ,
+		"import/no-restricted-paths" : [
+			"error" ,
+			{
+				"zones" : [
+					{
+						"except" : [
+							"./node_modules" ,
+							"./public" ,
+							"./src/components" ,
+							"./src/constants" ,
+							"./src/libraries" ,
+							"./src/styles" ,
+							"./src/utilities" ,
+							".env*" ,
+						] ,
+						"from"   : "." ,
+						"target" : "./src/components" ,
+					} ,
+					{
+						"except" : [
+							"./node_modules" ,
+							"./public" ,
+							"./src/constants" ,
+							".env*" ,
+						] ,
+						"from"   : "." ,
+						"target" : "./src/constants" ,
+					} ,
+					{
+						"except" : [
+							"./node_modules" ,
+							"./src/constants" ,
+							"./src/libraries" ,
+							".graphql-let.yml" ,
+						] ,
+						"from"   : "." ,
+						"target" : "./src/libraries" ,
+					} ,
+					{
+						"except" : [
+							"./node_modules" ,
+							"./public" ,
+							"./src/components" ,
+							"./src/constants" ,
+							"./src/libraries" ,
+							"./src/pages" ,
+							"./src/styles" ,
+							"./src/utilities" ,
+							".env*" ,
+						] ,
+						"from"   : "." ,
+						"target" : "./src/pages" ,
+					} ,
+					{
+						"except" : [
+							"./node_modules" ,
+							"./public" ,
+							"./src/constants" ,
+							"./src/styles" ,
+						] ,
+						"from"   : "." ,
+						"target" : "./src/styles" ,
+					} ,
+					{
+						"except" : [
+							"./node_modules" ,
+							"./public" ,
+							"./src/components" ,
+							"./src/constants" ,
+							"./src/libraries" ,
+							"./src/pages" ,
+							"./src/styles" ,
+							"./src/tests" ,
+							"./src/utilities" ,
+							".env*" ,
+						] ,
+						"from"   : "." ,
+						"target" : "./src/tests" ,
+					} ,
+					{
+						"except" : [
+							"./node_modules" ,
+							"./public" ,
+							"./src/constants" ,
+							"./src/libraries" ,
+							"./src/styles" ,
+							"./src/utilities" ,
+							".env*" ,
+						] ,
+						"from"   : "." ,
+						"target" : "./src/utilities" ,
+					} ,
+				] ,
+			} ,
+		] ,
+		"import/no-unresolved" : [
+			"error" ,
+			{
+				"amd"           : true ,
+				"caseSensitive" : true ,
+				"commonjs"      : true ,
+			} ,
 		] ,
 		"indent" : [
 			"off" ,
@@ -3562,6 +3682,31 @@ module.exports = {
 		] ,
 	} ,
 	"settings" : {
+		"import/extensions" : [
+			".js" ,
+			".jsx" ,
+			".ts" ,
+			".tsx" ,
+		] ,
+		"import/ignore"  : [
+			"node_modules" ,
+		] ,
+		"import/parsers"  : {
+			"@typescript-eslint/parser" : [
+				".ts" ,
+				".tsx" ,
+			] ,
+		} ,
+		"import/resolver" : {
+			"node" : {
+				"extensions" : [
+					".js" ,
+					".jsx" ,
+					".ts" ,
+					".tsx" ,
+				] ,
+			} ,
+		} ,
 		"linkComponents" : [
 			"Hyperlink" ,
 			{

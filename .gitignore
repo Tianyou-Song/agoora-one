@@ -39,6 +39,9 @@ __generated__
 *.graphql.d.ts
 *.graphqls.d.ts
 
+# typed-scss-modules
+*.scss.d.ts
+
 # CockroachDB
 /certs
 /cockroach-data

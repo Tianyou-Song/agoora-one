@@ -1209,7 +1209,13 @@
 	}
 }
 
-*,
+* {
+	@include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3);
+
+	font-size: medium;
+	font-family: $sansSerif, sans-serif;
+}
+
 .--dark {
 	@include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3);
 }
@@ -1218,7 +1224,6 @@
 	@include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
 }
 
-*,
 .--sans-serif {
 	font-family: $sansSerif, sans-serif;
 }

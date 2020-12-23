@@ -4,7 +4,7 @@ import {
 
 import {
 	schema ,
-} from "../../lib/schema" ;
+} from "../../libraries/schema" ;
 
 const apolloServer = new ApolloServer(
 	{
