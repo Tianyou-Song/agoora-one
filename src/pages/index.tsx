@@ -1,18 +1,21 @@
-import Link from "next/link" ;
+/* eslint-disable no-console */
+/* eslint-disable putout/putout */
+
+import Link from "next/link.js" ;
 
 import React , {
 	useState ,
 } from "react" ;
 
 import {
+	initializeApollo ,
+} from "../libraries/apollo" ;
+
+import {
 	ViewerDocument ,
 	useUpdateNameMutation ,
 	useViewerQuery ,
 } from "../libraries/viewer.graphql" ;
-
-import {
-	initializeApollo ,
-} from "../libraries/apollo" ;
 
 import HomeStyles from "../styles/Home.module.scss" ;
 
@@ -66,7 +69,9 @@ const Index = () => {
 						} ,
 					) ;
 
-					const newViewer = viewer ;
+					const newViewer = {
+						...viewer ,
+					} ;
 
 					// Add our comment from the mutation to the end.
 					newViewer.name = name ;
@@ -100,36 +105,25 @@ const Index = () => {
 				viewer.name
 			}
 			{
-				" "
-			}
-			{
-				"and you're"
+				" and you're "
 			}
 			{
 				viewer.status
 			}
 			{
-				". Go to the"
-			}
-			{
-				" "
+				". Go to the "
 			}
 			< Link
 				href = {
 					"/about"
 				}
 			>
-				< a >
-					{
-						"about"
-					}
-				</ a >
+				{
+					"about"
+				}
 			</ Link >
 			{
-				" "
-			}
-			{
-				"page."
+				" page."
 			}
 			< div >
 				< input
@@ -187,4 +181,3 @@ export async function getStaticProps () {
 }
 
 export default Index ;
-

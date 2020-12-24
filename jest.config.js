@@ -1,28 +1,33 @@
+/* eslint-disable import/no-commonjs */
+/* eslint-disable import/unambiguous */
 /* eslint-disable sonarjs/no-duplicate-string */
-module.exports = {
-	moduleFileExtensions    : [
+
+const jestConfig = {
+	"moduleFileExtensions" : [
 		"ts" ,
 		"tsx" ,
 		"js" ,
 		"json" ,
 		"jsx" ,
 	] ,
-	roots                   : [
+	"roots" : [
 		"<rootDir>" ,
 	] ,
-	testPathIgnorePatterns  : [
+	"testPathIgnorePatterns" : [
 		"<rootDir>[/\\\\](node_modules|.next)[/\\\\]" ,
 	] ,
-	transform               : {
-		"\\.graphql$"     : [
+	"transform" : {
+		"\\.graphql$" : [
 			"graphql-let/jestTransformer" ,
 			{
-				subsequentTransformer : "babel-jest" ,
+				"subsequentTransformer" : "babel-jest" ,
 			} ,
 		] ,
 		"^.+\\.(ts|tsx)$" : "babel-jest" ,
 	} ,
-	transformIgnorePatterns : [
+	"transformIgnorePatterns" : [
 		"[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$" ,
 	] ,
 } ;
+
+module.exports = jestConfig ;

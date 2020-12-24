@@ -1,10 +1,10 @@
 import type {
-	MutationResolvers , QueryResolvers ,
-} from "./type-defs.graphqls" ;
-
-import type {
 	ResolverContext ,
 } from "./apollo" ;
+
+import type {
+	MutationResolvers , QueryResolvers ,
+} from "./type-defs.graphqls" ;
 
 const userProfile = {
 	id     : String(

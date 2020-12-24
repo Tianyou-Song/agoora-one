@@ -1,12 +1,3 @@
-import "../styles/globals.scss" ;
-
-import React from "react" ;
-
-import type {
-	NextComponentType ,
-	NextPageContext ,
-} from "next" ;
-
 import type {
 	ApolloCache ,
 	NormalizedCacheObject ,
@@ -15,6 +6,15 @@ import type {
 import {
 	ApolloProvider ,
 } from "@apollo/client" ;
+
+import type {
+	NextComponentType ,
+	NextPageContext ,
+} from "next" ;
+
+import React from "react" ;
+
+import "../styles/globals.scss" ;
 
 import {
 	useApollo ,

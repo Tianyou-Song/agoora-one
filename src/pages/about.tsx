@@ -1,8 +1,8 @@
-import Link from "next/link" ;
+import Link from "next/link.js" ;
 
 import React from "react" ;
 
-export const About = () : JSX.Element => {
+const About = () : JSX.Element => {
 
 	return (
 		< div >
@@ -14,15 +14,9 @@ export const About = () : JSX.Element => {
 					"/"
 				}
 			>
-				< button
-					type = {
-						"button"
-					}
-				>
-					{
-						"Home"
-					}
-				</ button >
+				{
+					"Home"
+				}
 			</ Link >
 			{
 				" page."
@@ -31,3 +25,5 @@ export const About = () : JSX.Element => {
 	) ;
 
 } ;
+
+export default About ;

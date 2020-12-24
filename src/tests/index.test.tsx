@@ -2,15 +2,16 @@ import {
 	InMemoryCache , gql ,
 } from "@apollo/client" ;
 
-import React from "react" ;
+import {
+	MockedProvider ,
+// eslint-disable-next-line import/no-internal-modules
+} from "@apollo/client/testing" ;
 
-import Index from "../pages" ;
+import React from "react" ;
 
 import renderer from "react-test-renderer" ;
 
-import {
-	MockedProvider ,
-} from "@apollo/client/testing" ;
+import Index from "../pages" ;
 
 const cache = new InMemoryCache() ;
 
