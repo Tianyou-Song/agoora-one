@@ -5,95 +5,79 @@ import type {
 
 import {
 	ApolloClient ,
+	HttpLink ,
 	InMemoryCache ,
 } from "@apollo/client" ;
 
 import type {
-	ApolloCache ,
 	NormalizedCacheObject ,
 } from "@apollo/client" ;
+
+import {
+	SchemaLink ,
+} from "@apollo/client/link/schema" ;
 
 import {
 	useMemo ,
 } from "react" ;
 
+import {
+	schema ,
+} from  "./schema" ;
+
 let apolloClient : ApolloClient<NormalizedCacheObject> | undefined ;
 
-export interface ResolverContext {
+interface ResolverContext {
 	req ?: IncomingMessage;
 	res ?: ServerResponse;
 }
 
-function createIsomorphLink (
+const createIsomorphLink = (
 	context : ResolverContext = {} ,
-) {
+) : HttpLink | SchemaLink => {
 
 	if ( typeof window === "undefined" ) {
 
-		const {
-			SchemaLink ,
-		} = require(
-			"@apollo/client/link/schema" ,
-		) ;
-
-		const {
-			schema ,
-		} = require(
-			"./schema" ,
-		) ;
-
 		return new SchemaLink(
 			{
-				schema ,
 				context ,
+				schema ,
 			} ,
 		) ;
 
 	}
 
-	const {
-		HttpLink ,
-	} = require(
-		"@apollo/client" ,
-	) ;
-
 	return new HttpLink(
 		{
-			uri         : "/api/graphql" ,
-			credentials : "same-origin" ,
+			"credentials" : "same-origin" ,
+			"uri"         : "/api/graphql" ,
 		} ,
 	) ;
 
-}
+} ;
 
-function createApolloClient (
+const createApolloClient = (
 	context ?: ResolverContext ,
-) {
+) : ApolloClient<NormalizedCacheObject> => {
 
 	return new ApolloClient(
 		{
-			ssrMode : typeof window === "undefined" ,
-			link    : createIsomorphLink(
+			"cache" : new InMemoryCache() ,
+			"link"  : createIsomorphLink(
 				context ,
 			) ,
-			cache   : new InMemoryCache() ,
+			"ssrMode" : typeof window === "undefined" ,
 		} ,
 	) ;
 
-}
+} ;
 
-export function initializeApollo (
-	initialState : ApolloCache<NormalizedCacheObject> ,
+const initializeApollo = (
+	initialState ? : NormalizedCacheObject ,
+	context ? : ResolverContext ,
+) : ApolloClient<NormalizedCacheObject> => {
 
-	/*
-	 * Pages with Next.js data fetching methods, like `getStaticProps`, can send
-	 * a custom context which will be used by `SchemaLink` to server render pages
-	 */
-
-	context ?: ResolverContext ,
-) {
-
-	const _apolloClient = apolloClient ?? createApolloClient(
+	const apolloClientToUse = apolloClient ?? createApolloClient(
 		context ,
 	) ;
 
@@ -104,7 +88,7 @@ export function initializeApollo (
 
 	if ( initialState ) {
 
-		_apolloClient.cache.restore(
+		apolloClientToUse.cache.restore(
 			initialState ,
 		) ;
 
@@ -113,24 +97,24 @@ export function initializeApollo (
 	// For SSG and SSR always create a new Apollo Client
 	if ( typeof window === "undefined" ) {
 
-		return _apolloClient ;
+		return apolloClientToUse ;
 
 	}
 
 	// Create the Apollo Client once in the client
 	if ( ! apolloClient ) {
 
-		apolloClient = _apolloClient ;
+		apolloClient = apolloClientToUse ;
 
 	}
 
-	return _apolloClient ;
+	return apolloClientToUse ;
 
-}
+} ;
 
-export function useApollo (
-	initialState : ApolloCache<NormalizedCacheObject> ,
-) {
+const useApollo = (
+	initialState : NormalizedCacheObject ,
+) : ApolloClient<NormalizedCacheObject> => {
 
 	return useMemo(
 		() => {
@@ -145,4 +129,12 @@ export function useApollo (
 		] ,
 	) ;
 
-}
+} ;
+
+export {
+	ResolverContext ,
+	createApolloClient ,
+	createIsomorphLink ,
+	initializeApollo ,
+	useApollo ,
+} ;

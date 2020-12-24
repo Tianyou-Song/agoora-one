@@ -1558,23 +1558,23 @@
     camel-case "4.1.1"
     tslib "~2.0.1"
 
-"@graphql-tools/utils@^7.0.0", "@graphql-tools/utils@^7.1.0", "@graphql-tools/utils@^7.1.2", "@graphql-tools/utils@^7.1.4", "@graphql-tools/utils@^7.1.5", "@graphql-tools/utils@^7.1.6", "@graphql-tools/utils@~7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-7.2.0.tgz#e1d57c0b17231356c9df44c0a4e66a03814775b4"
-  integrity sha512-dVQHhuh/W6KlmSOQZliHH7ba41dsCOhqPwkeW6dwOjy0FqSx/hGihKZyABDmjNkDbowr2141aAIJYfj2XdoX8Q==
+"@graphql-tools/utils@^7.0.0", "@graphql-tools/utils@^7.1.0", "@graphql-tools/utils@^7.1.2", "@graphql-tools/utils@^7.1.5", "@graphql-tools/utils@^7.1.6", "@graphql-tools/utils@^7.2.1", "@graphql-tools/utils@~7.2.0":
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-7.2.1.tgz#c8b41f4feb9afeccec16575f5bf51de15e39cccd"
+  integrity sha512-uLlE3WX0qdPjjuGtgEvuAOybE7eTxnJBwnPWUp20ONRRpEf+tLVlJnsdPHFMbe8A+1yWsfHqJlvsgEdJXDsNjA==
   dependencies:
     "@ardatan/aggregate-error" "0.0.6"
     camel-case "4.1.2"
     tslib "~2.0.1"
 
 "@graphql-tools/wrap@^7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/wrap/-/wrap-7.0.4.tgz#436fc1a8febe23e57036ae21be0476dc8e5d9984"
-  integrity sha512-txBs0W4k3WR86aEzBYXtKdGeeUXCNdRNxjQA/95T6ywNYoM8pw2mvpoXrWOvzbeaH3zwhbHY7kwii4atrC9irg==
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/wrap/-/wrap-7.0.5.tgz#8659a119abef11754f712b0c202e41a484951e0b"
+  integrity sha512-KCWBXsDfvG46GNUawRltJL4j9BMGoOG7oo3WEyCQP+SByWXiTe5cBF45SLDVQgdjljGNZhZ4Lq/7avIkF7/zDQ==
   dependencies:
     "@graphql-tools/delegate" "^7.0.7"
     "@graphql-tools/schema" "^7.1.2"
-    "@graphql-tools/utils" "^7.1.4"
+    "@graphql-tools/utils" "^7.2.1"
     is-promise "4.0.0"
     tslib "~2.0.1"
 
@@ -1943,9 +1943,9 @@
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
 "@putout/compare@^6.0.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@putout/compare/-/compare-6.1.0.tgz#e58d4d9ea35b69f71d4c8824f1371e3161e03232"
-  integrity sha512-XtRFC2GlQ0rDKoAp1uwaPA6xdYkSmtSWVxm5YvywacUiGt2FLS6n4mCLI3loGYvAtY8uu9nuCjt16jGznj/zgg==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@putout/compare/-/compare-6.1.1.tgz#0ea600630d1d0240bf1bd933c3aa619560e6c581"
+  integrity sha512-vL820LcBVGULRogA/9NSJI6MKtmvksRKr/IQjpUX85oaF2R5VtlAkGzFlCLp3e6HO4owvUlZ/mPEbyciPtGnWA==
   dependencies:
     "@babel/traverse" "^7.12.5"
     "@babel/types" "^7.12.6"
@@ -2156,10 +2156,10 @@
   resolved "https://registry.yarnpkg.com/@putout/plugin-convert-equal-to-strict-equal/-/plugin-convert-equal-to-strict-equal-1.1.0.tgz#e32df3942d96f93959a354fb72c26e0f7c999620"
   integrity sha512-H6H4Qu7lCBSyTj16olpB2D9PFH1owy08ORcFOfmvyvuLYDqJybyycMk4sHDvU4cQDhsHYfEGXJOeAaKnoxEtLA==
 
-"@putout/plugin-convert-esm-to-commonjs@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@putout/plugin-convert-esm-to-commonjs/-/plugin-convert-esm-to-commonjs-3.0.0.tgz#b68eba56cddc6c2551147ba7ff884821d890928d"
-  integrity sha512-ZqnqRhLRla4tuI4qMBjJqiHUguNcd7OvXjb7OH1tl6fYgYdf5E+7KRlVXrWSBw+L8MWOd7X+cuslPCVVIZaLRA==
+"@putout/plugin-convert-esm-to-commonjs@^3.0.0", "@putout/plugin-convert-esm-to-commonjs@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@putout/plugin-convert-esm-to-commonjs/-/plugin-convert-esm-to-commonjs-3.1.0.tgz#651d5d4ecffc597827f348d950afbb860af6f971"
+  integrity sha512-8ZsJrv/hQBJsgh/Ylnw4WgqlHToE9WrRiKeVsaP96vLCRm0ZuKRBvT0dj5Zle3UjEjiW2vYvZcrEPzkItbGeBg==
 
 "@putout/plugin-convert-for-each-to-for-of@^5.0.0", "@putout/plugin-convert-for-each-to-for-of@^5.2.0":
   version "5.2.0"
@@ -10737,10 +10737,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-putout@^12.8.0:
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/putout/-/putout-12.8.0.tgz#76d7704c72d037438fbe8bb4511e0f0ca4656957"
-  integrity sha512-2evbkakOtOsdNVdWUtNt+QW9QRMIE1RIVnx2oFwtCpibusHu7cdi6m2a2EIjjneVbek1m63nOiSvGTSoG5hVXg==
+putout@^12.9.2:
+  version "12.9.2"
+  resolved "https://registry.yarnpkg.com/putout/-/putout-12.9.2.tgz#67929d691a7b3ce16ab0ad4223ce8950f3f8535b"
+  integrity sha512-2ztYQpmeUlCjPR361ITmJ1w8PX/viwNW6Jzrm98/vwB9T9BPi1LClMeQHbjkJNZpv74v4xgKnP7JNogFENOhVQ==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/traverse" "^7.12.5"
@@ -10865,6 +10865,7 @@ putout@^12.8.0:
     picomatch "^2.2.2"
     try-catch "^3.0.0"
     try-to-catch "^3.0.0"
+    v8-compile-cache "^2.2.0"
     yargs-parser "^20.0.0"
 
 qs@~6.5.2:

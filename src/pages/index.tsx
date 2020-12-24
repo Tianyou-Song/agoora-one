@@ -1,9 +1,16 @@
 /* eslint-disable no-console */
 /* eslint-disable putout/putout */
 
-import Link from "next/link.js" ;
+import type {
+	NormalizedCacheObject ,
+} from "@apollo/client" ;
 
-import React , {
+import Link from "next/link" ;
+
+import type React from "react" ;
+
+import {
+	useCallback ,
 	useState ,
 } from "react" ;
 
@@ -11,23 +18,53 @@ import {
 	initializeApollo ,
 } from "../libraries/apollo" ;
 
+import type {
+	ViewerQuery ,
+} from "../libraries/viewer.graphql" ;
+
 import {
-	ViewerDocument ,
+	ViewerDocument  ,
 	useUpdateNameMutation ,
 	useViewerQuery ,
 } from "../libraries/viewer.graphql" ;
 
 import HomeStyles from "../styles/Home.module.scss" ;
 
-const Index = () => {
+const getStaticProps = async () : Promise<{
+	"props" : {
+		"initialApolloState" : NormalizedCacheObject;
+	};
+}> => {
+
+	const apolloClient = initializeApollo() ;
+
+	await apolloClient.query(
+		{
+			"query" : ViewerDocument ,
+		} ,
+	) ;
+
+	return {
+		"props" : {
+			"initialApolloState" : apolloClient.cache.extract() ,
+		} ,
+	} ;
+
+} ;
+
+const Index = () : JSX.Element => {
+
+	const {
+		data ,
+	} = useViewerQuery() ;
 
 	const {
 		viewer ,
-	} = useViewerQuery().data! ;
+	} = data ?? {} ;
 
 	const [
-		name ,
-		setNewName ,
+		enteredName ,
+		setEnteredName ,
 	] = useState(
 		"" ,
 	) ;
@@ -36,84 +73,86 @@ const Index = () => {
 		updateNameMutation ,
 	] = useUpdateNameMutation() ;
 
-	const onChangeName = () => {
+	const handleNameTextChange = useCallback(
+		(
+			nameChangeEvent : React.ChangeEvent<HTMLInputElement> ,
+		) => {
 
-		updateNameMutation(
-			{
-				variables : {
-					name ,
-				} ,
+			setEnteredName(
+				nameChangeEvent.target.value ,
+			) ;
 
-				/*
-				 * Follow apollo suggestion to update cache
-				 * https://www.apollographql.com/docs/angular/features/cache-updates/#update
-				 */
+		} ,
+		[
+			setEnteredName ,
+		] ,
+	) ;
 
-				update : (
-					store ,
-					{
-						data: {
-							updateName: {
-								name ,
+	const handleNameChange = useCallback(
+		async () : Promise<void> => {
+
+			await updateNameMutation(
+				{
+					"update" : (
+						store ,
+						{
+							"data": {
+								"updateName" : {
+								// eslint-disable-next-line @typescript-eslint/no-shadow
+									name ,
+								} ,
 							} ,
 						} ,
+					) => {
+
+						const {
+							"viewer" : storeViewer ,
+						} = store.readQuery(
+							{
+								"query" : ViewerDocument ,
+							} ,
+						) as ViewerQuery ;
+
+						const viewerToWrite = {
+							...storeViewer ,
+						} ;
+
+						viewerToWrite.name = name as string ;
+
+						store.writeQuery(
+							{
+								"data"  : {
+									"viewer" : viewerToWrite ,
+								} ,
+								"query" : ViewerDocument ,
+							} ,
+						) ;
+
 					} ,
-				) => {
 
-					// Read the data from our cache for this query.
-					const {
-						viewer ,
-					} = store.readQuery(
-						{
-							query : ViewerDocument ,
-						} ,
-					) ;
-
-					const newViewer = {
-						...viewer ,
-					} ;
-
-					// Add our comment from the mutation to the end.
-					newViewer.name = name ;
-
-					// Write our data back to the cache.
-					store.writeQuery(
-						{
-							query : ViewerDocument ,
-							data  : {
-								viewer : newViewer ,
-							} ,
-						} ,
-					) ;
-
+					"variables" : {
+						"name" : enteredName ,
+					} ,
 				} ,
-			} ,
-		) ;
+			) ;
 
-	} ;
+		} ,
+		[
+			enteredName ,
+			updateNameMutation ,
+		] ,
+	) ;
 
 	return (
-		< div
+		<div
 			className = {
 				HomeStyles.main
 			}
 		>
 			{
-				"You're signed in as "
+				`You're signed in as ${ viewer?.name ?? "" } and you're ${ viewer?.status ?? "" }. Go to the `
 			}
-			{
-				viewer.name
-			}
-			{
-				" and you're "
-			}
-			{
-				viewer.status
-			}
-			{
-				". Go to the "
-			}
-			< Link
+			<Link
 				href = {
 					"/about"
 				}
@@ -121,12 +160,12 @@ const Index = () => {
 				{
 					"about"
 				}
-			</ Link >
+			</Link>
 			{
 				" page."
 			}
-			< div >
-				< input
+			<div>
+				<input
 					placeholder = {
 						"your new name..."
 					}
@@ -134,18 +173,10 @@ const Index = () => {
 						"text"
 					}
 					onChange = {
-						(
-							e ,
-						) => {
-
-							setNewName(
-								e.target.value ,
-							) ;
-
-						}
+						handleNameTextChange
 					}
 				/>
-				< input
+				<input
 					type = {
 						"button"
 					}
@@ -153,31 +184,17 @@ const Index = () => {
 						"change"
 					}
 					onClick = {
-						onChangeName
+						handleNameChange
 					}
 				/>
-			</ div >
-		</ div >
+			</div>
+		</div>
 	) ;
 
 } ;
 
-export async function getStaticProps () {
-
-	const apolloClient = initializeApollo() ;
-
-	await apolloClient.query(
-		{
-			query : ViewerDocument ,
-		} ,
-	) ;
-
-	return {
-		props : {
-			initialApolloState : apolloClient.cache.extract() ,
-		} ,
-	} ;
-
-}
+export {
+	getStaticProps ,
+} ;
 
 export default Index ;

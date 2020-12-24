@@ -1,15 +1,15 @@
-import Link from "next/link.js" ;
+import Link from "next/link" ;
 
 import React from "react" ;
 
 const About = () : JSX.Element => {
 
 	return (
-		< div >
+		<div>
 			{
 				"Welcome to the about page. Go to the "
 			}
-			< Link
+			<Link
 				href = {
 					"/"
 				}
@@ -17,11 +17,11 @@ const About = () : JSX.Element => {
 				{
 					"Home"
 				}
-			</ Link >
+			</Link>
 			{
 				" page."
 			}
-		</ div >
+		</div>
 	) ;
 
 } ;

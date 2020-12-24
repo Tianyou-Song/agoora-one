@@ -12,14 +12,20 @@ const apolloServer = new ApolloServer(
 	} ,
 ) ;
 
-export const config = {
-	api : {
-		bodyParser : false ,
+const config = {
+	"api" : {
+		"bodyParser" : false ,
 	} ,
 } ;
 
-export default apolloServer.createHandler(
+const apolloServerHandler = apolloServer.createHandler(
 	{
-		path : "/api/graphql" ,
+		"path" : "/api/graphql" ,
 	} ,
 ) ;
+
+export {
+	config ,
+} ;
+
+export default apolloServerHandler ;

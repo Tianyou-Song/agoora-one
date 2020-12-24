@@ -17,7 +17,7 @@ const cache = new InMemoryCache() ;
 
 cache.writeQuery(
 	{
-		query : gql `
+		"query" : gql `
     query Viewer {
       viewer {
         id
@@ -26,12 +26,12 @@ cache.writeQuery(
       }
     }
   ` ,
-		data : {
-			viewer : {
-				__typename : "User" ,
-				id         : "Baa" ,
-				name       : "Baa" ,
-				status     : "Healthy" ,
+		"data" : {
+			"viewer" : {
+				"__typename" : "User" ,
+				"id"         : "Baa" ,
+				"name"       : "Baa" ,
+				"status"     : "Healthy" ,
 			} ,
 		} ,
 	} ,
@@ -46,13 +46,13 @@ describe(
 			() => {
 
 				const component = renderer.create(
-					< MockedProvider
+					<MockedProvider
 						cache = {
 							cache
 						}
 					>
-						< Index />
-					</ MockedProvider > ,
+						<Index/>
+					</MockedProvider> ,
 				) ;
 
 				expect(

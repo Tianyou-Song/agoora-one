@@ -1,5 +1,4 @@
 import type {
-	ApolloCache ,
 	NormalizedCacheObject ,
 } from "@apollo/client" ;
 
@@ -23,7 +22,7 @@ import {
 const App = (
 	{
 		Component ,
-		pageProps : pageProperties ,
+		"pageProps" : pageProperties ,
 	} : {
 		Component : NextComponentType<NextPageContext , unknown , unknown> ;
 		pageProps : Record<string , unknown> ;
@@ -33,7 +32,7 @@ const App = (
 	const {
 		initialApolloState ,
 	} = pageProperties as {
-		initialApolloState : ApolloCache<NormalizedCacheObject> ;
+		initialApolloState : NormalizedCacheObject ;
 	} ;
 
 	const apolloClient = useApollo(
@@ -41,18 +40,18 @@ const App = (
 	) ;
 
 	return (
-		< ApolloProvider
+		<ApolloProvider
 			client = {
 				apolloClient
 			}
 		>
-			< Component
+			<Component
 				// eslint-disable-next-line react/jsx-props-no-spreading
 				{
 					...pageProperties
 				}
 			/>
-		</ ApolloProvider >
+		</ApolloProvider>
 	) ;
 
 } ;
