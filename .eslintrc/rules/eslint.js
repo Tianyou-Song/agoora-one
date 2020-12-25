@@ -620,7 +620,7 @@ const eslintRule = {
 			"allowAfterSuper": false,
 			"allowAfterThis": false,
 			"allowAfterThisConstructor": false,
-			"allowFunctionParams": false,
+			"allowFunctionParams": true,
 			"enforceInMethodNames": true,
 		},
 	],

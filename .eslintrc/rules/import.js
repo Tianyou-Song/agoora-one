@@ -15,6 +15,9 @@ const importRule = {
 	"import/extensions": [
 		"error",
 		"never",
+		{
+			"yml": "always"
+		}
 	],
 	"import/first": [
 		"error",
@@ -227,6 +230,9 @@ const importRule = {
 			"amd": true,
 			"caseSensitive": true,
 			"commonjs": true,
+			"ignore": [
+				"\.yml$"
+			]
 		},
 	],
 	"import/no-unused-modules": [

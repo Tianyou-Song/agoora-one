@@ -1,6 +1,6 @@
-schema: '**/*.graphqls'
-schemaEntrypoint: 'src/libraries/type-defs.graphqls'
-documents: '**/*.graphql'
+schema: "**/*.graphqls"
+schemaEntrypoint: "src/libraries/type-defs.graphqls"
+documents: "**/*.graphql"
 plugins:
   - typescript
   - typescript-operations

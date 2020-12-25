@@ -17,7 +17,7 @@ import graphQLLetConfigImport from "../../.graphql-let.yml" ;
 import resolvers from "./resolvers" ;
 
 const graphQLLetConfig = graphQLLetConfigImport as {
-	"schema" : string;
+	"schema" : string ;
 } ;
 
 const loadedFiles = loadFilesSync(

@@ -25,7 +25,7 @@ const Query : Required<QueryResolvers<ResolverContext>> = {
 
 const Mutation : Required<MutationResolvers<ResolverContext>> = {
 	updateName (
-		updateNameParent ,
+		_updateNameParent ,
 		updateNameArguments ,
 	) {
 
