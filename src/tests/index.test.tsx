@@ -17,23 +17,24 @@ const cache = new InMemoryCache() ;
 
 cache.writeQuery(
 	{
-		"query" : gql `
-    query Viewer {
-      viewer {
-        id
-        name
-        status
-      }
-    }
-  ` ,
 		"data" : {
 			"viewer" : {
+				// eslint-disable-next-line @typescript-eslint/naming-convention
 				"__typename" : "User" ,
 				"id"         : "Baa" ,
 				"name"       : "Baa" ,
 				"status"     : "Healthy" ,
 			} ,
 		} ,
+		"query" : gql `
+			query Viewer {
+			viewer {
+				id
+				name
+				status
+			}
+			}
+		` ,
 	} ,
 ) ;
 

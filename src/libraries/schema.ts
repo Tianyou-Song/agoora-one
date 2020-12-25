@@ -1,4 +1,6 @@
-import path from "path" ;
+import {
+	join ,
+} from "path" ;
 
 import {
 	loadFilesSync ,
@@ -12,16 +14,12 @@ import {
 	makeExecutableSchema ,
 } from "@graphql-tools/schema" ;
 
-import graphQLLetConfigYml from "../../.graphql-let.yml" ;
+import graphQLLetConfig from "../../.graphql-let.yml" ;
 
 import resolvers from "./resolvers" ;
 
-const graphQLLetConfig = graphQLLetConfigYml as {
-	schema : string;
-} ;
-
 const loadedFiles = loadFilesSync(
-	path.join(
+	join(
 		process.cwd() ,
 		graphQLLetConfig.schema ,
 	) ,
@@ -31,13 +29,9 @@ const typeDefs = mergeTypeDefs(
 	loadedFiles ,
 ) ;
 
-const schema = makeExecutableSchema(
+export const schema = makeExecutableSchema(
 	{
-		resolvers ,
 		typeDefs ,
+		resolvers ,
 	} ,
 ) ;
-
-export {
-	schema ,
-} ;

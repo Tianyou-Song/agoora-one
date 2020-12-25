@@ -20,6 +20,7 @@ import {
 } from "../libraries/apollo" ;
 
 const App = (
+	// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 	{
 		Component ,
 		"pageProps" : pageProperties ,

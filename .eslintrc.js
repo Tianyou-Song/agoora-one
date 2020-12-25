@@ -1,11 +1,3 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-/* eslint-disable @typescript-eslint/no-require-imports */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable import/no-commonjs */
-/* eslint-disable import/no-internal-modules */
-/* eslint-disable import/unambiguous */
-/* eslint-disable sonarjs/no-duplicate-string */
-
 const eslintRule = require(
 	"./.eslintrc/rules/eslint" ,
 ) ;
@@ -138,21 +130,11 @@ const eslintRunCommand = {
 						"trailingUnderscore"        : "forbid" ,
 					} ,
 				] ,
-				"@graphql-eslint/no-anonymous-operations"                    : [
-					"error" ,
-				] ,
-				"@graphql-eslint/no-case-insensitive-enum-values-duplicates" : [
-					"error" ,
-				] ,
-				"@graphql-eslint/no-operation-name-suffix"                   : [
-					"error" ,
-				] ,
-				"@graphql-eslint/prettier"                                   : [
-					"off" ,
-				] ,
-				"@graphql-eslint/require-deprecation-reason"                 : [
-					"error" ,
-				] ,
+				"@graphql-eslint/no-anonymous-operations"                    : "error" ,
+				"@graphql-eslint/no-case-insensitive-enum-values-duplicates" : "error" ,
+				"@graphql-eslint/no-operation-name-suffix"                   : "error" ,
+				"@graphql-eslint/prettier"                                   : "off" ,
+				"@graphql-eslint/require-deprecation-reason"                 : "error" ,
 				"@graphql-eslint/require-description"                        : [
 					"error" ,
 					{
@@ -162,12 +144,8 @@ const eslintRunCommand = {
 						] ,
 					} ,
 				] ,
-				"@graphql-eslint/require-id-when-available" : [
-					"error" ,
-				] ,
-				"@graphql-eslint/validate-against-schema"   : [
-					"error" ,
-				] ,
+				"@graphql-eslint/require-id-when-available" : "error" ,
+				"@graphql-eslint/validate-against-schema"   : "error" ,
 				"graphql/template-strings"                  : [
 					"error" ,
 					{
@@ -195,18 +173,50 @@ const eslintRunCommand = {
 		} ,
 		{
 			"files" : [
-				"src/pages/**" ,
+				"./src/libraries/**" ,
 			] ,
 			"rules" : {
-				"import/no-default-export"     : [
-					"off" ,
-				] ,
-				"import/no-unused-modules"     : [
-					"off" ,
-				] ,
-				"import/prefer-default-export" : [
-					"error" ,
-				] ,
+				"import/no-default-export"     : "off" ,
+				"import/no-unused-modules"     : "off" ,
+			} ,
+		} ,
+		{
+			"files" : [
+				"./src/pages/**" ,
+			] ,
+			"rules" : {
+				"import/no-default-export"     : "off" ,
+				"import/no-unused-modules"     : "off" ,
+				"import/prefer-default-export" : "error" ,
+			} ,
+		} ,
+		{
+			"files" : [
+				"!./src/**" ,
+			] ,
+			"rules" : {
+				"@typescript-eslint/no-magic-numbers"   : "off" ,
+				"@typescript-eslint/no-require-imports" : "off" ,
+				"@typescript-eslint/no-var-requires"    : "off" ,
+				"import/no-commonjs"                    : "off" ,
+				"import/no-internal-modules"            : "off" ,
+				"import/unambiguous"                    : "off" ,
+				"sonarjs/no-duplicate-string"           : "off" ,
+			} ,
+		} ,
+		{
+			"files" : [
+				"**/*.js" ,
+			] ,
+			"rules" : {
+				"@typescript-eslint/explicit-function-return-type"  : "off" ,
+				"@typescript-eslint/explicit-module-boundary-types" : "off" ,
+				"@typescript-eslint/no-unsafe-assignment"           : "off" ,
+				"@typescript-eslint/no-unsafe-call"                 : "off" ,
+				"@typescript-eslint/no-unsafe-member-access"        : "off" ,
+				"@typescript-eslint/no-unsafe-return"               : "off" ,
+				"@typescript-eslint/strict-boolean-expressions"     : "off" ,
+				"@typescript-eslint/typedef"                        : "off" ,
 			} ,
 		} ,
 	] ,

@@ -3,13 +3,11 @@ import type {
 } from "./apollo" ;
 
 import type {
-	MutationResolvers ,
-	QueryResolvers ,
+	MutationResolvers , QueryResolvers ,
 } from "./type-defs.graphqls" ;
 
 const userProfile = {
 	"id"     : String(
-		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 		1 ,
 	) ,
 	"name"   : "John Smith" ,
@@ -26,24 +24,18 @@ const Query : Required<QueryResolvers<ResolverContext>> = {
 
 const Mutation : Required<MutationResolvers<ResolverContext>> = {
 	updateName (
-		methodParent , methodArguments ,
+		_parent , _arguments ,
 	) {
 
-		const {
-			"name" : argumentName ,
-		} = methodArguments ;
-
-		userProfile.name = argumentName ;
+		userProfile.name = _arguments.name ;
 
 		return userProfile ;
 
 	} ,
 } ;
 
-const defaultExport = {
-	Mutation ,
+export default {
 	Query ,
+	Mutation ,
 } ;
 
-// eslint-disable-next-line import/no-default-export
-export default defaultExport ;

@@ -75,6 +75,7 @@ const Index = () : JSX.Element => {
 
 	const handleNameTextChange = useCallback(
 		(
+			// eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
 			nameChangeEvent : React.ChangeEvent<HTMLInputElement> ,
 		) => {
 
@@ -96,12 +97,7 @@ const Index = () : JSX.Element => {
 					"update" : (
 						store ,
 						{
-							"data": {
-								"updateName" : {
-								// eslint-disable-next-line @typescript-eslint/no-shadow
-									name ,
-								} ,
-							} ,
+							"data": updatedNameMutation ,
 						} ,
 					) => {
 
@@ -117,7 +113,21 @@ const Index = () : JSX.Element => {
 							...storeViewer ,
 						} ;
 
-						viewerToWrite.name = name as string ;
+						let nameToWrite = "" ;
+
+						if ( updatedNameMutation ) {
+
+							const {
+								"updateName" : {
+									"name" : updatedName ,
+								} ,
+							} = updatedNameMutation ;
+
+							nameToWrite = updatedName ;
+
+						}
+
+						viewerToWrite.name = nameToWrite ;
 
 						store.writeQuery(
 							{

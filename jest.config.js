@@ -1,7 +1,3 @@
-/* eslint-disable import/no-commonjs */
-/* eslint-disable import/unambiguous */
-/* eslint-disable sonarjs/no-duplicate-string */
-
 const jestConfig = {
 	"moduleFileExtensions" : [
 		"ts" ,
