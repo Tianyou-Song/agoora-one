@@ -61,19 +61,13 @@ const eslintRule = {
 			"before": true,
 		},
 	],
-	"block-scoped-var": [
-		"error",
-	],
+	"block-scoped-var": "error",
 	"block-spacing": [
 		"error",
 		"always",
 	],
-	"brace-style": [
-		"off",
-	],
-	"callback-return": [
-		"off",
-	],
+	"brace-style": "off",
+	"callback-return": "off",
 	"camelcase": [
 		"error",
 		{
@@ -88,24 +82,18 @@ const eslintRule = {
 		"always",
 		{
 			"block": {
-				"ignoreConsecutiveComments": false,
-				"ignoreInlineComments": false,
+				"ignoreConsecutiveComments": true,
+				"ignoreInlineComments": true,
 			},
 			"line": {
-				"ignoreConsecutiveComments": false,
-				"ignoreInlineComments": false,
+				"ignoreConsecutiveComments": true,
+				"ignoreInlineComments": true,
 			},
 		},
 	],
-	"class-methods-use-this": [
-		"error",
-	],
-	"comma-dangle": [
-		"off",
-	],
-	"comma-spacing": [
-		"off",
-	],
+	"class-methods-use-this": "error",
+	"comma-dangle": "off",
+	"comma-spacing": "off",
 	"comma-style": [
 		"error",
 		"last",
@@ -148,29 +136,19 @@ const eslintRule = {
 		"error",
 		"that",
 	],
-	"constructor-super": [
-		"error",
-	],
+	"constructor-super": "error",
 	"curly": [
 		"error",
 		"all",
 	],
-	"default-case": [
-		"error",
-	],
-	"default-case-last": [
-		"error",
-	],
-	"default-param-last": [
-		"off",
-	],
+	"default-case": "error",
+	"default-case-last": "error",
+	"default-param-last": "off",
 	"dot-location": [
 		"error",
 		"property",
 	],
-	"dot-notation": [
-		"off",
-	],
+	"dot-notation": "off",
 	"eol-last": [
 		"error",
 		"always",
@@ -179,15 +157,9 @@ const eslintRule = {
 		"error",
 		"always",
 	],
-	"eslint-plugin-config-perf-standard": [
-		"off",
-	],
-	"for-direction": [
-		"error",
-	],
-	"func-call-spacing": [
-		"off",
-	],
+	"eslint-plugin-config-perf-standard": "off",
+	"for-direction": "error",
+	"func-call-spacing": "off",
 	"func-name-matching": [
 		"error",
 		"always",
@@ -245,25 +217,15 @@ const eslintRule = {
 			"allowImplicit": false,
 		},
 	],
-	"global-require": [
-		"off",
-	],
+	"global-require": "off",
 	"grouped-accessor-pairs": [
 		"error",
 		"getBeforeSet",
 	],
-	"guard-for-in": [
-		"error",
-	],
-	"handle-callback-err": [
-		"off",
-	],
-	"id-blacklist": [
-		"off",
-	],
-	"id-denylist": [
-		"error",
-	],
+	"guard-for-in": "error",
+	"handle-callback-err": "off",
+	"id-blacklist": "off",
+	"id-denylist": "error",
 	"id-length": [
 		"error",
 		{
@@ -272,22 +234,14 @@ const eslintRule = {
 			"properties": "always",
 		},
 	],
-	"id-match": [
-		"error",
-	],
+	"id-match": "error",
 	"implicit-arrow-linebreak": [
 		"error",
 		"below",
 	],
-	"indent": [
-		"off",
-	],
-	"indent-legacy": [
-		"off",
-	],
-	"init-declarations": [
-		"off",
-	],
+	"indent": "off",
+	"indent-legacy": "off",
+	"init-declarations": "off",
 	"jsx-quotes": [
 		"error",
 		"prefer-double",
@@ -301,9 +255,7 @@ const eslintRule = {
 			"mode": "minimum",
 		},
 	],
-	"keyword-spacing": [
-		"off",
-	],
+	"keyword-spacing": "off",
 	"line-comment-position": [
 		"error",
 		{
@@ -333,12 +285,8 @@ const eslintRule = {
 			"beforeLineComment": true,
 		},
 	],
-	"lines-around-directive": [
-		"off",
-	],
-	"lines-between-class-members": [
-		"off",
-	],
+	"lines-around-directive": "off",
+	"lines-between-class-members": "off",
 	"max-classes-per-file": [
 		"error",
 		1,
@@ -364,7 +312,7 @@ const eslintRule = {
 	"max-lines": [
 		"error",
 		{
-			"max": 1_024,
+			"max": 512,
 			"skipBlankLines": true,
 			"skipComments": true,
 		},
@@ -416,51 +364,25 @@ const eslintRule = {
 		"error",
 		"always",
 	],
-	"newline-after-var": [
-		"off",
-	],
-	"newline-before-return": [
-		"off",
-	],
+	"newline-after-var": "off",
+	"newline-before-return": "off",
 	"newline-per-chained-call": [
 		"error",
 		{
 			"ignoreChainWithDepth": 1,
 		},
 	],
-	"no-alert": [
-		"error",
-	],
-	"no-array-constructor": [
-		"off",
-	],
-	"no-async-promise-executor": [
-		"error",
-	],
-	"no-await-in-loop": [
-		"error",
-	],
-	"no-bitwise": [
-		"error",
-	],
-	"no-buffer-constructor": [
-		"off",
-	],
-	"no-caller": [
-		"error",
-	],
-	"no-case-declarations": [
-		"error",
-	],
-	"no-catch-shadow": [
-		"off",
-	],
-	"no-class-assign": [
-		"error",
-	],
-	"no-compare-neg-zero": [
-		"error",
-	],
+	"no-alert": "error",
+	"no-array-constructor": "off",
+	"no-async-promise-executor": "error",
+	"no-await-in-loop": "error",
+	"no-bitwise": "error",
+	"no-buffer-constructor": "off",
+	"no-caller": "error",
+	"no-case-declarations": "error",
+	"no-catch-shadow": "off",
+	"no-class-assign": "error",
+	"no-compare-neg-zero": "error",
 	"no-cond-assign": [
 		"error",
 		"always",
@@ -471,54 +393,26 @@ const eslintRule = {
 			"allowParens": false,
 		},
 	],
-	"no-console": [
-		"error",
-	],
-	"no-const-assign": [
-		"error",
-	],
+	"no-console": "error",
+	"no-const-assign": "error",
 	"no-constant-condition": [
 		"error",
 		{
 			"checkLoops": true,
 		},
 	],
-	"no-constructor-return": [
-		"error",
-	],
-	"no-continue": [
-		"error",
-	],
-	"no-control-regex": [
-		"error",
-	],
-	"no-debugger": [
-		"error",
-	],
-	"no-delete-var": [
-		"error",
-	],
-	"no-div-regex": [
-		"error",
-	],
-	"no-dupe-args": [
-		"error",
-	],
-	"no-dupe-class-members": [
-		"off",
-	],
-	"no-dupe-else-if": [
-		"error",
-	],
-	"no-dupe-keys": [
-		"error",
-	],
-	"no-duplicate-case": [
-		"error",
-	],
-	"no-duplicate-imports": [
-		"off",
-	],
+	"no-constructor-return": "error",
+	"no-continue": "error",
+	"no-control-regex": "error",
+	"no-debugger": "error",
+	"no-delete-var": "error",
+	"no-div-regex": "error",
+	"no-dupe-args": "error",
+	"no-dupe-class-members": "off",
+	"no-dupe-else-if": "error",
+	"no-dupe-keys": "error",
+	"no-duplicate-case": "error",
+	"no-duplicate-imports": "off",
 	"no-else-return": [
 		"error",
 		{
@@ -531,63 +425,33 @@ const eslintRule = {
 			"allowEmptyCatch": false,
 		},
 	],
-	"no-empty-character-class": [
-		"error",
-	],
-	"no-empty-function": [
-		"off",
-	],
-	"no-empty-label": [
-		"off",
-	],
-	"no-empty-pattern": [
-		"error",
-	],
-	"no-eq-null": [
-		"error",
-	],
+	"no-empty-character-class": "error",
+	"no-empty-function": "off",
+	"no-empty-label": "off",
+	"no-empty-pattern": "error",
+	"no-eq-null": "error",
 	"no-eval": [
 		"error",
 		{
 			"allowIndirect": false,
 		},
 	],
-	"no-ex-assign": [
-		"error",
-	],
-	"no-extend-native": [
-		"error",
-	],
-	"no-extra-bind": [
-		"error",
-	],
+	"no-ex-assign": "error",
+	"no-extend-native": "error",
+	"no-extra-bind": "error",
 	"no-extra-boolean-cast": [
 		"error",
 		{
 			"enforceForLogicalOperands": true,
 		},
 	],
-	"no-extra-label": [
-		"error",
-	],
-	"no-extra-parens": [
-		"off",
-	],
-	"no-extra-semi": [
-		"off",
-	],
-	"no-fallthrough": [
-		"error",
-	],
-	"no-floating-decimal": [
-		"error",
-	],
-	"no-func-assign": [
-		"error",
-	],
-	"no-global-assign": [
-		"error",
-	],
+	"no-extra-label": "error",
+	"no-extra-parens": "off",
+	"no-extra-semi": "off",
+	"no-fallthrough": "error",
+	"no-floating-decimal": "error",
+	"no-func-assign": "error",
+	"no-global-assign": "error",
 	"no-implicit-coercion": [
 		"error",
 		{
@@ -602,25 +466,15 @@ const eslintRule = {
 			"lexicalBindings": true,
 		},
 	],
-	"no-implied-eval": [
-		"off",
-	],
-	"no-import-assign": [
-		"error",
-	],
-	"no-inline-comments": [
-		"error",
-	],
+	"no-implied-eval": "off",
+	"no-import-assign": "error",
+	"no-inline-comments": "error",
 	"no-inner-declarations": [
 		"error",
 		"both",
 	],
-	"no-invalid-regexp": [
-		"error",
-	],
-	"no-invalid-this": [
-		"off",
-	],
+	"no-invalid-regexp": "error",
+	"no-invalid-this": "off",
 	"no-irregular-whitespace": [
 		"error",
 		{
@@ -630,12 +484,8 @@ const eslintRule = {
 			"skipTemplates": false,
 		},
 	],
-	"no-iterator": [
-		"error",
-	],
-	"no-label-var": [
-		"error",
-	],
+	"no-iterator": "error",
+	"no-label-var": "error",
 	"no-labels": [
 		"error",
 		{
@@ -643,39 +493,21 @@ const eslintRule = {
 			"allowSwitch": false,
 		},
 	],
-	"no-lone-blocks": [
-		"error",
-	],
-	"no-lonely-if": [
-		"error",
-	],
-	"no-loop-func": [
-		"off",
-	],
-	"no-loss-of-precision": [
-		"off",
-	],
-	"no-magic-numbers": [
-		"off",
-	],
-	"no-misleading-character-class": [
-		"error",
-	],
+	"no-lone-blocks": "error",
+	"no-lonely-if": "error",
+	"no-loop-func": "off",
+	"no-loss-of-precision": "off",
+	"no-magic-numbers": "off",
+	"no-misleading-character-class": "error",
 	"no-mixed-operators": [
 		"error",
 		{
 			"allowSamePrecedence": true,
 		},
 	],
-	"no-mixed-requires": [
-		"off",
-	],
-	"no-mixed-spaces-and-tabs": [
-		"error",
-	],
-	"no-multi-assign": [
-		"error",
-	],
+	"no-mixed-requires": "off",
+	"no-mixed-spaces-and-tabs": "error",
+	"no-multi-assign": "error",
 	"no-multi-spaces": [
 		"error",
 		{
@@ -688,9 +520,7 @@ const eslintRule = {
 			"ignoreEOLComments": false,
 		},
 	],
-	"no-multi-str": [
-		"error",
-	],
+	"no-multi-str": "error",
 	"no-multiple-empty-lines": [
 		"error",
 		{
@@ -699,160 +529,76 @@ const eslintRule = {
 			"maxEOF": 1,
 		},
 	],
-	"no-native-reassign": [
-		"off",
-	],
-	"no-negated-condition": [
-		"error",
-	],
-	"no-negated-in-lhs": [
-		"off",
-	],
-	"no-nested-ternary": [
-		"off",
-	],
-	"no-new": [
-		"error",
-	],
-	"no-new-func": [
-		"error",
-	],
-	"no-new-object": [
-		"error",
-	],
-	"no-new-require": [
-		"off",
-	],
-	"no-new-symbol": [
-		"error",
-	],
-	"no-new-wrappers": [
-		"error",
-	],
-	"no-nonoctal-decimal-escape": [
-		"error",
-	],
-	"no-obj-calls": [
-		"error",
-	],
-	"no-octal": [
-		"error",
-	],
-	"no-octal-escape": [
-		"error",
-	],
+	"no-native-reassign": "off",
+	"no-negated-condition": "error",
+	"no-negated-in-lhs": "off",
+	"no-nested-ternary": "off",
+	"no-new": "error",
+	"no-new-func": "error",
+	"no-new-object": "error",
+	"no-new-require": "off",
+	"no-new-symbol": "error",
+	"no-new-wrappers": "error",
+	"no-nonoctal-decimal-escape": "error",
+	"no-obj-calls": "error",
+	"no-octal": "error",
+	"no-octal-escape": "error",
 	"no-param-reassign": [
 		"error",
 		{
 			"props": false,
 		},
 	],
-	"no-path-concat": [
-		"off",
-	],
+	"no-path-concat": "off",
 	"no-plusplus": [
 		"error",
 		{
 			"allowForLoopAfterthoughts": false,
 		},
 	],
-	"no-process-env": [
-		"off",
-	],
-	"no-process-exit": [
-		"off",
-	],
-	"no-promise-executor-return": [
-		"error",
-	],
-	"no-proto": [
-		"error",
-	],
-	"no-prototype-builtins": [
-		"error",
-	],
-	"no-redeclare": [
-		"off",
-	],
-	"no-regex-spaces": [
-		"error",
-	],
-	"no-restricted-exports": [
-		"error",
-	],
-	"no-restricted-globals": [
-		"error",
-	],
-	"no-restricted-imports": [
-		"error",
-	],
-	"no-restricted-modules": [
-		"off",
-	],
-	"no-restricted-properties": [
-		"error",
-	],
-	"no-restricted-syntax": [
-		"error",
-	],
+	"no-process-env": "off",
+	"no-process-exit": "off",
+	"no-promise-executor-return": "error",
+	"no-proto": "error",
+	"no-prototype-builtins": "error",
+	"no-redeclare": "off",
+	"no-regex-spaces": "error",
+	"no-restricted-exports": "error",
+	"no-restricted-globals": "error",
+	"no-restricted-imports": "error",
+	"no-restricted-modules": "off",
+	"no-restricted-properties": "error",
+	"no-restricted-syntax": "error",
 	"no-return-assign": [
 		"error",
 		"always",
 	],
-	"no-return-await": [
-		"off",
-	],
-	"no-script-url": [
-		"error",
-	],
+	"no-return-await": "off",
+	"no-script-url": "error",
 	"no-self-assign": [
 		"error",
 		{
 			"props": true,
 		},
 	],
-	"no-self-compare": [
-		"error",
-	],
-	"no-sequences": [
-		"error",
-	],
-	"no-setter-return": [
-		"error",
-	],
-	"no-shadow": [
-		"off",
-	],
-	"no-shadow-restricted-names": [
-		"error",
-	],
-	"no-spaced-func": [
-		"off",
-	],
-	"no-sparse-arrays": [
-		"error",
-	],
-	"no-sync": [
-		"off",
-	],
+	"no-self-compare": "error",
+	"no-sequences": "error",
+	"no-setter-return": "error",
+	"no-shadow": "off",
+	"no-shadow-restricted-names": "error",
+	"no-spaced-func": "off",
+	"no-sparse-arrays": "error",
+	"no-sync": "off",
 	"no-tabs": [
 		"error",
 		{
 			"allowIndentationTabs": true,
 		},
 	],
-	"no-template-curly-in-string": [
-		"error",
-	],
-	"no-ternary": [
-		"error",
-	],
-	"no-this-before-super": [
-		"error",
-	],
-	"no-throw-literal": [
-		"off",
-	],
+	"no-template-curly-in-string": "error",
+	"no-ternary": "error",
+	"no-this-before-super": "error",
+	"no-throw-literal": "off",
 	"no-trailing-spaces": [
 		"error",
 		{
@@ -866,12 +612,8 @@ const eslintRule = {
 			"typeof": true,
 		},
 	],
-	"no-undef-init": [
-		"error",
-	],
-	"no-undefined": [
-		"error",
-	],
+	"no-undef-init": "error",
+	"no-undefined": "error",
 	"no-underscore-dangle": [
 		"error",
 		{
@@ -882,27 +624,17 @@ const eslintRule = {
 			"enforceInMethodNames": true,
 		},
 	],
-	"no-unexpected-multiline": [
-		"error",
-	],
-	"no-unmodified-loop-condition": [
-		"error",
-	],
+	"no-unexpected-multiline": "error",
+	"no-unmodified-loop-condition": "error",
 	"no-unneeded-ternary": [
 		"error",
 		{
 			"defaultAssignment": false,
 		},
 	],
-	"no-unreachable": [
-		"error",
-	],
-	"no-unreachable-loop": [
-		"error",
-	],
-	"no-unsafe-finally": [
-		"error",
-	],
+	"no-unreachable": "error",
+	"no-unreachable-loop": "error",
+	"no-unsafe-finally": "error",
 	"no-unsafe-negation": [
 		"error",
 		{
@@ -915,42 +647,22 @@ const eslintRule = {
 			"disallowArithmeticOperators": true,
 		},
 	],
-	"no-unused-expressions": [
-		"off",
-	],
-	"no-unused-labels": [
-		"error",
-	],
-	"no-unused-vars": [
-		"off",
-	],
-	"no-use-before-define": [
-		"off",
-	],
-	"no-useless-backreference": [
-		"error",
-	],
-	"no-useless-call": [
-		"error",
-	],
-	"no-useless-catch": [
-		"error",
-	],
+	"no-unused-expressions": "off",
+	"no-unused-labels": "error",
+	"no-unused-vars": "off",
+	"no-use-before-define": "off",
+	"no-useless-backreference": "error",
+	"no-useless-call": "error",
+	"no-useless-catch": "error",
 	"no-useless-computed-key": [
 		"error",
 		{
 			"enforceForClassMembers": true,
 		},
 	],
-	"no-useless-concat": [
-		"error",
-	],
-	"no-useless-constructor": [
-		"off",
-	],
-	"no-useless-escape": [
-		"error",
-	],
+	"no-useless-concat": "error",
+	"no-useless-constructor": "off",
+	"no-useless-escape": "error",
 	"no-useless-rename": [
 		"error",
 		{
@@ -959,12 +671,8 @@ const eslintRule = {
 			"ignoreImport": false,
 		},
 	],
-	"no-useless-return": [
-		"error",
-	],
-	"no-var": [
-		"error",
-	],
+	"no-useless-return": "error",
+	"no-var": "error",
 	"no-void": [
 		"error",
 		{
@@ -982,12 +690,8 @@ const eslintRule = {
 			],
 		},
 	],
-	"no-whitespace-before-property": [
-		"error",
-	],
-	"no-with": [
-		"error",
-	],
+	"no-whitespace-before-property": "error",
+	"no-with": "error",
 	"nonblock-statement-body-position": [
 		"error",
 		"below",
@@ -1108,42 +812,26 @@ const eslintRule = {
 			"enforceForRenamedProperties": true,
 		},
 	],
-	"prefer-exponentiation-operator": [
-		"error",
-	],
-	"prefer-named-capture-group": [
-		"error",
-	],
-	"prefer-numeric-literals": [
-		"error",
-	],
-	"prefer-object-spread": [
-		"error",
-	],
+	"prefer-exponentiation-operator": "error",
+	"prefer-named-capture-group": "error",
+	"prefer-numeric-literals": "error",
+	"prefer-object-spread": "error",
 	"prefer-promise-reject-errors": [
 		"error",
 		{
 			"allowEmptyReject": false,
 		},
 	],
-	"prefer-reflect": [
-		"off",
-	],
+	"prefer-reflect": "off",
 	"prefer-regex-literals": [
 		"error",
 		{
 			"disallowRedundantWrapping": true,
 		},
 	],
-	"prefer-rest-params": [
-		"error",
-	],
-	"prefer-spread": [
-		"error",
-	],
-	"prefer-template": [
-		"error",
-	],
+	"prefer-rest-params": "error",
+	"prefer-spread": "error",
+	"prefer-template": "error",
 	"quote-props": [
 		"error",
 		"always",
@@ -1153,35 +841,21 @@ const eslintRule = {
 			"unnecessary": false,
 		},
 	],
-	"quotes": [
-		"off",
-	],
+	"quotes": "off",
 	"radix": [
 		"error",
 		"always",
 	],
-	"require-atomic-updates": [
-		"error",
-	],
-	"require-await": [
-		"off",
-	],
-	"require-jsdoc": [
-		"off",
-	],
-	"require-unicode-regexp": [
-		"error",
-	],
-	"require-yield": [
-		"error",
-	],
+	"require-atomic-updates": "error",
+	"require-await": "off",
+	"require-jsdoc": "off",
+	"require-unicode-regexp": "error",
+	"require-yield": "error",
 	"rest-spread-spacing": [
 		"error",
 		"never",
 	],
-	"semi": [
-		"off",
-	],
+	"semi": "off",
 	"semi-spacing": [
 		"error",
 		{
@@ -1223,9 +897,7 @@ const eslintRule = {
 			"ignoreCase": false,
 		},
 	],
-	"space-after-keywords": [
-		"off",
-	],
+	"space-after-keywords": "off",
 	"space-before-blocks": [
 		"error",
 		{
@@ -1234,22 +906,14 @@ const eslintRule = {
 			"keywords": "always",
 		},
 	],
-	"space-before-function-paren": [
-		"off",
-	],
-	"space-before-keywords": [
-		"off",
-	],
+	"space-before-function-paren": "off",
+	"space-before-keywords": "off",
 	"space-in-parens": [
 		"error",
 		"always",
 	],
-	"space-infix-ops": [
-		"off",
-	],
-	"space-return-throw-case": [
-		"off",
-	],
+	"space-infix-ops": "off",
+	"space-return-throw-case": "off",
 	"space-unary-ops": [
 		"error",
 		{
@@ -1280,9 +944,7 @@ const eslintRule = {
 			"before": true,
 		},
 	],
-	"symbol-description": [
-		"error",
-	],
+	"symbol-description": "error",
 	"template-curly-spacing": [
 		"error",
 		"always",
@@ -1302,18 +964,14 @@ const eslintRule = {
 			"enforceForSwitchCase": true,
 		},
 	],
-	"valid-jsdoc": [
-		"off",
-	],
+	"valid-jsdoc": "off",
 	"valid-typeof": [
 		"error",
 		{
 			"requireStringLiterals": true,
 		},
 	],
-	"vars-on-top": [
-		"error",
-	],
+	"vars-on-top": "error",
 	"wrap-iife": [
 		"error",
 		"inside",
@@ -1321,9 +979,7 @@ const eslintRule = {
 			"functionPrototypeMethods": true,
 		},
 	],
-	"wrap-regex": [
-		"error",
-	],
+	"wrap-regex": "error",
 	"yield-star-spacing": [
 		"error",
 		{

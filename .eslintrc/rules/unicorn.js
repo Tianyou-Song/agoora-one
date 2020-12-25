@@ -17,18 +17,10 @@ const unicornRule = {
 			"checkArrowFunctions": true,
 		},
 	],
-	"unicorn/custom-error-definition": [
-		"error",
-	],
-	"unicorn/empty-brace-spaces": [
-		"error",
-	],
-	"unicorn/error-message": [
-		"error",
-	],
-	"unicorn/escape-case": [
-		"error",
-	],
+	"unicorn/custom-error-definition": "error",
+	"unicorn/empty-brace-spaces": "error",
+	"unicorn/error-message": "error",
+	"unicorn/escape-case": "error",
 	"unicorn/expiring-todo-comments": [
 		"error",
 		{
@@ -94,27 +86,13 @@ const unicornRule = {
 			},
 		},
 	],
-	"unicorn/new-for-builtins": [
-		"error",
-	],
-	"unicorn/no-abusive-eslint-disable": [
-		"error",
-	],
-	"unicorn/no-array-instanceof": [
-		"error",
-	],
-	"unicorn/no-console-spaces": [
-		"error",
-	],
-	"unicorn/no-fn-reference-in-iterator": [
-		"error",
-	],
-	"unicorn/no-for-loop": [
-		"error",
-	],
-	"unicorn/no-hex-escape": [
-		"error",
-	],
+	"unicorn/new-for-builtins": "error",
+	"unicorn/no-abusive-eslint-disable": "error",
+	"unicorn/no-array-instanceof": "error",
+	"unicorn/no-console-spaces": "error",
+	"unicorn/no-fn-reference-in-iterator": "error",
+	"unicorn/no-for-loop": "error",
+	"unicorn/no-hex-escape": "error",
 	"unicorn/no-keyword-prefix": [
 		"error",
 		{
@@ -126,54 +104,34 @@ const unicornRule = {
 			"onlyCamelCase": false,
 		},
 	],
-	"unicorn/no-lonely-if": [
-		"error",
-	],
+	"unicorn/no-lonely-if": "error",
 	"unicorn/no-nested-ternary": [
 		"error",
 		{
 			"checkStrictEquality": true,
 		},
 	],
-	"unicorn/no-new-buffer": [
-		"error",
-	],
+	"unicorn/no-new-buffer": "error",
 	"unicorn/no-null": [
 		"error",
 		{
 			"checkStrictEquality": false,
 		},
 	],
-	"unicorn/no-object-as-default-parameter": [
-		"error",
-	],
-	"unicorn/no-process-exit": [
-		"error",
-	],
-	"unicorn/no-reduce": [
-		"error",
-	],
-	"unicorn/no-unreadable-array-destructuring": [
-		"error",
-	],
-	"unicorn/no-unsafe-regex": [
-		"error",
-	],
-	"unicorn/no-unused-properties": [
-		"error",
-	],
+	"unicorn/no-object-as-default-parameter": "error",
+	"unicorn/no-process-exit": "error",
+	"unicorn/no-reduce": "error",
+	"unicorn/no-unreadable-array-destructuring": "error",
+	"unicorn/no-unsafe-regex": "error",
+	"unicorn/no-unused-properties": "error",
 	"unicorn/no-useless-undefined": [
 		"error",
 		{
 			"checkArguments": true,
 		},
 	],
-	"unicorn/no-zero-fractions": [
-		"error",
-	],
-	"unicorn/number-literal-case": [
-		"error",
-	],
+	"unicorn/no-zero-fractions": "error",
+	"unicorn/number-literal-case": "error",
 	"unicorn/numeric-separators-style": [
 		"error",
 		{
@@ -195,87 +153,36 @@ const unicornRule = {
 			},
 		},
 	],
-	"unicorn/prefer-add-event-listener": [
-		"error",
-	],
-	"unicorn/prefer-array-find": [
-		"error",
-	],
-	"unicorn/prefer-dataset": [
-		"error",
-	],
-	"unicorn/prefer-date-now": [
-		"error",
-	],
-	"unicorn/prefer-event-key": [
-		"error",
-	],
-	"unicorn/prefer-exponentiation-operator": [
-		"off",
-	],
-	"unicorn/prefer-flat-map": [
-		"error",
-	],
-	"unicorn/prefer-includes": [
-		"error",
-	],
-	"unicorn/prefer-math-trunc": [
-		"error",
-	],
-	"unicorn/prefer-modern-dom-apis": [
-		"error",
-	],
-	"unicorn/prefer-negative-index": [
-		"error",
-	],
-	"unicorn/prefer-node-append": [
-		"error",
-	],
-	"unicorn/prefer-node-remove": [
-		"error",
-	],
+	"unicorn/prefer-add-event-listener": "error",
+	"unicorn/prefer-array-find": "error",
+	"unicorn/prefer-dataset": "error",
+	"unicorn/prefer-date-now": "error",
+	"unicorn/prefer-event-key": "error",
+	"unicorn/prefer-flat-map": "error",
+	"unicorn/prefer-includes": "error",
+	"unicorn/prefer-math-trunc": "error",
+	"unicorn/prefer-modern-dom-apis": "error",
+	"unicorn/prefer-negative-index": "error",
+	"unicorn/prefer-node-append": "error",
+	"unicorn/prefer-node-remove": "error",
 	"unicorn/prefer-number-properties": [
 		"error",
 		{
 			"checkInfinity": true,
 		},
 	],
-	"unicorn/prefer-optional-catch-binding": [
-		"error",
-	],
-	"unicorn/prefer-query-selector": [
-		"error",
-	],
-	"unicorn/prefer-reflect-apply": [
-		"error",
-	],
-	"unicorn/prefer-replace-all": [
-		"error",
-	],
-	"unicorn/prefer-set-has": [
-		"error",
-	],
-	"unicorn/prefer-spread": [
-		"error",
-	],
-	"unicorn/prefer-starts-ends-with": [
-		"error",
-	],
-	"unicorn/prefer-string-slice": [
-		"error",
-	],
-	"unicorn/prefer-ternary": [
-		"error",
-	],
-	"unicorn/prefer-text-content": [
-		"error",
-	],
-	"unicorn/prefer-trim-start-end": [
-		"error",
-	],
-	"unicorn/prefer-type-error": [
-		"error",
-	],
+	"unicorn/prefer-optional-catch-binding": "error",
+	"unicorn/prefer-query-selector": "error",
+	"unicorn/prefer-reflect-apply": "error",
+	"unicorn/prefer-replace-all": "error",
+	"unicorn/prefer-set-has": "error",
+	"unicorn/prefer-spread": "error",
+	"unicorn/prefer-starts-ends-with": "error",
+	"unicorn/prefer-string-slice": "error",
+	"unicorn/prefer-ternary": "error",
+	"unicorn/prefer-text-content": "error",
+	"unicorn/prefer-trim-start-end": "error",
+	"unicorn/prefer-type-error": "error",
 	"unicorn/prevent-abbreviations": [
 		"error",
 		{
@@ -293,15 +200,8 @@ const unicornRule = {
 			},
 		},
 	],
-	"unicorn/regex-shorthand": [
-		"off",
-	],
-	"unicorn/string-content": [
-		"error",
-	],
-	"unicorn/throw-new-error": [
-		"error",
-	],
+	"unicorn/string-content": "error",
+	"unicorn/throw-new-error": "error",
 }
 
 module.exports = unicornRule;

@@ -1,7 +1,5 @@
 const importRule = {
-	"import/default": [
-		"error",
-	],
+	"import/default": "error",
 	"import/dynamic-import-chunkname": [
 		"error",
 		{
@@ -12,12 +10,8 @@ const importRule = {
 			"webpackChunknameFormat": "[a-zA-Z0-9-/_]+",
 		},
 	],
-	"import/export": [
-		"error",
-	],
-	"import/exports-last": [
-		"error",
-	],
+	"import/export": "error",
+	"import/exports-last": "error",
 	"import/extensions": [
 		"error",
 		"never",
@@ -26,18 +20,14 @@ const importRule = {
 		"error",
 		"absolute-first",
 	],
-	"import/group-exports": [
-		"error",
-	],
+	"import/group-exports": "error",
 	"import/max-dependencies": [
 		"error",
 		{
 			"max": 16,
 		},
 	],
-	"import/named": [
-		"error",
-	],
+	"import/named": "error",
 	"import/namespace": [
 		"error",
 		{
@@ -58,9 +48,7 @@ const importRule = {
 			"esmodule": true,
 		},
 	],
-	"import/no-amd": [
-		"error",
-	],
+	"import/no-amd": "error",
 	"import/no-anonymous-default-export": [
 		"error",
 		{
@@ -87,21 +75,15 @@ const importRule = {
 			"maxDepth": Number.POSITIVE_INFINITY,
 		},
 	],
-	"import/no-default-export": [
-		"error",
-	],
-	"import/no-deprecated": [
-		"error",
-	],
+	"import/no-default-export": "error",
+	"import/no-deprecated": "error",
 	"import/no-duplicates": [
 		"error",
 		{
 			"considerQueryString": true,
 		},
 	],
-	"import/no-dynamic-require": [
-		"error",
-	],
+	"import/no-dynamic-require": "error",
 	"import/no-extraneous-dependencies": [
 		"error",
 		{
@@ -126,30 +108,14 @@ const importRule = {
 			],
 		},
 	],
-	"import/no-mutable-exports": [
-		"error",
-	],
-	"import/no-named-as-default": [
-		"error",
-	],
-	"import/no-named-as-default-member": [
-		"error",
-	],
-	"import/no-named-default": [
-		"error",
-	],
-	"import/no-named-export": [
-		"off",
-	],
-	"import/no-namespace": [
-		"error",
-	],
-	"import/no-nodejs-modules": [
-		"off",
-	],
-	"import/no-relative-parent-imports": [
-		"off",
-	],
+	"import/no-mutable-exports": "error",
+	"import/no-named-as-default": "error",
+	"import/no-named-as-default-member": "error",
+	"import/no-named-default": "error",
+	"import/no-named-export": "off",
+	"import/no-namespace": "error",
+	"import/no-nodejs-modules": "off",
+	"import/no-relative-parent-imports": "off",
 	"import/no-restricted-paths": [
 		"error",
 		{
@@ -245,14 +211,12 @@ const importRule = {
 			],
 		},
 	],
-	"import/no-self-import": [
-		"error",
-	],
+	"import/no-self-import": "error",
 	"import/no-unassigned-import": [
 		"error",
 		{
 			"allow": [
-				"**/src/styles/globals.scss",
+				"./src/styles/globals.scss",
 			],
 		},
 	],
@@ -272,7 +236,7 @@ const importRule = {
 				"**/*.test.*",
 				"**/*config.js",
 				"**/*rc.js",
-				"**/_app.tsx",
+				"./src/pages/**/*.tsx",
 			],
 			"missingExports": true,
 			"src": [
@@ -288,9 +252,7 @@ const importRule = {
 			"noUselessIndex": true,
 		},
 	],
-	"import/no-webpack-loader-syntax": [
-		"error",
-	],
+	"import/no-webpack-loader-syntax": "error",
 	"import/order": [
 		"error",
 		{
@@ -311,12 +273,8 @@ const importRule = {
 			"newlines-between": "always-and-inside-groups",
 		},
 	],
-	"import/prefer-default-export": [
-		"off",
-	],
-	"import/unambiguous": [
-		"error",
-	],
+	"import/prefer-default-export": "off",
+	"import/unambiguous": "error",
 }
 
 module.exports = importRule;

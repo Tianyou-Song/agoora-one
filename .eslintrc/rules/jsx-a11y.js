@@ -1,7 +1,5 @@
 const jsxA11yRule = {
-	"jsx-a11y/accessible-emoji": [
-		"error",
-	],
+	"jsx-a11y/accessible-emoji": "error",
 	"jsx-a11y/alt-text": [
 		"error",
 		{
@@ -52,24 +50,16 @@ const jsxA11yRule = {
 			],
 		},
 	],
-	"jsx-a11y/aria-activedescendant-has-tabindex": [
-		"error",
-	],
-	"jsx-a11y/aria-props": [
-		"error",
-	],
-	"jsx-a11y/aria-proptypes": [
-		"error",
-	],
+	"jsx-a11y/aria-activedescendant-has-tabindex": "error",
+	"jsx-a11y/aria-props": "error",
+	"jsx-a11y/aria-proptypes": "error",
 	"jsx-a11y/aria-role": [
 		"error",
 		{
 			"ignoreNonDOM": false,
 		},
 	],
-	"jsx-a11y/aria-unsupported-elements": [
-		"error",
-	],
+	"jsx-a11y/aria-unsupported-elements": "error",
 	"jsx-a11y/autocomplete-valid": [
 		"error",
 		{
@@ -79,9 +69,7 @@ const jsxA11yRule = {
 			],
 		},
 	],
-	"jsx-a11y/click-events-have-key-events": [
-		"error",
-	],
+	"jsx-a11y/click-events-have-key-events": "error",
 	"jsx-a11y/heading-has-content": [
 		"error",
 		{
@@ -90,12 +78,8 @@ const jsxA11yRule = {
 			],
 		},
 	],
-	"jsx-a11y/html-has-lang": [
-		"error",
-	],
-	"jsx-a11y/iframe-has-title": [
-		"error",
-	],
+	"jsx-a11y/html-has-lang": "error",
+	"jsx-a11y/iframe-has-title": "error",
 	"jsx-a11y/img-redundant-alt": [
 		"error",
 		{
@@ -164,9 +148,7 @@ const jsxA11yRule = {
 			],
 		},
 	],
-	"jsx-a11y/lang": [
-		"error",
-	],
+	"jsx-a11y/lang": "error",
 	"jsx-a11y/media-has-caption": [
 		"error",
 		{
@@ -181,12 +163,8 @@ const jsxA11yRule = {
 			],
 		},
 	],
-	"jsx-a11y/mouse-events-have-key-events": [
-		"error",
-	],
-	"jsx-a11y/no-access-key": [
-		"error",
-	],
+	"jsx-a11y/mouse-events-have-key-events": "error",
+	"jsx-a11y/no-access-key": "error",
 	"jsx-a11y/no-autofocus": [
 		"error",
 		{
@@ -269,9 +247,7 @@ const jsxA11yRule = {
 			"tags": [],
 		},
 	],
-	"jsx-a11y/no-onchange": [
-		"off",
-	],
+	"jsx-a11y/no-onchange": "off",
 	"jsx-a11y/no-redundant-roles": [
 		"error",
 		{
@@ -293,18 +269,10 @@ const jsxA11yRule = {
 			],
 		},
 	],
-	"jsx-a11y/role-has-required-aria-props": [
-		"error",
-	],
-	"jsx-a11y/role-supports-aria-props": [
-		"error",
-	],
-	"jsx-a11y/scope": [
-		"error",
-	],
-	"jsx-a11y/tabindex-no-positive": [
-		"error",
-	],
+	"jsx-a11y/role-has-required-aria-props": "error",
+	"jsx-a11y/role-supports-aria-props": "error",
+	"jsx-a11y/scope": "error",
+	"jsx-a11y/tabindex-no-positive": "error",
 };
 
 module.exports = jsxA11yRule;

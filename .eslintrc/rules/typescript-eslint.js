@@ -1,7 +1,5 @@
 const typescriptEslintRule = {
-	"@typescript-eslint/adjacent-overload-signatures": [
-		"error",
-	],
+	"@typescript-eslint/adjacent-overload-signatures": "error",
 	"@typescript-eslint/array-type": [
 		"error",
 		{
@@ -9,9 +7,7 @@ const typescriptEslintRule = {
 			"readonly": "array",
 		},
 	],
-	"@typescript-eslint/await-thenable": [
-		"error",
-	],
+	"@typescript-eslint/await-thenable": "error",
 	"@typescript-eslint/ban-ts-comment": [
 		"error",
 		{
@@ -22,9 +18,7 @@ const typescriptEslintRule = {
 			"ts-nocheck": true,
 		},
 	],
-	"@typescript-eslint/ban-tslint-comment": [
-		"error",
-	],
+	"@typescript-eslint/ban-tslint-comment": "error",
 	"@typescript-eslint/ban-types": [
 		"error",
 		{
@@ -84,9 +78,7 @@ const typescriptEslintRule = {
 			"prefer": "type-imports",
 		},
 	],
-	"@typescript-eslint/default-param-last": [
-		"error",
-	],
+	"@typescript-eslint/default-param-last": "error",
 	"@typescript-eslint/dot-notation": [
 		"error",
 		{
@@ -98,10 +90,10 @@ const typescriptEslintRule = {
 	"@typescript-eslint/explicit-function-return-type": [
 		"error",
 		{
-			"allowConciseArrowFunctionExpressionsStartingWithVoid": false,
-			"allowDirectConstAssertionInArrowFunctions": false,
-			"allowExpressions": false,
-			"allowHigherOrderFunctions": false,
+			"allowConciseArrowFunctionExpressionsStartingWithVoid": true,
+			"allowDirectConstAssertionInArrowFunctions": true,
+			"allowExpressions": true,
+			"allowHigherOrderFunctions": true,
 			"allowTypedFunctionExpressions": true,
 		},
 	],
@@ -151,9 +143,7 @@ const typescriptEslintRule = {
 			"outerIIFEBody": 1,
 		},
 	],
-	"@typescript-eslint/init-declarations": [
-		"off",
-	],
+	"@typescript-eslint/init-declarations": "off",
 	"@typescript-eslint/keyword-spacing": [
 		"error",
 		{
@@ -389,15 +379,9 @@ const typescriptEslintRule = {
 			"selector": "typeLike",
 		},
 	],
-	"@typescript-eslint/no-array-constructor": [
-		"error",
-	],
-	"@typescript-eslint/no-base-to-string": [
-		"error",
-	],
-	"@typescript-eslint/no-confusing-non-null-assertion": [
-		"error",
-	],
+	"@typescript-eslint/no-array-constructor": "error",
+	"@typescript-eslint/no-base-to-string": "error",
+	"@typescript-eslint/no-confusing-non-null-assertion": "error",
 	"@typescript-eslint/no-confusing-void-expression": [
 		"error",
 		{
@@ -405,21 +389,15 @@ const typescriptEslintRule = {
 			"ignoreVoidOperator": false,
 		},
 	],
-	"@typescript-eslint/no-dupe-class-members": [
-		"error",
-	],
+	"@typescript-eslint/no-dupe-class-members": "error",
 	"@typescript-eslint/no-duplicate-imports": [
 		"error",
 		{
 			"includeExports": true,
 		},
 	],
-	"@typescript-eslint/no-dynamic-delete": [
-		"error",
-	],
-	"@typescript-eslint/no-empty-function": [
-		"error",
-	],
+	"@typescript-eslint/no-dynamic-delete": "error",
+	"@typescript-eslint/no-empty-function": "error",
 	"@typescript-eslint/no-empty-interface": [
 		"error",
 		{
@@ -433,9 +411,7 @@ const typescriptEslintRule = {
 			"ignoreRestArgs": false,
 		},
 	],
-	"@typescript-eslint/no-extra-non-null-assertion": [
-		"error",
-	],
+	"@typescript-eslint/no-extra-non-null-assertion": "error",
 	"@typescript-eslint/no-extra-parens": [
 		"error",
 		"all",
@@ -450,9 +426,7 @@ const typescriptEslintRule = {
 			"returnAssign": false,
 		},
 	],
-	"@typescript-eslint/no-extra-semi": [
-		"error",
-	],
+	"@typescript-eslint/no-extra-semi": "error",
 	"@typescript-eslint/no-extraneous-class": [
 		"error",
 		{
@@ -469,18 +443,14 @@ const typescriptEslintRule = {
 			"ignoreVoid": false,
 		},
 	],
-	"@typescript-eslint/no-for-in-array": [
-		"error",
-	],
+	"@typescript-eslint/no-for-in-array": "error",
 	"@typescript-eslint/no-implicit-any-catch": [
 		"error",
 		{
 			"allowExplicitAny": false,
 		},
 	],
-	"@typescript-eslint/no-implied-eval": [
-		"error",
-	],
+	"@typescript-eslint/no-implied-eval": "error",
 	"@typescript-eslint/no-inferrable-types": [
 		"error",
 		{
@@ -501,12 +471,8 @@ const typescriptEslintRule = {
 			"allowInGenericTypeArguments": true,
 		},
 	],
-	"@typescript-eslint/no-loop-func": [
-		"error",
-	],
-	"@typescript-eslint/no-loss-of-precision": [
-		"error",
-	],
+	"@typescript-eslint/no-loop-func": "error",
+	"@typescript-eslint/no-loss-of-precision": "error",
 	"@typescript-eslint/no-magic-numbers": [
 		"error",
 		{
@@ -519,9 +485,7 @@ const typescriptEslintRule = {
 			"ignoreReadonlyClassProperties": false,
 		},
 	],
-	"@typescript-eslint/no-misused-new": [
-		"error",
-	],
+	"@typescript-eslint/no-misused-new": "error",
 	"@typescript-eslint/no-misused-promises": [
 		"error",
 		{
@@ -536,12 +500,8 @@ const typescriptEslintRule = {
 			"allowDefinitionFiles": false,
 		},
 	],
-	"@typescript-eslint/no-non-null-asserted-optional-chain": [
-		"error",
-	],
-	"@typescript-eslint/no-non-null-assertion": [
-		"error",
-	],
+	"@typescript-eslint/no-non-null-asserted-optional-chain": "error",
+	"@typescript-eslint/no-non-null-assertion": "error",
 	"@typescript-eslint/no-parameter-properties": [
 		"error",
 		{
@@ -563,9 +523,7 @@ const typescriptEslintRule = {
 			"ignoreDeclarationMerge": false,
 		},
 	],
-	"@typescript-eslint/no-require-imports": [
-		"error",
-	],
+	"@typescript-eslint/no-require-imports": "error",
 	"@typescript-eslint/no-shadow": [
 		"error",
 		{
@@ -581,9 +539,7 @@ const typescriptEslintRule = {
 			"allowDestructuring": true,
 		},
 	],
-	"@typescript-eslint/no-throw-literal": [
-		"error",
-	],
+	"@typescript-eslint/no-throw-literal": "error",
 	"@typescript-eslint/no-type-alias": [
 		"error",
 		{
@@ -610,30 +566,14 @@ const typescriptEslintRule = {
 			"allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing": false,
 		},
 	],
-	"@typescript-eslint/no-unnecessary-qualifier": [
-		"error",
-	],
-	"@typescript-eslint/no-unnecessary-type-arguments": [
-		"error",
-	],
-	"@typescript-eslint/no-unnecessary-type-assertion": [
-		"error",
-	],
-	"@typescript-eslint/no-unnecessary-type-constraint": [
-		"error",
-	],
-	"@typescript-eslint/no-unsafe-assignment": [
-		"error",
-	],
-	"@typescript-eslint/no-unsafe-call": [
-		"error",
-	],
-	"@typescript-eslint/no-unsafe-member-access": [
-		"error",
-	],
-	"@typescript-eslint/no-unsafe-return": [
-		"error",
-	],
+	"@typescript-eslint/no-unnecessary-qualifier": "error",
+	"@typescript-eslint/no-unnecessary-type-arguments": "error",
+	"@typescript-eslint/no-unnecessary-type-assertion": "error",
+	"@typescript-eslint/no-unnecessary-type-constraint": "error",
+	"@typescript-eslint/no-unsafe-assignment": "error",
+	"@typescript-eslint/no-unsafe-call": "error",
+	"@typescript-eslint/no-unsafe-member-access": "error",
+	"@typescript-eslint/no-unsafe-return": "error",
 	"@typescript-eslint/no-unused-expressions": [
 		"error",
 		{
@@ -662,36 +602,16 @@ const typescriptEslintRule = {
 			"variables": true,
 		},
 	],
-	"@typescript-eslint/no-useless-constructor": [
-		"error",
-	],
-	"@typescript-eslint/no-var-requires": [
-		"error",
-	],
-	"@typescript-eslint/non-nullable-type-assertion-style": [
-		"off",
-	],
-	"@typescript-eslint/prefer-as-const": [
-		"error",
-	],
-	"@typescript-eslint/prefer-enum-initializers": [
-		"error",
-	],
-	"@typescript-eslint/prefer-for-of": [
-		"error",
-	],
-	"@typescript-eslint/prefer-function-type": [
-		"error",
-	],
-	"@typescript-eslint/prefer-includes": [
-		"error",
-	],
-	"@typescript-eslint/prefer-literal-enum-member": [
-		"error",
-	],
-	"@typescript-eslint/prefer-namespace-keyword": [
-		"error",
-	],
+	"@typescript-eslint/no-useless-constructor": "error",
+	"@typescript-eslint/no-var-requires": "error",
+	"@typescript-eslint/non-nullable-type-assertion-style": "off",
+	"@typescript-eslint/prefer-as-const": "error",
+	"@typescript-eslint/prefer-enum-initializers": "error",
+	"@typescript-eslint/prefer-for-of": "error",
+	"@typescript-eslint/prefer-function-type": "error",
+	"@typescript-eslint/prefer-includes": "error",
+	"@typescript-eslint/prefer-literal-enum-member": "error",
+	"@typescript-eslint/prefer-namespace-keyword": "error",
 	"@typescript-eslint/prefer-nullish-coalescing": [
 		"error",
 		{
@@ -699,9 +619,7 @@ const typescriptEslintRule = {
 			"ignoreMixedLogicalExpressions": false,
 		},
 	],
-	"@typescript-eslint/prefer-optional-chain": [
-		"error",
-	],
+	"@typescript-eslint/prefer-optional-chain": "error",
 	"@typescript-eslint/prefer-readonly": [
 		"error",
 		{
@@ -709,20 +627,16 @@ const typescriptEslintRule = {
 		},
 	],
 	"@typescript-eslint/prefer-readonly-parameter-types": [
-		"off",
-	],
-	"@typescript-eslint/prefer-reduce-type-parameter": [
 		"error",
+		{
+			"checkParameterProperties": false,
+			"ignoreInferredTypes": true,
+		}
 	],
-	"@typescript-eslint/prefer-regexp-exec": [
-		"error",
-	],
-	"@typescript-eslint/prefer-string-starts-ends-with": [
-		"error",
-	],
-	"@typescript-eslint/prefer-ts-expect-error": [
-		"error",
-	],
+	"@typescript-eslint/prefer-reduce-type-parameter": "error",
+	"@typescript-eslint/prefer-regexp-exec": "error",
+	"@typescript-eslint/prefer-string-starts-ends-with": "error",
+	"@typescript-eslint/prefer-ts-expect-error": "error",
 	"@typescript-eslint/promise-function-async": [
 		"error",
 		{
@@ -750,9 +664,7 @@ const typescriptEslintRule = {
 			"ignoreStringArrays": false,
 		},
 	],
-	"@typescript-eslint/require-await": [
-		"error",
-	],
+	"@typescript-eslint/require-await": "error",
 	"@typescript-eslint/restrict-plus-operands": [
 		"error",
 		{
@@ -806,12 +718,8 @@ const typescriptEslintRule = {
 			"allowString": true,
 		},
 	],
-	"@typescript-eslint/switch-exhaustiveness-check": [
-		"error",
-	],
-	"@typescript-eslint/triple-slash-reference": [
-		"error",
-	],
+	"@typescript-eslint/switch-exhaustiveness-check": "error",
+	"@typescript-eslint/triple-slash-reference": "error",
 	"@typescript-eslint/type-annotation-spacing": [
 		"error",
 		{
@@ -838,9 +746,7 @@ const typescriptEslintRule = {
 			"ignoreStatic": false,
 		},
 	],
-	"@typescript-eslint/unified-signatures": [
-		"error",
-	],
+	"@typescript-eslint/unified-signatures": "error",
 }
 
 module.exports = typescriptEslintRule;
