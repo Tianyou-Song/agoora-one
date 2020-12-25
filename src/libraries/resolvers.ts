@@ -8,6 +8,7 @@ import type {
 
 const userProfile = {
 	"id"     : String(
+		// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 		1 ,
 	) ,
 	"name"   : "John Smith" ,
@@ -24,18 +25,24 @@ const Query : Required<QueryResolvers<ResolverContext>> = {
 
 const Mutation : Required<MutationResolvers<ResolverContext>> = {
 	updateName (
-		_parent , _arguments ,
+		updateNameParent ,
+		updateNameArguments ,
 	) {
 
-		userProfile.name = _arguments.name ;
+		const {
+			"name" : argumentName ,
+		} = updateNameArguments ;
+
+		userProfile.name = argumentName ;
 
 		return userProfile ;
 
 	} ,
 } ;
 
-export default {
-	Query ,
+const resolvers = {
 	Mutation ,
+	Query ,
 } ;
 
+export default resolvers ;

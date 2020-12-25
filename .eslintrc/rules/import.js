@@ -149,6 +149,7 @@ const importRule = {
 						"./node_modules",
 						"./src/constants",
 						"./src/libraries",
+						"./src/utilities",
 						".graphql-let.yml",
 					],
 					"from": ".",

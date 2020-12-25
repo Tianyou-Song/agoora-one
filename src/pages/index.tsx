@@ -30,6 +30,10 @@ import {
 
 import HomeStyles from "../styles/Home.module.scss" ;
 
+import {
+	isViewerQuery ,
+} from "../utilities/apollo" ;
+
 const getStaticProps = async () : Promise<{
 	"props" : {
 		"initialApolloState" : NormalizedCacheObject;
@@ -101,13 +105,25 @@ const Index = () : JSX.Element => {
 						} ,
 					) => {
 
-						const {
-							"viewer" : storeViewer ,
-						} = store.readQuery(
+						const viewerQuery = store.readQuery(
 							{
 								"query" : ViewerDocument ,
 							} ,
-						) as ViewerQuery ;
+						) ;
+
+						let storeViewer = {} ;
+
+						if ( isViewerQuery(
+							viewerQuery ,
+						) ) {
+
+							const {
+								"viewer" : viewerQuery ,
+							} = viewerQuery ;
+
+							storeViewer = viewerQuery ;
+
+						}
 
 						const viewerToWrite = {
 							...storeViewer ,

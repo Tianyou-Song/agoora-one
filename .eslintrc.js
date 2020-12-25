@@ -173,7 +173,7 @@ const eslintRunCommand = {
 		} ,
 		{
 			"files" : [
-				"./src/libraries/**" ,
+				"src/libraries/**/*" ,
 			] ,
 			"rules" : {
 				"import/no-default-export"     : "off" ,
@@ -182,7 +182,7 @@ const eslintRunCommand = {
 		} ,
 		{
 			"files" : [
-				"./src/pages/**" ,
+				"src/pages/**/*" ,
 			] ,
 			"rules" : {
 				"import/no-default-export"     : "off" ,
@@ -192,7 +192,7 @@ const eslintRunCommand = {
 		} ,
 		{
 			"files" : [
-				"!./src/**" ,
+				"!src/**/*" ,
 			] ,
 			"rules" : {
 				"@typescript-eslint/no-magic-numbers"   : "off" ,

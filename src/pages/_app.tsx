@@ -1,7 +1,3 @@
-import type {
-	NormalizedCacheObject ,
-} from "@apollo/client" ;
-
 import {
 	ApolloProvider ,
 } from "@apollo/client" ;
@@ -32,9 +28,7 @@ const App = (
 
 	const {
 		initialApolloState ,
-	} = pageProperties as {
-		initialApolloState : NormalizedCacheObject ;
-	} ;
+	} = pageProperties ;
 
 	const apolloClient = useApollo(
 		initialApolloState ,

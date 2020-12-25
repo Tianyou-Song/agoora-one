@@ -604,7 +604,7 @@ const typescriptEslintRule = {
 	],
 	"@typescript-eslint/no-useless-constructor": "error",
 	"@typescript-eslint/no-var-requires": "error",
-	"@typescript-eslint/non-nullable-type-assertion-style": "off",
+	"@typescript-eslint/non-nullable-type-assertion-style": "error",
 	"@typescript-eslint/prefer-as-const": "error",
 	"@typescript-eslint/prefer-enum-initializers": "error",
 	"@typescript-eslint/prefer-for-of": "error",
