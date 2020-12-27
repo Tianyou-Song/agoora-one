@@ -5,7 +5,6 @@ import {
 
 import {
 	MockedProvider ,
-// eslint-disable-next-line import/no-internal-modules
 } from "@apollo/client/testing" ;
 
 import React from "react" ;

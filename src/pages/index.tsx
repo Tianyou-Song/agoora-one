@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable putout/putout */
-
 import type {
 	NormalizedCacheObject ,
 } from "@apollo/client" ;
@@ -107,7 +104,7 @@ const Index = () : JSX.Element => {
 							} ,
 						) as ViewerQuery | undefined ;
 
-						let storeViewer ;
+						let viewerToWrite ;
 
 						if ( viewerQuery ) {
 
@@ -115,13 +112,9 @@ const Index = () : JSX.Element => {
 								"viewer" : viewerFromQuery ,
 							} = viewerQuery ;
 
-							storeViewer = viewerFromQuery ;
+							viewerToWrite = viewerFromQuery ;
 
 						}
-
-						const viewerToWrite = {
-							...storeViewer ,
-						} ;
 
 						let nameToWrite = "" ;
 
@@ -218,3 +211,4 @@ export {
 } ;
 
 export default Index ;
+

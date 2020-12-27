@@ -10,10 +10,6 @@ const jsxA11yRule = require(
 	"./.eslintrc/rules/jsx-a11y" ,
 ) ;
 
-const typescriptEslintRuleOff = require(
-	"./.eslintrc/rules/off/typescript-eslint" ,
-) ;
-
 const putoutRule = require(
 	"./.eslintrc/rules/putout" ,
 ) ;
@@ -50,9 +46,14 @@ const eslintRunCommand = {
 	} ,
 	"extends" : [
 		"eslint:all" ,
+		"plugin:@shopify/esnext" ,
+		"plugin:@shopify/node" ,
+		"plugin:@shopify/react" ,
+		"plugin:@shopify/typescript" ,
 		"plugin:@typescript-eslint/all" ,
 		"plugin:import/errors" ,
 		"plugin:import/typescript" ,
+		"plugin:@shopify/typescript-type-checking" ,
 		"plugin:import/warnings" ,
 		"plugin:jsx-a11y/recommended" ,
 		"plugin:putout/recommended" ,
@@ -125,24 +126,28 @@ const eslintRunCommand = {
 				"@typescript-eslint/typedef"                        : "off" ,
 			} ,
 		} ,
-		{
-			"files"   : [
-				"*.graphql" ,
-			] ,
-			"parser"  : "@graphql-eslint/eslint-plugin" ,
-			"plugins" : [
-				"@graphql-eslint" ,
-				"graphql" ,
-			] ,
-			"rules"   : typescriptEslintRuleOff ,
-		} ,
+
+		/*
+		 * {
+		 *     "files": [
+		 *         "*.graphql",
+		 *     ],
+		 *     "parser": "@graphql-eslint/eslint-plugin",
+		 *     "plugins": [
+		 *         "@graphql-eslint",
+		 *         "graphql",
+		 *     ],
+		 *     "rules": {},
+		 * },
+		 */
+
 		{
 			"files" : [
 				"src/libraries/**/*" ,
 			] ,
 			"rules" : {
-				"import/no-default-export"     : "off" ,
-				"import/no-unused-modules"     : "off" ,
+				"import/no-default-export" : "off" ,
+				"import/no-unused-modules" : "off" ,
 			} ,
 		} ,
 		{
@@ -195,7 +200,10 @@ const eslintRunCommand = {
 		...typescriptEslintRule ,
 		...unicornRule ,
 		...wokeRule ,
-
+		"@shopify/binary-assignment-parens" : [
+			"error" ,
+			"always" ,
+		] ,
 	} ,
 	"settings" : {
 		"import/extensions" : [
@@ -204,7 +212,7 @@ const eslintRunCommand = {
 			".ts" ,
 			".tsx" ,
 		] ,
-		"import/ignore"  : [
+		"import/ignore" : [
 			"node_modules" ,
 		] ,
 		"import/parsers" : {

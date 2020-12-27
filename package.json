@@ -109,6 +109,7 @@
 		"@putout/plugin-split-variable-declarations": "^2.0.0",
 		"@putout/plugin-strict-mode": "^2.0.0",
 		"@putout/plugin-webpack": "^1.2.0",
+		"@shopify/eslint-plugin": "^39.0.3",
 		"@types/jest": "^26.0.19",
 		"@types/lodash": "^4.14.166",
 		"@types/node": "^14.14.16",

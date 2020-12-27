@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/triple-slash-reference */
 /* eslint-disable multiline-comment-style */
 /* eslint-disable unicorn/prevent-abbreviations */
 
