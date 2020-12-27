@@ -18,21 +18,17 @@ import {
 	initializeApollo ,
 } from "../libraries/apollo" ;
 
-import type {
-	ViewerQuery ,
-} from "../libraries/viewer.graphql" ;
-
 import {
 	ViewerDocument  ,
 	useUpdateNameMutation ,
 	useViewerQuery ,
 } from "../libraries/viewer.graphql" ;
 
-import HomeStyles from "../styles/Home.module.scss" ;
+import type {
+	ViewerQuery ,
+} from "../libraries/viewer.graphql" ;
 
-import {
-	isViewerQuery ,
-} from "../utilities/apollo" ;
+import HomeStyles from "../styles/Home.module.scss" ;
 
 const getStaticProps = async () : Promise<{
 	"props" : {
@@ -109,19 +105,17 @@ const Index = () : JSX.Element => {
 							{
 								"query" : ViewerDocument ,
 							} ,
-						) ;
+						) as ViewerQuery | undefined ;
 
-						let storeViewer = {} ;
+						let storeViewer ;
 
-						if ( isViewerQuery(
-							viewerQuery ,
-						) ) {
+						if ( viewerQuery ) {
 
 							const {
-								"viewer" : viewerQuery ,
+								"viewer" : viewerFromQuery ,
 							} = viewerQuery ;
 
-							storeViewer = viewerQuery ;
+							storeViewer = viewerFromQuery ;
 
 						}
 

@@ -24,10 +24,6 @@ import {
 	useMemo ,
 } from "react" ;
 
-import {
-	isNormalizedCacheObject ,
-} from "../utilities/apollo" ;
-
 let apolloClient : ApolloClient<NormalizedCacheObject> | undefined ;
 
 interface ResolverContext {
@@ -86,7 +82,7 @@ const createApolloClient = (
 } ;
 
 const initializeApollo = (
-	initialState ?: unknown ,
+	initialState ?: NormalizedCacheObject ,
 
 	/*
 	 * Pages with Next.js data fetching methods, like `getStaticProps`, can send
@@ -100,9 +96,7 @@ const initializeApollo = (
 		context ,
 	) ;
 
-	if ( isNormalizedCacheObject(
-		initialState ,
-	) ) {
+	if ( initialState ) {
 
 		createdApolloClient.cache.restore(
 			initialState ,
@@ -129,7 +123,7 @@ const initializeApollo = (
 } ;
 
 const useApollo = (
-	initialState : unknown ,
+	initialState ?: NormalizedCacheObject ,
 ) : ApolloClient<NormalizedCacheObject> => {
 
 	return useMemo(

@@ -3,6 +3,10 @@ import {
 } from "@apollo/client" ;
 
 import type {
+	NormalizedCacheObject ,
+} from "@apollo/client" ;
+
+import type {
 	NextComponentType ,
 	NextPageContext ,
 } from "next" ;
@@ -28,6 +32,8 @@ const App = (
 
 	const {
 		initialApolloState ,
+	} : {
+		initialApolloState ?: NormalizedCacheObject;
 	} = pageProperties ;
 
 	const apolloClient = useApollo(

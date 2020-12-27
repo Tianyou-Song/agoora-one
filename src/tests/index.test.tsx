@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {
 	InMemoryCache , gql ,
 } from "@apollo/client" ;
